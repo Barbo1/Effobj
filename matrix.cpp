@@ -1,6 +1,5 @@
 #include "./matrix.hpp"
 #include <utility>
-#include <iostream>
 #include <cmath>
 
 Matrix::Matrix() {
