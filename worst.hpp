@@ -1,6 +1,6 @@
 /*
-	This module was made to do some lexical analysis, working with words in an efficient manner.
-	It defines the wordSet class that can store words in a tree that represents a set. 
+	This module was store data in a tree.
+   It defines the wordSet class that can store words in a tree that represents a set. The type 
 	The wordSet's don't work for words larger than MAX_LEN_WORD, and the amount of letters allowed 
 	are LETTER_QUAN.
 	It also defines a bunch of methods:
@@ -21,17 +21,19 @@
 
 #include <vector>
 #include <string>
+#include <type_traits>
 
 #define MAX_LEN_WORD 35
 #define LETTER_QUAN 27
 
-typedef struct nodeWordSet * nodeWS; //nodeWordSet
+typedef struct nodeWordSet * nodeWS;
 
 class WordSet{
 private:
    nodeWS root;
 public:
    WordSet();
+
    WordSet(const WordSet &);
    WordSet(WordSet &&) noexcept;
    WordSet & operator=(const WordSet &);
@@ -96,6 +98,16 @@ public:
    WordSet operator!() const;
    
    /*
+      Make a WordSet with the words that have a length shorter than the parameter.
+   */
+   WordSet operator<(unsigned) const;
+
+   /*
+      Make a WordSet with the words that have a length larger than the parameter.
+   */
+   WordSet operator>(unsigned) const;
+   
+   /*
 		Make a WordSet with the words who's (unsigned parameter)-th 
 		letter is the defined by (char paramenter).
    */
@@ -104,8 +116,8 @@ public:
    /*
 		Make a WordSet with the words that contain the parameter.
 		ie.: parameter = "in" ->
-      ___the WordSet would contain: "in", "inside", "minus", "principle", ...
-      ___and wouldn't contain: "hello", "cry", "breath", "notion", ...
+      ...the WordSet would contain: "in", "inside", "minus", "principle", ...
+      ...and wouldn't contain: "hello", "cry", "breath", "notion", ...
    */
    WordSet find_subword(const std::string &) const;
 
@@ -180,5 +192,6 @@ public:
    words will not be recognized.
 */
 WordSet from_file_to_set(const std::string &);
+
 
 #endif

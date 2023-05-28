@@ -7,9 +7,8 @@
 #include <stack>
 #include <cstdlib>
 #include <ctime>
-#include "./worst_v3.h"
+#include "./worst.hpp"
 #include <utility>
-#include <iostream>
 
 #define PERMITED_CHAR(pt) ((65 <= *pt && *pt <= 90) || (97 <= *pt && *pt <= 122))
 
@@ -73,16 +72,16 @@ static unsigned char aux_get_largest(nodeWS node, unsigned char m){
 
 /* 
    Return a copy of the nodes that leads to, or follow, a node in the n-height
-   that have a lett character, counting n below the node passed by parameter.
+   that have a 'letter' character, counting n below the node passed by parameter.
 */
-static nodeWS aux_n_defined(nodeWS node, unsigned len, char lett, unsigned char n){ 
+static nodeWS aux_n_defined(nodeWS node, unsigned len, char & letter, unsigned char & n){ 
    if(node != nullptr){
       if(len < n){
          /* son_i iterate for the sons of the node, constructing the node if
          at least one son return a copied node(copied in the elseif) */
          nodeWS son_i = node->son, sons = nullptr, res, son_f = nullptr;
          while(son_i != nullptr){
-            res = aux_n_defined(son_i, len+1, lett, n);
+            res = aux_n_defined(son_i, len+1, letter, n);
             if(res != nullptr){
                (sons != nullptr ? sons->sibling : son_f) = res;
                sons = res;
@@ -97,7 +96,7 @@ static nodeWS aux_n_defined(nodeWS node, unsigned len, char lett, unsigned char 
             node_new->sibling = nullptr;
             return node_new;
          }
-      }else if(len == n && node->letter == lett) 
+      }else if(len == n && node->letter == letter) 
          return copy_nodes(node);
    }
    return nullptr;
@@ -107,7 +106,7 @@ static nodeWS aux_n_defined(nodeWS node, unsigned len, char lett, unsigned char 
    Return a copy of the nodes that leads to, or follow, a node that have a 
    secuences of nodes with the subword in str.
 */
-static nodeWS aux_find_subword(nodeWS node, unsigned pos, const char * str, int n){ 
+static nodeWS aux_find_subword(nodeWS node, unsigned pos, const char * str, const int & n){ 
    if(node != nullptr){
       if(pos < n || node->letter != str[pos]){
          nodeWS son_i = node->son, sons = nullptr, res, son_f = nullptr;
@@ -260,9 +259,68 @@ static nodeWS aux_sub(nodeWS ws_1, nodeWS ws_2){
 }
 
 /*
-   -------------------------------------------------------------------
-   Here are the implementation of the operations described in worst.h.
-   -------------------------------------------------------------------
+   Return a node that contain the words below ws_1 with height less than top.
+   preconditions: ws_1 != nullptr.
+*/
+static nodeWS aux_less(nodeWS node, unsigned n, unsigned & top){
+   nodeWS sons_iter, res, res_prev = nullptr, res_f = nullptr;
+   sons_iter = node->son;
+   if(n < top){
+      n++;
+      while(sons_iter != nullptr){
+         res = aux_less(sons_iter, n, top);
+         if(res != nullptr){
+            (res_f == nullptr ? res_f : res_prev->sibling) = res;
+            res_prev = res;
+         }
+         sons_iter = sons_iter->sibling;
+      }
+      if(res_f != nullptr || node->finished){
+         res = new nodeWordSet;
+         res->finished = node->finished;
+         res->letter = node->letter;
+         res->sibling = nullptr;
+         res->son = res_f;
+      }
+      return res;
+   }
+   return nullptr;
+}
+
+/*
+   Return a node that contain the words below ws_1 with the words with length 
+   greater than top.
+   preconditions: ws_1 != nullptr.
+*/
+static nodeWS aux_great(nodeWS node, unsigned n, unsigned & top){
+   nodeWS sons_iter, res, res_prev = nullptr, res_f = nullptr;
+   sons_iter = node->son;
+   if(n == top){
+      return copy_nodes(sons_iter, false);
+   }else{
+      n++;
+      while(sons_iter != nullptr){
+         res = aux_great(sons_iter, n, top);
+         if(res != nullptr){
+            node = new nodeWordSet;
+            node->finished = false;
+            node->letter = sons_iter->letter;
+            node->sibling = nullptr;
+            node->son = res;
+            (res_f == nullptr ? res_f : res_prev->sibling) = node;
+            res_prev = node;
+         }
+         sons_iter = sons_iter->sibling;
+      }
+      return res_f;
+   }
+   return nullptr;
+}
+
+/*
+   ---------------------------------------------------------------------
+   Here are the implementation of the operations described in worst.hpp.
+   ---------------------------------------------------------------------
 */
 /*
    --------------------
@@ -295,10 +353,10 @@ WordSet::iterator::iterator(const iterator& it){
    }
 }
 
-WordSet::iterator::iterator(iterator&& it) :
-   _large_(std::exchange(it._large_, 0)),
-   _nodes_(std::exchange(it._nodes_, nullptr))
-{}
+WordSet::iterator::iterator(iterator&& it){
+   _large_ = std::exchange(it._large_, 0);
+   _nodes_ = std::exchange(it._nodes_, nullptr);
+}
 
 WordSet::iterator WordSet::iterator::operator=(const iterator & it){
    _large_ = it._large_;
@@ -351,7 +409,7 @@ std::string WordSet::iterator::operator*() const {
    return str;
 }
 
-bool WordSet::iterator::operator==(const iterator& it) const {
+bool WordSet::iterator::operator==(const iterator & it) const {
    if(it._large_ != _large_)
       return false;
    bool b = true;
@@ -604,8 +662,7 @@ std::vector<std::string> WordSet::get_words_l() const {
    subject to change:
       seeing the code is pretty obvious that there are better ways to implement that operation. 
       One reason is: not all the words have the same probability of be picked up. But for that I 
-      need to learn to use <random> of c++, and probably change the implementation. When I can,
-      I will change this operation.
+      need to learn to use <random>. When I can, I will change this operation.
 */
 std::vector<std::string> WordSet::get_words_r(unsigned m){
    std::vector<std::string> vt;
@@ -680,6 +737,18 @@ WordSet WordSet::operator!() const {
          std::swap(str[le-i], str[i]);
       ws.aggregate_word(str);
    }
+   return ws;
+}
+
+WordSet WordSet::operator<(unsigned top_lenght) const{
+   WordSet ws = WordSet();
+   ws.root->son = aux_less(this->root, 0, top_lenght);
+   return ws;
+}
+
+WordSet WordSet::operator>(unsigned top_lenght) const{
+   WordSet ws = WordSet();
+   ws.root->son = aux_great(this->root, 0, top_lenght);
    return ws;
 }
 
@@ -792,3 +861,4 @@ WordSet from_file_to_set(const std::string & path){
    }
    return ws;
 }
+
