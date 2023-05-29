@@ -116,7 +116,7 @@ void Matrix::change_rows(unsigned row1, unsigned row2) {
    }
 }
 
-bool Matrix::is_estocastic() const {
+bool Matrix::is_stochastic() const {
    if(_rows_ != _columns_){
       return false;
    }
@@ -206,18 +206,6 @@ Matrix Matrix::operator+(const Matrix & M) const {
    } else {
       return Matrix(0, 0, nullptr);
    } 
-}
-
-void _printMatrix(Matrix A) {
-    unsigned rows = A.rows(), cols = A.cols();
-    if(rows != 0 && cols != 0){
-        for(unsigned i = 1; i <= rows; i++){
-            for(unsigned j = 1; j <= cols; j++){
-                std::cout << A(i,j) << " ";
-            }
-            std::cout << std::endl;
-        }
-    }
 }
 
 Matrix Matrix::invert() {

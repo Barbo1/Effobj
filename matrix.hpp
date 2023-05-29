@@ -24,35 +24,116 @@ public:
     Matrix operator=(const Matrix &);
     Matrix operator=(Matrix &&);
     
+    /*
+     * Return the quantity of rows in the matrix.
+    */
     unsigned rows() const;
+
+    /*
+     * Return the quantity of columns in the matrix.
+     */
     unsigned cols() const;
 
-    void mult_row(unsigned, float);
-    void mult_column(unsigned, float);
+    /*
+     * Multiply the row in the position specified by the float constant passed by parameter. If the
+     * position is greater than the rows quantity, nothing will change.
+     */
+    void mult_row(unsigned, const float);
+
+    /*
+     * Multiply the column in the position specified by the float constant passed by paramenter. If
+     * the position is greater than the columns quantity, nothing will change.
+     */
+    void mult_column(unsigned, const float);
+
+    /*
+     * Change the columns specified. If any of the columns specified overpass the columns quantity,
+     * nothing will change.
+     */
     void change_columns(unsigned, unsigned);
+
+    /*
+     * Change the rows specified. If any of the rows specified overpass the rows quantity, nothing
+     * will change.
+     */
     void change_rows(unsigned, unsigned);
 
-    bool is_estocastic() const;
+    /*
+     * Evaluate if the matrix is a stochastic one. Reminder: a matrix is Stochastic if all his rows
+     * have all his elements between 0 and 1, and the addition of those(in the row) is equal to 1.
+     */
+    bool is_stochastic() const;
+
+    /*
+     * Evaluate if the matrix is a square matrix. Reminder: a matrix is a Square matrix if both
+     * dimentions are equal.
+     */
     bool is_square() const;
+
+    /*
+     * Evaluate if the matrix is a vector. Reminder: a vector is a matrix with one of his dimentions
+     * are equal to 1.
+     */
     bool is_vector() const;
     
-    float operator()(unsigned, unsigned) const; // operator[]
-    Matrix operator*(float) const;
-    Matrix operator*(const Matrix &) const;
-    Matrix operator+(const Matrix &) const;
-    //Matrix operator+(Matrix &&); // i can use the same r-value matrix to return
+    /*
+     * Access operator: return the element in the position specified. If any of the parameters overpass 
+     * the actual dimentions, 0 will be returned.
+     */
+    float operator()(unsigned, unsigned) const;
 
-    // this two will be nearly the same
+    /*
+     * Multiplication by a constant operation. It returns another object with the result of the operation.
+     */
+    Matrix operator*(float) const;
+
+    /*
+     * Multiplication by a matrix operation. It returns another object with the result of the operation. If
+     * the dimentions of the matrices don't match(A.cols() != B.rows(), with A*B), the operation will 
+     * return a null matrix.
+     */
+    Matrix operator*(const Matrix &) const;
+
+    /*
+     * Addition of two matrices. It returns another object with the result of the operation. If the 
+     * dimentions of the matrices don't match(A.rows() != B.rows() || A.cols() != B.cols(), with A+B),
+     * then the operation will return a null matrix.
+     */
+    Matrix operator+(const Matrix &) const;
+
+    /*
+     * Return the inverse of the matrix. It returns another object with the result of the operation. 
+     * If the determinant is equal to 0, then the operation will return a null matrix.
+     */
     Matrix invert();
+
+    /*
+     * Return the determinant of the matrix.
+     */
     float determinant(); 
     
+    /*
+     * Return the transpose of the matrix. It returns another object with the result of the operation.
+     */
     Matrix traspose();
+
+    /*
+     * return the matrix attached in the position specified. It return another object with the result
+     * of the operation. If the position specified overpass the dimentions of the matrix, then the 
+     * operation will return a null matrix.
+     */
     Matrix matrix_attached(unsigned, unsigned);
 };
 
+/*
+ * Return an identity matrix with the dimention passed by parameter.
+ */
 Matrix identity(unsigned);
 
-Matrix mfo(unsigned, unsigned, float); //matrix of dimentions (row x col) where each element are elem.
+/*
+ * Return a matrix with the dimentions passed by parameter, and fill it with the floating point parameter
+ */
+Matrix mfo(unsigned, unsigned, float);
 
 /*
     Square matrices that have fixed dimensions of 2, 4 or 8. It implements
