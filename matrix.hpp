@@ -1,5 +1,5 @@
 /*
-  This piece implements matrix objects with some methods to manipulate them, and some 
+  This library implements matrix objects with some methods to manipulate them, and some 
   operations and functions. I would define the "null matrix" such as one that have a 
   dimension(or both) equaly to 0. This one would be returned in case of error.
   The class matrix is implemented in matrix.cpp, but Matrix_2sq, Matrix_4sq and
@@ -9,15 +9,27 @@
 #ifndef mod_matrix
 #define mod_matrix
 
+#include <type_traits>
+
+template<typename T>
+concept __Arith_t = requires(T a){
+    a * a;
+    a - a;
+    a + a;
+}
+
+template<__Arith_t T>
 class Matrix{
 private:
-    float * _data_;
+    T * _data_;
     unsigned _rows_;
     unsigned _columns_;
 public:
     Matrix(); // null matrix
-    Matrix(unsigned, unsigned, float * &); // put elems == nullptr
-    Matrix(unsigned, unsigned, float * &&); // not what's above
+
+    template<typename T>
+    Matrix(unsigned, unsigned, T) requires std::is_pointer_t<std::remove_reference_t<T>>;
+
     Matrix(const Matrix &);
     Matrix(Matrix &&);
     ~Matrix();
@@ -38,13 +50,13 @@ public:
      * Multiply the row in the position specified by the float constant passed by parameter. If the
      * position is greater than the rows quantity, nothing will change.
      */
-    void mult_row(unsigned, const float);
+    void mult_row(unsigned, const T &);
 
     /*
      * Multiply the column in the position specified by the float constant passed by paramenter. If
      * the position is greater than the columns quantity, nothing will change.
      */
-    void mult_column(unsigned, const float);
+    void mult_column(unsigned, const T &);
 
     /*
      * Change the columns specified. If any of the columns specified overpass the columns quantity,
@@ -85,7 +97,7 @@ public:
     /*
      * Multiplication by a constant operation. It returns another object with the result of the operation.
      */
-    Matrix operator*(float) const;
+    Matrix operator*(const T &) const;
 
     /*
      * Multiplication by a matrix operation. It returns another object with the result of the operation. If
@@ -133,7 +145,8 @@ Matrix identity(unsigned);
 /*
  * Return a matrix with the dimentions passed by parameter, and fill it with the floating point parameter
  */
-Matrix mfo(unsigned, unsigned, float);
+template<Arith_t T>
+Matrix mfo(unsigned, unsigned, const T &);
 
 /*
     Square matrices that have fixed dimensions of 2, 4 or 8. It implements
@@ -142,6 +155,7 @@ Matrix mfo(unsigned, unsigned, float);
 */
 class Matrix_Nsq{
 public:
+    Matrix_Nsq();
     Matrix_Nsq(unsigned N, float * & elems); // put elems == nullptr
     Matrix_Nsq(unsigned N, float * && elems); // not what's above
     Matrix_Nsq(const Matrix_Nsq &);
