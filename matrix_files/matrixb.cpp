@@ -1,34 +1,11 @@
-/*
-  floathis library implements matrix objects with some methods to manipulate them, and some 
-  operations and functions. I would define the "null matrix" such as one that have a 
-  dimension(or both) equaly to 0. floathis one would be returned in case of error.
-  floathe class matrix is implemented in matrix.cpp, but Matrix_2sq, Matrix_4sq and
-  Matrix_8sq are not yet.
-*/
+/*********************************
+ *    Generic Size, Bool type    *
+ *********************************/
 
-#ifndef mod_matrix
-#define mod_matrix
-
-#include <type_traits>
-#include <utility>
-#include <cmath>
-#include <cstring>
-
-template<typename A>
-concept arithmetric = requires (A a) {
-    a + a;
-    a * a;
-};
-
-
-/************************************************
- *    Generic Size, Generic Arithmetric type    *
- ************************************************/
-
-template<arithmetric T>
-class Matrix{
+template<>
+class Matrix<bool>{
 private:
-    float * _data_;
+    bool * _data_;
     unsigned _rows_;
     unsigned _columns_;
 public:
@@ -39,7 +16,7 @@ public:
     }
 
     template<typename U>
-    requires std::is_same_v< std::remove_reference_t<U>, T* >
+    requires std::is_same_v< std::remove_reference_t<U>, bool* >
     Matrix(unsigned rows, unsigned columns, U && data){
         _rows_ = rows;
         _columns_ = columns;
@@ -54,8 +31,9 @@ public:
         _columns_ = M._columns_;
         if(_rows_ != 0 && _columns_ != 0) {
             unsigned length = _rows_ * _columns_;
-            _data_ = new T[_rows_ * _columns_];
-            for(unsigned i = 0; i < _rows_ * _columns_; i++) {
+            unsigned i;
+            _data_ = new bool[length];
+            for(unsigned i = 0; i < length; i++) {
                 _data_[i] = M._data_[i];
             }
         } else {
@@ -78,7 +56,7 @@ public:
             if (_data_ != nullptr) {
                 delete [] _data_;
             }
-            _data_ = new T[length];
+            _data_ = new bool[length];
             for(unsigned i = 0; i < length; i++){
                 _data_[i] = M._data_[i];
             }
@@ -108,8 +86,9 @@ public:
     template<arithmetric U>
     Matrix<U> cast() {
         if(_rows_ != 0 && _columns_ != 0) {
-            U * _data_new_ = new U[_rows_ * _columns_];
-            for(unsigned i = 0; i < _rows_ * _columns_; i++) {
+            unsigned length = _rows_ * _columns_;
+            U * _data_new_ = new U[length];
+            for(unsigned i = 0; i < length; i++) {
                 _data_new_[i] = (U)_data_[i];
             }
             return Matrix<U>(_rows_, _columns_, _data_new_);
@@ -182,7 +161,7 @@ public:
     /*
      *  Operator to access an element.
      * */
-    float operator()(unsigned row, unsigned column) const {
+    bool operator()(unsigned row, unsigned column) const {
         row--;
         column--;
         if(row <= _rows_ && column <= _columns_){
@@ -197,7 +176,7 @@ public:
     Matrix traspose() {
         if(_columns_ != 0 && _rows_ != 0) {
             unsigned i, j;
-            T * _data_new_ = new T[_columns_*_rows_];
+            bool * _data_new_ = new bool[_columns_*_rows_];
             for(i = 0; i < _rows_; i++) {
                 for(j = 0; j < _columns_; j++) {
                     _data_new_[_rows_*i + j] = _data_[_rows_*j + i];
@@ -219,7 +198,7 @@ public:
         if(row_to_elim <= _rows_ && col_to_elim <= _columns_) {
             unsigned i, j, pos_i, pos_j;
             unsigned _rows_new_ = _rows_-1, _columns_new_ = _columns_-1;
-            T * _data_new_ = new T[_rows_new_*_columns_new_];
+            bool * _data_new_ = new bool[_rows_new_*_columns_new_];
             for(i = 0; i < _rows_; i++) {
                 for(j = 0; j < _columns_; j++) {
                     pos_i = i;
@@ -240,41 +219,15 @@ public:
             return Matrix();
         }
     }
-    /*
-     *  floatest if the matrix is stochastic(the sum of the elements in all rows is 1, and all elements
-     *  are between 0 and 1).
-     * */
-    bool is_stochastic() const { 
-        unsigned i = 0, j;
-        T accumulate;
-        bool resul = true;
-
-        while(resul && i < _columns_) {
-            j = 0;
-            accumulate = 0;
-            while(resul && j < _rows_) {
-                if(0 <= _data_[_rows_*i + j] && _data_[_rows_*i + j] <= 1){
-                    accumulate += _data_[_rows_*i + j];
-                } else {
-                    resul = false;
-                }
-                j++;
-            }
-            if(accumulate != 1) 
-                resul = false;
-            i++;
-        }
-        return resul;
-    }
 
     /*
      *  Multiply the column referenced by 'column' by 'multiplier'.
      * */
-    void multr(unsigned row, float multiplier) {
+    void multr(unsigned row, bool multiplier) {
         row--;
-        if(row <= _rows_) { 
+        if(row <= _rows_) {
             for(unsigned i = _columns_ * row; i < _columns_ * (row + 1); i++) {
-                _data_[i] *= multiplier;
+                _data_[i] &= multiplier;
             }
         }
     }
@@ -282,11 +235,11 @@ public:
     /*
      *  Multiply the column referenced by 'column' by 'multiplier'.
      * */
-    void multc(unsigned column, float multiplier) { 
+    void multc(unsigned column, bool multiplier) { 
         column--;
         if(column <= _columns_) {
             for(unsigned i = 0; i < _rows_; i++) {
-                _data_[_columns_*i + column] *= multiplier;
+                _data_[_columns_*i + column] &= multiplier;
             }
         }
     }
@@ -294,38 +247,46 @@ public:
     /* 
      *  Matrix by constant operator.
      **/
-    Matrix operator*(float multiplier) const {
-        if(_rows_ != 0 && _columns_ != 0){
-            T * _data_new_ = new T[_columns_*_rows_];
-            for(unsigned i = 0; i < _rows_ * _columns_; i++) {
-                _data_new_[i] = _data_[i] * multiplier;
+    Matrix<bool> operator*(bool multiplier) const {
+        if(_rows_ != 0 && _columns_ != 0){ 
+            bool * _data_new_ = new bool[_columns_*_rows_];
+            if (multiplier) {
+                for(unsigned i = 0; i < _rows_ * _columns_; i++) {
+                    _data_new_[i] = _data_[i];
+                }
+            } else {
+                for(unsigned i = 0; i < _rows_ * _columns_; i++) {
+                    _data_new_[i] = false;
+                }
             }
             return Matrix(_rows_, _columns_, _data_new_);
         }
-        return Matrix();   
+        return Matrix();
     }
 
     /* 
      *  Matrix by Matrix operator.
      **/
     Matrix operator*(const Matrix & A) const {
-       if(_columns_ == A._rows_) {
-          unsigned i, j, k;
-          unsigned res;
-          T * _data_new_ = new float[_columns_*A._rows_];
-          for(i = 0; i < _rows_; i++){
-             for(j = 0; j < A._columns_; j++) {
-                res = _rows_*i + j;
-                _data_new_[res] = 0;
-                for(k = 0; k < _columns_; k++) {
-                   _data_new_[res] += _data_[_rows_*i + k] * A._data_[A._rows_*k + j];
+        if (_columns_ == A._rows_) {
+            unsigned i, j, k;
+            unsigned res;
+            bool * _data_new_ = new bool[_columns_*A._rows_];
+            for (i = 0; i < _rows_; i++) {
+                for (j = 0; j < A._columns_; j++) {
+                    res = _rows_*i + j;
+                    _data_new_[res] = false;
+                    k = 0;
+                    while (!_data_new_[res] && k < _columns_) {
+                        _data_new_[res] = _data_[_rows_*i + k] && A._data_[A._rows_*k + j];
+                        k++;
+                    }
                 }
-             }
-          }
-          return Matrix(_rows_, A._columns_, _data_new_);
-       } else {
-          return Matrix();
-       }
+            }
+            return Matrix(_rows_, A._columns_, _data_new_);
+        } else {
+            return Matrix();
+        }
     }
 
     /* 
@@ -334,61 +295,13 @@ public:
     Matrix operator+(const Matrix & M) const {
         if(_columns_ == M._columns_ && _rows_ == M._rows_) {
             unsigned i;
-            T * _data_new_ = new T[_columns_*_rows_];
-            for(i = 0; i < _rows_ * _columns_; i++) {
-                _data_new_[i] = _data_[i] + M._data_[i];
+            bool * _data_new_ = new bool[_columns_*_rows_];
+            for(i = 0; i < _rows_ * _columns_; i++) {    
+                _data_new_[i] = _data_[i] || M._data_[i];
             }
             return Matrix(_rows_, _columns_, _data_new_);
         } else {
             return Matrix();
         } 
-    }
-};  
-
-#include "./matrix_files/matrixf.cpp"
-#include "./matrix_files/matrixb.cpp"
-
-/*****************************
- *    Function definition    *
- *****************************/
-
-template<arithmetric T>
-/*
- * Return an identity matrix with the dimention passed by parameter.
- */
-Matrix<T> identity(unsigned dimension) {
-    if(dimension != 0){
-        unsigned i, j;
-        T * _data_new_ = new T[dimension * dimension];
-        for(i = 0; i < dimension; i++) {
-            for(j = 0; j < dimension; j++) {
-                _data_new_[dimension*i + j] = i == j;
-            }
-        }
-        return Matrix<T>(dimension, dimension, _data_new_);
-    } else {
-        return Matrix<T>();
-    }
-}
-
-template<arithmetric T>
-/*
- * Return a matrix with the dimentions passed by parameter, and fill it with the floating point parameter
- */
-Matrix<T> mfo(unsigned row, unsigned col, T elem) {
-    if(row != 0 && col != 0) {
-        unsigned i, j;
-        T * _data_new_;
-        _data_new_ = new T[row*col];
-        for(i = 0; i < row; i++) {
-            for(j = 0; j < col; j++) {
-                _data_new_[row*i + j] = elem;
-            }
-        }
-        return Matrix<T>(row, col, _data_new_);
-    } else {
-        return Matrix<T>();
     } 
-}
-
-#endif
+};

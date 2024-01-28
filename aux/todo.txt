@@ -1,0 +1,47 @@
+-agregar nuevas functiones is_oper_mb, 
+    is_oper_b, is_oper_u en mas partes.
+-arreglar replace_current y contemplar 
+    lo que estaba pensando.
+-introducion el parametro 'bool 
+    replce_in_repetition' y 'bool take_comming' 
+    en los metodos replace para poder tener mas 
+    maniobravilidad.
+
+otras funciones:
+
+simplify_values ()     	          
+    -> realiza todas las operaciones posibles 
+        para reducir la cantidad de nodos.
+
+get_xpres ()            	      
+    -> retorna una expresion copia de la 
+        subexpresion apuntada.
+
+to_right (uint64_t q)    	      
+    -> mueve la subexpresion apuntada q lugares
+        a la derecha.
+
+to_left (uint64_t q)   	          
+    -> mueve la subexpresion apuntada q lugares
+        a la izquierda. 
+
+quit_current (Xpres::iterator it) 
+    -> elimina solo lo apuntado por it y deja 
+        la expresion valida.
+
+quit_node_u (Xpres::iterator it)    
+    -> quita el nodo unitario (no el arbol) 
+        apuntado por it la expresion valida.
+
+----------------para despues-----------:
+--error cuando se intenta utilizar un iterador 
+    que inicialmente se utilizo para hacer 
+    compose.
+    
+to_son (Xpres::iterator it)    
+    -> mueve la subexpresion apuntada por it para
+        sea hijo de la apuntada por *this.
+
+to_sibling (Xpres::iterator it)    
+    -> mueve la subexpresion apuntada por it para
+        sea hermano de la apuntada por *this.
