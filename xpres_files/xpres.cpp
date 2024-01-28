@@ -1,6 +1,3 @@
-#include <cmath>
-#include <cctype>
-#include <iostream>
 #include "../xpres.hpp"
 
 /* "log2", "log10" cannot exists bacause is not acepted a token with numbers and letters. */

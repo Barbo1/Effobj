@@ -89,15 +89,16 @@ class Xpres{
             with the type of the value by first parameter and a void pointer to
             the final value by second parameter. The posible values to the first
             parameter are:
+                - 'E' to matrix<Xpres>.
                 - 'M' to matrix<double>.
-                - 'm' to matrix<long>.
+                - 'm' to matrix<int64_t>.
+                - 'e' to Xpres.
                 - 'd' to double.
-                - 'i' to long.
-                - 'e' to expresion.
+                - 'i' to int64_t.
         */
         std::pair<char, void*> evaluate() const;
 
-        #include "./xpresc/set_get_value.hpp"
+        #include "./xpres_files/set_get_value.hpp"
 
         /* 
             The iterator class is meant to control the operations of the expression. With it, you
@@ -226,6 +227,6 @@ std::ostream& operator<<(std::ostream & ofile, const Xpres::iterator & it);
 /* validate if a string is a valid expresion. */
 bool validate_string_expresion(std::string_view sexp_view);
 
-#include "./xpresc/xpres.cpp"
+#include "./xpres_files/xpres.cpp"
 
 #endif

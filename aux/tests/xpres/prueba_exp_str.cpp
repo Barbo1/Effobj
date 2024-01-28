@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 
-#include "../xpres.hpp"
-#include "../matrix.hpp"
+#include "../../../xpres.hpp"
+#include "../../../matrix.hpp"
 
 template<typename T>
 void print_matrix(const Matrix<T> & A){

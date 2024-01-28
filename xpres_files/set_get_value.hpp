@@ -46,7 +46,6 @@ bool set_value(std::string_view name, const T& value) {
         } else if (std::is_same_v<int64_t, T>) {
             type = 'i';
         } else {
-            std::cout << "retorno falso" << std::endl;
             return false;
         }
         data = (void *) (new T(value));
