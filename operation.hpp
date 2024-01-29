@@ -11,19 +11,19 @@
 
 __Graph_Undirected__ MtoG(Matrix & M);
 
-template<typename T>
 /* 
     Two expresions 'a' and 'b' are Multipliable if they have defined the * binary operation.
 */
+template<typename T>
 concept Multipliable = requires(T a){
     a * a;
 };
 
-template<typename T>
 /* 
     Two expresions 'a' and 'b' are Orderable if they define the ordered operations.
     (>, <, >=, <=, ==)
 */
+template<typename T>
 concept Orderable = requires(T a){
     a > a;
     a < a;
@@ -35,12 +35,12 @@ concept Orderable = requires(T a){
 /* the floor(log2(x)) operation, implemented way effitient. */
 inline constexpr unsigned flog2(unsigned x);
 
-template<typename T>
-requires Multipliable<T>
 /*
     get an Multipliable object and an integer, and make the "object" to the
     "integer" operation. It needs that pot > 0.
 */
+template<typename T>
+requires Multipliable<T>
 constexpr T int_pot(const T &, unsigned pot);
 
 /* 
@@ -61,13 +61,13 @@ unsigned* discompressPrimes(unsigned);
 */
 unsigned phi(unsigned n);
 
-template<typename T>
-requires Orderable<T>
 /*
     Algorithm to sort elements that have the requirement Orderable. The implementation
     use recursiveness. If it is not desired, other algorithms can be used instead.
     (std::sort use quicksort or introsort)
 */
+template<typename T>
+requires Orderable<T>
 void mergesort(T * arr, unsigned n);
 
 /*

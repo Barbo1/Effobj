@@ -1,47 +1,59 @@
--agregar nuevas functiones is_oper_mb, 
-    is_oper_b, is_oper_u en mas partes.
--arreglar replace_current y contemplar 
-    lo que estaba pensando.
--introducion el parametro 'bool 
-    replce_in_repetition' y 'bool take_comming' 
-    en los metodos replace para poder tener mas 
-    maniobravilidad.
+TODOs to made:
 
-otras funciones:
+Matrix:
+    -make specialization for:
+        1 - integral, floating_point (joined)
+        2 - bool (make it better)
+        3 - integral
+        4 - floating_point
+        5 - generic for all arithmetric types.
 
-simplify_values ()     	          
-    -> realiza todas las operaciones posibles 
-        para reducir la cantidad de nodos.
+Graphs:
+    -make them (._.)
 
-get_xpres ()            	      
-    -> retorna una expresion copia de la 
-        subexpresion apuntada.
+Xpres:
+    -repare replace_current function.
+    -add the parameters 'bool replce_in_repetition' and 'bool take_comming' to get more maneuveravility.
+    -error when trying to use an iterator that where used before to compose().
+    -restructure the code to hold data of tokens with 'typedef std::pair<char, void*> value_t' to get make 
+        it more readible and effitient.
+    -make support for the following functions:
+        - log2 (base 2 logarithm).
+        - log10 (base 10 logarithm).
+        - randM (return a matrix of double random numbers).
+        - randI (return a matrix of integer random numbers).
+        - randd (return a double random number).
+        - randd (return a integer random number).
+        - possibly functions with more than one parameter.
+    -add this functions:
+        Xpres::simplify_values () 
+        Xpres::iterator::simplify_values () 
+            -> make all posible operations to reduce the quantity of nodes, that means:
+                reduce the double minus, operate the operators that have constant operands, etc.
 
-to_right (uint64_t q)    	      
-    -> mueve la subexpresion apuntada q lugares
-        a la derecha.
+        Xpres::iterator::get_xpres () 
+            -> return a Xpres that is a copy of the pointed subXpres.
 
-to_left (uint64_t q)   	          
-    -> mueve la subexpresion apuntada q lugares
-        a la izquierda. 
+        Xpres::iterator::to_right (uint64_t q)
+            -> move the poined subXpres q positions to right.
 
-quit_current (Xpres::iterator it) 
-    -> elimina solo lo apuntado por it y deja 
-        la expresion valida.
+        Xpres::iterator::to_left (uint64_t q)
+            -> move the poined subXpres q positions to left.
 
-quit_node_u (Xpres::iterator it)    
-    -> quita el nodo unitario (no el arbol) 
-        apuntado por it la expresion valida.
+        Xpres::iterator::quit_current () 
+            -> remove only the pointed subXpres.
 
-----------------para despues-----------:
---error cuando se intenta utilizar un iterador 
-    que inicialmente se utilizo para hacer 
-    compose.
-    
-to_son (Xpres::iterator it)    
-    -> mueve la subexpresion apuntada por it para
-        sea hijo de la apuntada por *this.
+        quit_node_u (Xpres::iterator it) 
+            -> remove the pointed unitary node, keeping the Xpres valid.
 
-to_sibling (Xpres::iterator it)    
-    -> mueve la subexpresion apuntada por it para
-        sea hermano de la apuntada por *this.
+        ----------------dont know if needed----------------
+
+        Xpres::iterator::to_son (Xpres::iterator it)    
+            -> move the pointed subXpres by it to be the first son of *this.
+
+        Xpres::iterator::to_sibling (Xpres::iterator it)    
+            -> move the pointed subXpres by it to be a sibling of *this.
+
+
+
+

@@ -17,7 +17,7 @@
 template<typename T>
 concept arithmetric = requires (T a) {
     a + a;
-    - a;
+    a - a;
     a * a;
     a / a;
 };

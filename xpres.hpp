@@ -74,6 +74,7 @@ class Xpres{
         Xpres operator~();
         Xpres apply_function(std::string_view func_name);
 
+        Xpres operator-(const Xpres & exp);
         Xpres operator^(const Xpres & exp);
         Xpres operator%(const Xpres & exp);
         Xpres operator/(const Xpres & exp);
@@ -169,11 +170,12 @@ class Xpres{
                     with the type of the value by first parameter and a void pointer to
                     the final value by secon parameter. The posible values to the first
                     parameter are:
-                        - 'M' to matrix<float>.
-                        - 'm' to matrix<int>.
+                        - 'E' to matrix<Xpres>.
+                        - 'M' to matrix<double>.
+                        - 'm' to matrix<int64_t>.
+                        - 'e' to Xpres.
                         - 'd' to double.
-                        - 'i' to long int.
-                        - 'e' to expresion.
+                        - 'i' to int64_t.
                 */
                 std::pair<char, void*> evaluate() const;
 
@@ -198,6 +200,7 @@ class Xpres{
                 iterator& operator~(); 
                 iterator& apply_function(std::string_view func_name); 
 
+                iterator& operator-(const Xpres & exp); 
                 iterator& operator^(const Xpres & exp); 
                 iterator& operator%(const Xpres & exp); 
                 iterator& operator/(const Xpres & exp); 
@@ -210,11 +213,21 @@ class Xpres{
                 
                 /* friendship. */
                 friend std::ostream& operator<<(std::ostream & of, const iterator & it);
+                friend void operate_operator_iterator(
+                    const char oper, 
+                    Xpres::iterator& it, 
+                    const Xpres& exp
+                ); 
         };
 
         /* friendship. */
         friend Xpres operator""_exp(const char8_t*, std::size_t);
         friend std::ostream& operator<<(std::ostream & of, const Xpres & exp);
+
+        /* function to make the operator methods. */
+        friend Xpres operate_operator(const char oper, const Xpres& obj, const Xpres& exp);
+        friend void operate_operator_iterator(const char oper, Xpres::iterator& it, const Xpres& exp); 
+        friend void almost_empty_points(std::stack<nodeEX>& points);
 };
 
 Xpres operator""_exp(const char * exp, size_t);
