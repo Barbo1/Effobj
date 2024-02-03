@@ -12,7 +12,6 @@ Matrix traspose() {
             }
         }
         return Matrix(_columns_, _rows_, _data_new_, true);
-    } else {
-        return Matrix();
     }
+    return Matrix();
 }

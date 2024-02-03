@@ -2,13 +2,11 @@
 /*--------------------------------------Xpres needed functions----------------------------------------*/
 
 /* Return the final Xpres. Precondition: is_oper_m (oper) .*/
-Xpres operate_operator(const char oper, const Xpres& obj, const Xpres& exp) {
-    Xpres xp = Xpres(obj);
+Xpres& operate_operator(const char oper, Xpres& xp, const Xpres& exp) {
     nodeEX prin = copy_nodes(exp.root);
     
-    xp.token_info = obj.token_info;
     std::vector<uint64_t> vecc;
-    const uint64_t n = obj.token_info.size();
+    const uint64_t n = xp.token_info.size();
     uint64_t cont = n, i;
     for (auto elem: exp.token_info) {
         const auto& [name, _, __] = elem;
@@ -117,63 +115,89 @@ Xpres Xpres::apply_function(std::string_view func_name) {
     return *this;
 }
 
-Xpres Xpres::operator-(const Xpres & exp){
+Xpres Xpres::operator-=(const Xpres & exp) {
     return operate_operator('-', *this, exp);
 }
 
-Xpres Xpres::operator^(const Xpres & exp){
-    return operate_operator('^', *this, exp);
-}
-
-Xpres Xpres::operator%(const Xpres & exp){
-    return operate_operator('%', *this, exp);
-}
-
-Xpres Xpres::operator/(const Xpres & exp){
+Xpres Xpres::operator/=(const Xpres & exp) {
     return operate_operator('/', *this, exp);
 }
 
-Xpres Xpres::operator*(const Xpres & exp){
-    return operate_operator('*', *this, exp);
-}
-
-Xpres Xpres::operator+(const Xpres & exp){
+Xpres Xpres::operator+=(const Xpres & exp) {
     return operate_operator('+', *this, exp);
 }
 
-Xpres Xpres::operator<(const Xpres & exp){
-    return operate_operator('<', *this, exp);
+Xpres Xpres::operator*=(const Xpres & exp) {
+    return operate_operator('*', *this, exp);
 }
 
-Xpres Xpres::operator>(const Xpres & exp){
-    return operate_operator('>', *this, exp);
+Xpres Xpres::operator-(const Xpres & exp) {
+    Xpres xp = Xpres(*this);
+    return operate_operator('-', xp, exp);
 }
 
-Xpres Xpres::operator&(const Xpres & exp){
-    return operate_operator('&', *this, exp);
+Xpres Xpres::operator^(const Xpres & exp) {
+    Xpres xp = Xpres(*this);
+    return operate_operator('^', xp, exp);
 }
 
-Xpres Xpres::operator|(const Xpres & exp){
-    return operate_operator('|', *this, exp);
+Xpres Xpres::operator%(const Xpres & exp) {
+    Xpres xp = Xpres(*this);
+    return operate_operator('%', xp, exp);
+}
+
+Xpres Xpres::operator/(const Xpres & exp) {
+    Xpres xp = Xpres(*this);
+    return operate_operator('/', xp, exp);
+}
+
+Xpres Xpres::operator*(const Xpres & exp) {
+    Xpres xp = Xpres(*this);
+    return operate_operator('*', xp, exp);
+}
+
+Xpres Xpres::operator+(const Xpres & exp) {
+    Xpres xp = Xpres(*this);
+    return operate_operator('+', xp, exp);
+}
+
+Xpres Xpres::operator<(const Xpres & exp) {
+    Xpres xp = Xpres(*this);
+    return operate_operator('<', xp, exp);
+}
+
+Xpres Xpres::operator>(const Xpres & exp) {
+    Xpres xp = Xpres(*this);
+    return operate_operator('>', xp, exp);
+}
+
+Xpres Xpres::operator&(const Xpres & exp) {
+    Xpres xp = Xpres(*this);
+    return operate_operator('&', xp, exp);
+}
+
+Xpres Xpres::operator|(const Xpres & exp) {
+    Xpres xp = Xpres(*this);
+    return operate_operator('|', xp, exp);
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------Iterator----------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
 
-Xpres::iterator& Xpres::iterator::operator!(){
+Xpres::iterator& Xpres::iterator::operator!() {
     points.top() = create_node('p', '!', points.top());
     almost_empty_points(this->points);
     return *this;
 }
 
-Xpres::iterator& Xpres::iterator::operator-(){
+Xpres::iterator& Xpres::iterator::operator-() {
     points.top() = create_node('p', '-', points.top());
     almost_empty_points(this->points);
     return *this;
 }
 
-Xpres::iterator& Xpres::iterator::operator~(){
+Xpres::iterator& Xpres::iterator::operator~() {
     points.top() = create_node('p', '~', points.top());
     almost_empty_points(this->points);
     return *this;
@@ -185,53 +209,53 @@ Xpres::iterator& Xpres::iterator::apply_function(std::string_view func_name) {
     return *this;
 }
 
-Xpres::iterator& Xpres::iterator::operator-(const Xpres & exp){
+Xpres::iterator& Xpres::iterator::operator-(const Xpres & exp) {
     points.top() = create_node('p', '-', points.top());
     almost_empty_points(this->points);
     return *this;
 }
 
-Xpres::iterator& Xpres::iterator::operator^(const Xpres & exp){
+Xpres::iterator& Xpres::iterator::operator^(const Xpres & exp) {
     operate_operator_iterator('^', *this, exp);
     return *this;
 }
 
-Xpres::iterator& Xpres::iterator::operator%(const Xpres & exp){
+Xpres::iterator& Xpres::iterator::operator%(const Xpres & exp) {
     operate_operator_iterator('%', *this, exp);
     return *this;
 }
 
-Xpres::iterator& Xpres::iterator::operator/(const Xpres & exp){
+Xpres::iterator& Xpres::iterator::operator/(const Xpres & exp) {
     operate_operator_iterator('/', *this, exp);
     return *this;
 }
 
-Xpres::iterator& Xpres::iterator::operator*(const Xpres & exp){
+Xpres::iterator& Xpres::iterator::operator*(const Xpres & exp) {
     operate_operator_iterator('*', *this, exp);
     return *this;
 }
 
-Xpres::iterator& Xpres::iterator::operator+(const Xpres & exp){
+Xpres::iterator& Xpres::iterator::operator+(const Xpres & exp) {
     operate_operator_iterator('+', *this, exp);
     return *this;
 }
 
-Xpres::iterator& Xpres::iterator::operator<(const Xpres & exp){
+Xpres::iterator& Xpres::iterator::operator<(const Xpres & exp) {
     operate_operator_iterator('<', *this, exp);
     return *this;
 }
 
-Xpres::iterator& Xpres::iterator::operator>(const Xpres & exp){
+Xpres::iterator& Xpres::iterator::operator>(const Xpres & exp) {
     operate_operator_iterator('>', *this, exp);
     return *this;
 }
 
-Xpres::iterator& Xpres::iterator::operator&(const Xpres & exp){
+Xpres::iterator& Xpres::iterator::operator&(const Xpres & exp) {
     operate_operator_iterator('&', *this, exp);
     return *this;
 }
 
-Xpres::iterator& Xpres::iterator::operator|(const Xpres & exp){
+Xpres::iterator& Xpres::iterator::operator|(const Xpres & exp) {
     operate_operator_iterator('|', *this, exp);
     return *this;
 }

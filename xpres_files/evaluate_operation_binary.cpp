@@ -8,34 +8,34 @@ inline std::pair<char, void*> evaluate_operator_binary(
         const char ope
     ) {
     if (op1.first == 'i' && op2.first == 'i') {
-        long int * a = (long int*)op1.second; 
+        data_t * a = (data_t*)op1.second; 
         switch (ope) {
             case '^':
-                *a = std::pow(*a, * (long int*) op2.second);
+                *a = std::pow(*a, * (data_t*) op2.second);
                 break;
             case '%':
-                *a = (*a) % (* (long int*) op2.second);
+                *a = (*a) % (* (data_t*) op2.second);
                 break;
             case '/':
-                *a = (*a) / (* (long int*) op2.second);
+                *a = (*a) / (* (data_t*) op2.second);
                 break;
             case '*':
-                *a = (*a) * (* (long int*) op2.second);
+                *a = (*a) * (* (data_t*) op2.second);
                 break;
             case '+':
-                *a = (*a) + (* (long int*) op2.second);
+                *a = (*a) + (* (data_t*) op2.second);
                 break;
             case '<':
-                *a = (*a) << (* (long int*) op2.second);
+                *a = (*a) << (* (data_t*) op2.second);
                 break;
             case '>':
-                *a = ((*a) >> (* (long int*) op2.second));
+                *a = ((*a) >> (* (data_t*) op2.second));
                 break;
             case '&':
-                *a = (*a) & (* (long int*) op2.second);
+                *a = (*a) & (* (data_t*) op2.second);
                 break;
             case '|':
-                *a = (*a) | (* (long int*) op2.second);
+                *a = (*a) | (* (data_t*) op2.second);
                 break;
             default:
                 free_pair(op2);
@@ -48,24 +48,24 @@ inline std::pair<char, void*> evaluate_operator_binary(
         double * a = (double *)op2.second;
         switch (ope) {
             case '^':
-                *a = std::pow(* (long int*) op1.second, *a);
+                *a = std::pow(* (data_t*) op1.second, *a);
                 break;
             case '/':
-                *a = (double)(* (long int*) op1.second) / (*a);
+                *a = (double)(* (data_t*) op1.second) / (*a);
                 break;
             case '*':
-                *a = (* (long int*) op1.second) * (*a);
+                *a = (* (data_t*) op1.second) * (*a);
                 break;
             case '+':
-                *a = (double)(* (long int*) op1.second) + (*a);
+                *a = (double)(* (data_t*) op1.second) + (*a);
                 break;
             case '&': {
-                long int r = (* (long int*) op1.second) | (* (long int *) a);
+                data_t r = (* (data_t*) op1.second) | (* (data_t *) a);
                 *a = * (double *) &r;
                 break;
             }
             case '|': {
-                long int r = (* (long int*) op1.second) & (* (long int *) a);
+                data_t r = (* (data_t*) op1.second) & (* (data_t *) a);
                 *a = * (double *) &r;
                 break;
             }
@@ -81,34 +81,34 @@ inline std::pair<char, void*> evaluate_operator_binary(
         double * a = (double *)op1.second;
         switch (ope) {
             case '^':
-                *a = std::pow(*a, * (long int*) op2.second);
+                *a = std::pow(*a, * (data_t*) op2.second);
                 break;
             case '/':
-                *a = (*a) / (double)(* (long int*) op2.second);
+                *a = (*a) / (double)(* (data_t*) op2.second);
                 break;
             case '*':
-                *a *= (double)(* (long int*) op2.second);
+                *a *= (double)(* (data_t*) op2.second);
                 break;
             case '+':
-                *a += (double)(* (long int*) op2.second);
+                *a += (double)(* (data_t*) op2.second);
                 break;
             case '<': {
-                long int r = (* (long int *) a) << (* (long int*) op2.second);
+                data_t r = (* (data_t *) a) << (* (data_t*) op2.second);
                 *a = * (double*) &r;
                 break;
             }
             case '>': {
-                long int r = (* (long int *) a) >> (* (long int*) op2.second);
+                data_t r = (* (data_t *) a) >> (* (data_t*) op2.second);
                 *a = * (double*) &r;
                 break;
             }
             case '&': {
-                long int r = (* (long int *) a) & (* (long int*) op2.second);
+                data_t r = (* (data_t *) a) & (* (data_t*) op2.second);
                 *a = * (double*) &r;
                 break;
             }
             case '|': {
-                long int r = (* (long int *) a) | (* (long int*) op2.second);
+                data_t r = (* (data_t *) a) | (* (data_t*) op2.second);
                 *a = * (double*) &r;
                 break;
             }
@@ -136,13 +136,13 @@ inline std::pair<char, void*> evaluate_operator_binary(
                 break;
             case '&':
                 {
-                    long int r = (* (long int *) a) & (* (long int*) op2.second);
+                    data_t r = (* (data_t *) a) & (* (data_t*) op2.second);
                     *a = * (double*) &r;
                     break;
                 }
             case '|':
                 {
-                    long int r = (* (long int *) a) | (* (long int*) op2.second);
+                    data_t r = (* (data_t *) a) | (* (data_t*) op2.second);
                     *a = * (double*) &r;
                     break;
                 }
@@ -154,13 +154,13 @@ inline std::pair<char, void*> evaluate_operator_binary(
         }
         free_pair(op2);
     } else if (op1.first == 'm' && op2.first == 'm') {
-        Matrix<long int> * a = (Matrix<long int> *)op1.second;
+        Matrix<data_t> * a = (Matrix<data_t> *)op1.second;
         switch (ope) {
             case '*':
-                *a = (*a) * (* (Matrix<long int> *) op2.second);
+                *a = (*a) * (* (Matrix<data_t> *) op2.second);
                 break;
             case '+':
-                *a = (*a) + (* (Matrix<long int> *) op2.second);
+                *a = (*a) + (* (Matrix<data_t> *) op2.second);
                 break;
             default:
                 free_pair(op2);
@@ -173,10 +173,10 @@ inline std::pair<char, void*> evaluate_operator_binary(
         Matrix<double> * a = (Matrix<double> *)op1.second;
         switch (ope) {
             case '*':
-                *a = (*a) * (* (Matrix<long int> *) op2.second).cast<double>();
+                *a = (*a) * (* (Matrix<data_t> *) op2.second).cast<double>();
                 break;
             case '+':
-                *a = (*a) + (* (Matrix<long int> *) op2.second).cast<double>();
+                *a = (*a) + (* (Matrix<data_t> *) op2.second).cast<double>();
                 break;
             default:
                 free_pair(op2);
@@ -189,10 +189,10 @@ inline std::pair<char, void*> evaluate_operator_binary(
         Matrix<double> * a = (Matrix<double> *)op2.second;
         switch (ope) {
             case '*':
-                *a = (* (Matrix<long int> *) op1.second).cast<double>() * (*a);
+                *a = (* (Matrix<data_t> *) op1.second).cast<double>() * (*a);
                 break;
             case '+':
-                *a = (* (Matrix<long int> *) op1.second).cast<double>() + (*a);
+                *a = (* (Matrix<data_t> *) op1.second).cast<double>() + (*a);
                 break;
             default:
                 free_pair(op2);

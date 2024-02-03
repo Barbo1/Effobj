@@ -9,6 +9,18 @@ Xpres::Xpres() {
     this->root = create_node(0, 0);
 }
 
+/* Constructor from a int.
+ * */
+Xpres::Xpres(int i) {
+    this->root = create_node('i', i);
+}
+
+/* Constructor from a double.
+ * */
+Xpres::Xpres(double d) {
+    this->root = create_node('d', d);
+}
+
 /* This is the constructor that make an expresion form a string.
  * Precondition: the string is a valid expresion, that menas,
  * validate_string_expresion(sexp) == true. 
@@ -197,12 +209,10 @@ Xpres::Xpres(Xpres && exp) noexcept {
 
 /* Copy assignment. 
  * */
-Xpres& Xpres::operator=(const Xpres & exp){
+Xpres& Xpres::operator=(const Xpres & exp) noexcept {
     if(&exp != this) {
-        
         delete_nodes(this->root);
-        this->root = copy_nodes(exp.root, false);
-        
+        this->root = copy_nodes(exp.root);
         for (const auto& [name, type, data] : this->token_info) {
             free_pair({type, data});
         }
@@ -235,7 +245,7 @@ bool Xpres::operator==(const Xpres & exp) const noexcept {
 
 /* Destructor.
  * */
-Xpres::~Xpres(){
+Xpres::~Xpres() {
     delete_nodes(this->root);
     for (const auto& [name, type, data] : this->token_info) {
         free_pair({type, data});

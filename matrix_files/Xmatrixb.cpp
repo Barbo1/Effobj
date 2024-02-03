@@ -2,38 +2,44 @@
  *    Generic Size, Bool type    *
  *********************************/
 
+#define bits 32
+typedef vectorBM uint32_t;
+
 template<>
 class Matrix<bool>{
 private:
-    bool * _data_;
+    vectorBM * _data_;
     unsigned _rows_;
     unsigned _columns_;
 public:
     Matrix() {
        _data_ = nullptr;
-       _rows_ = 0;
        _columns_ = 0;
+       _rows_ = 0;
     }
 
     template<typename U>
-    requires std::is_same_v< std::remove_reference_t<U>, bool* >
-    Matrix(unsigned rows, unsigned columns, U && data){
-        _rows_ = rows;
+    requires std::is_same_v< U, bool* >
+    Matrix (unsigned rows, unsigned columns, U data, bool consume_data = false) {
+        int _len_buck_ = columns / bits;
         _columns_ = columns;
-        _data_ = data;
-        if(std::is_lvalue_reference_v<U>) {
-            data = nullptr;
+        _rows_ = rows;
+        _data_ = new vectorBM[_len_buck_ * _rows_]{0};
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                _data_[i*_len_buck_ + j / bits] |= data[i*columns + j] << ((bits ^ 1) - j % bits);
+            }
         }
+        if (consume_data) delete [] data;
     }
 
     Matrix(const Matrix & M) {
         _rows_ = M._rows_;
         _columns_ = M._columns_;
         if(_rows_ != 0 && _columns_ != 0) {
-            unsigned length = _rows_ * _columns_;
-            unsigned i;
-            _data_ = new bool[length];
-            for(unsigned i = 0; i < length; i++) {
+            int length = _rows_ * (_columns_ / bits);
+            _data_ = new vectorBM[length];
+            for(int i = 0; i < length; i++) {
                 _data_[i] = M._data_[i];
             }
         } else {
@@ -51,13 +57,12 @@ public:
         _rows_ = M._rows_;
         _columns_ = M._columns_;
         if(_rows_ != 0 && _columns_ != 0){
-            unsigned length = _rows_ * _columns_;
-            unsigned i;
+            unsigned length = _rows_ * (_columns_ / bits);
             if (_data_ != nullptr) {
                 delete [] _data_;
             }
-            _data_ = new bool[length];
-            for(unsigned i = 0; i < length; i++){
+            _data_ = new vectorBM[length];
+            for(int i = 0; i < length; i++){
                 _data_[i] = M._data_[i];
             }
         } else {
@@ -88,10 +93,13 @@ public:
         if(_rows_ != 0 && _columns_ != 0) {
             unsigned length = _rows_ * _columns_;
             U * _data_new_ = new U[length];
-            for(unsigned i = 0; i < length; i++) {
-                _data_new_[i] = (U)_data_[i];
+            for(unsigned i = 0; i < _rows_; i++) {
+                for(unsigned j = 0; j < _columns_; j++) {
+                    _data_new [i * _columns_ + j] = 
+                        _data_[i * _len_buck_ + j / bits] & (1 << ((bits ^ 1) - j % bits));
+                }
             }
-            return Matrix<U>(_rows_, _columns_, _data_new_);
+            return Matrix<U>(_rows_, _columns_, _data_new_, true);
         } else {
             return Matrix<U>();
         }
@@ -182,7 +190,7 @@ public:
                     _data_new_[_rows_*i + j] = _data_[_rows_*j + i];
                 }
             }
-            return Matrix(_columns_, _rows_, _data_new_);
+            return Matrix(_columns_, _rows_, _data_new_, true);
         } else {
             return Matrix();
         }
@@ -214,7 +222,7 @@ public:
                     }
                 }
             }
-            return Matrix(_rows_new_, _columns_new_, _data_new_);
+            return Matrix(_rows_new_, _columns_new_, _data_new_, true);
         } else {
             return Matrix();
         }
@@ -259,7 +267,7 @@ public:
                     _data_new_[i] = false;
                 }
             }
-            return Matrix(_rows_, _columns_, _data_new_);
+            return Matrix(_rows_, _columns_, _data_new_, true);
         }
         return Matrix();
     }
@@ -283,10 +291,9 @@ public:
                     }
                 }
             }
-            return Matrix(_rows_, A._columns_, _data_new_);
-        } else {
-            return Matrix();
+            return Matrix(_rows_, A._columns_, _data_new_, true);
         }
+        return Matrix();
     }
 
     /* 
@@ -299,9 +306,8 @@ public:
             for(i = 0; i < _rows_ * _columns_; i++) {    
                 _data_new_[i] = _data_[i] || M._data_[i];
             }
-            return Matrix(_rows_, _columns_, _data_new_);
-        } else {
-            return Matrix();
+            return Matrix(_rows_, _columns_, _data_new_, true);
         } 
+        return Matrix();
     } 
 };

@@ -38,12 +38,16 @@ class Xpres{
         Xpres(std::string_view sexp); 
         Xpres(const Xpres & exp); 
         Xpres(Xpres && exp) noexcept; 
-        Xpres& operator=(const Xpres & exp); 
+        Xpres& operator=(const Xpres & exp) noexcept; 
         Xpres& operator=(Xpres && exp) noexcept; 
         bool operator==(const Xpres & exp) const noexcept; 
-        std::string to_string() const noexcept; 
         ~Xpres();
         
+        /* Convertion methods. */
+        Xpres(int i);
+        Xpres(double d);
+        std::string to_string() const noexcept; 
+
         /* 
             Take the name of a token and quit the appearances. This means 
             that if the token is adding, then will be changed by 0, y is 
@@ -73,6 +77,11 @@ class Xpres{
         Xpres operator-();
         Xpres operator~();
         Xpres apply_function(std::string_view func_name);
+
+        Xpres operator-=(const Xpres & exp);
+        Xpres operator/=(const Xpres & exp);
+        Xpres operator*=(const Xpres & exp);
+        Xpres operator+=(const Xpres & exp);
 
         Xpres operator-(const Xpres & exp);
         Xpres operator^(const Xpres & exp);
@@ -222,12 +231,15 @@ class Xpres{
 
         /* friendship. */
         friend Xpres operator""_exp(const char8_t*, std::size_t);
+        friend void operate_operator_iterator(
+            const char oper, 
+            Xpres::iterator& it, 
+            const Xpres& exp
+        ); 
         friend std::ostream& operator<<(std::ostream & of, const Xpres & exp);
 
         /* function to make the operator methods. */
-        friend Xpres operate_operator(const char oper, const Xpres& obj, const Xpres& exp);
-        friend void operate_operator_iterator(const char oper, Xpres::iterator& it, const Xpres& exp); 
-        friend void almost_empty_points(std::stack<nodeEX>& points);
+        friend Xpres& operate_operator(const char oper, Xpres& obj, const Xpres& exp);
 };
 
 Xpres operator""_exp(const char * exp, size_t);

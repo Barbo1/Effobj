@@ -23,14 +23,14 @@ inline std::pair<char, void*> evaluate_operator_unitary(std::pair<char, void*> o
                 }
                 case 'm': {
                     Matrix<data_t> * b = (Matrix<data_t> *) op1.second;
-                    op1.second = new double{(std::move(*b)).determinant()};
+                    op1.second = new double{(*b).determinant()};
                     op1.first = 'd';
                     delete b;
                     break;
                 }
                 case 'M': {
                     Matrix<double> * b = (Matrix<double> *) op1.second;
-                    op1.second = new double{(std::move(*b)).determinant()};
+                    op1.second = new double{(*b).determinant()};
                     op1.first = 'd';
                     delete b;
                     break;

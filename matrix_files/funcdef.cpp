@@ -12,7 +12,7 @@ Matrix<T> identity(unsigned dimension) {
                 _data_new_[dimension*i + j] = i == j;
             }
         }
-        return Matrix<T>(dimension, dimension, _data_new_);
+        return Matrix<T>(dimension, dimension, _data_new_, true);
     } else {
         return Matrix<T>();
     }
@@ -22,14 +22,11 @@ template<arithmetric T>
 Matrix<T> mfo(unsigned row, unsigned col, T elem) {
     if(row != 0 && col != 0) {
         unsigned i, j;
-        T * _data_new_;
-        _data_new_ = new T[row*col];
-        for(i = 0; i < row; i++) {
-            for(j = 0; j < col; j++) {
-                _data_new_[row*i + j] = elem;
-            }
+        T * _data_new_ = new T[row * col];
+        for(i = 0; i < row*col; i++) {
+            _data_new_[i] = elem;
         }
-        return Matrix<T>(row, col, _data_new_);
+        return Matrix<T>(row, col, _data_new_, true);
     } else {
         return Matrix<T>();
     } 

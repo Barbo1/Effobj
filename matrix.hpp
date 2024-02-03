@@ -14,13 +14,23 @@
 #include <cmath>
 #include <cstring>
 
-template<typename T>
-concept arithmetric = requires (T a) {
-    a + a;
-    a - a;
-    a * a;
-    a / a;
+template<typename _type> concept arithmetric = requires (_type Arth, int i) {
+    Arth + Arth;                                    // addition 
+    Arth += Arth;
+    Arth - Arth;                                    // substraction 
+    Arth -= Arth;
+    Arth * Arth;                                    // multiplication 
+    Arth *= Arth;
+    Arth / Arth;                                    // division 
+    Arth /= Arth;
+    Arth == Arth;                                   // equal comparation
+    Arth = Arth;                                    // asignation
+    requires std::constructible_from<_type, int>;   // 1, -1, 0 needs to be convertible to _type
 };
+
+/**********************
+ *    Generic type    *
+ **********************/
 
 template<arithmetric T>
 class Matrix{
@@ -52,6 +62,10 @@ public:
     
     #include "./matrix_files/determinant.cpp"
 };  
+
+#include "./matrix_files/Xmatrixi.cpp"
+
+#include "./matrix_files/Xmatrixb.cpp"
 
 /******************************
  *    Functions definition    *

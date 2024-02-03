@@ -1,5 +1,5 @@
 
-static std::pair<char, void*> evaluate_aux(
+std::pair<char, void*> evaluate_aux(
         nodeEX node,
         const std::vector<std::tuple<std::string, char, void*>> & token_info
     ) {

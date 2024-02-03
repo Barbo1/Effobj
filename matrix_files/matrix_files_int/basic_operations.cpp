@@ -2,9 +2,9 @@
 /* Creation of a null matrix. 
  * */
 Matrix () {
-    _data_ = nullptr;
-    _rows_ = 0;
-    _columns_ = 0;
+    this->_data_ = nullptr;
+    this->_rows_ = 0;
+    this->_columns_ = 0;
 }
 
 /* Generic constructor. 
@@ -12,14 +12,14 @@ Matrix () {
 template<typename U>
 requires std::convertible_to<U, T*>
 Matrix (unsigned rows, unsigned columns, const U data, bool consume_data = false) {
-    this->_rows_ = rows;
-    this->_columns_ = columns;
+    _rows_ = rows;
+    _columns_ = columns;
     if (consume_data) {
-        this->_data_ = data;
+        _data_ = data;
     } else {
-        this->_data_ = new T[columns*rows];
-        for (unsigned i = 0; i < rows * columns; i++) {
-            this->_data_ [i] = data [i];
+        _data_ = new T[columns * rows];
+        for (int i = 0; i < rows * columns; i++) {
+            _data_ [i] = data [i];
         }
     }
 }
@@ -29,9 +29,7 @@ Matrix (const Matrix & M) {
     _columns_ = M._columns_;
     if(_rows_ != 0 && _columns_ != 0) {
         _data_ = new T[_rows_ * _columns_];
-        for (int i = 0; i < _columns_ * _rows_; i++) {
-            _data_ [i] = M._data_[i];
-        }
+        std::memcpy (_data_, M._data_, sizeof (T) * _columns_ * _rows_);
     } else {
         _data_ = nullptr;
     }
@@ -51,9 +49,7 @@ Matrix& operator=(const Matrix & M) {
             delete [] _data_;
         }
         _data_ = new T[_rows_ * _columns_];
-        for (int i = 0; i < _columns_ * _rows_; i++) {
-            _data_ [i] = M._data_[i];
-        }
+        std::memcpy (_data_, M._data_, sizeof (T) * _columns_ * _rows_);
     } else {
         _data_ = nullptr;
     }
