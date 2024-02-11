@@ -13,6 +13,7 @@
 #include <utility>
 #include <cmath>
 #include <cstring>
+#include <cstdint>
 
 template<typename _type> concept arithmetric = requires (_type Arth, int i) {
     Arth + Arth;                                    // addition 
@@ -63,7 +64,7 @@ public:
     #include "./matrix_files/determinant.cpp"
 };  
 
-#include "./matrix_files/Xmatrixi.cpp"
+#include "./matrix_files/Xmatrixif.cpp"
 
 #include "./matrix_files/Xmatrixb.cpp"
 

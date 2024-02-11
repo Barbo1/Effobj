@@ -11,9 +11,7 @@
 
 __Graph_Undirected__ MtoG(Matrix & M);
 
-/* 
-    Two expresions 'a' and 'b' are Multipliable if they have defined the * binary operation.
-*/
+/* Two expresions 'a' and 'b' are Multipliable if they have defined the * binary operation. */
 template<typename T>
 concept Multipliable = requires(T a){
     a * a;
@@ -32,8 +30,11 @@ concept Orderable = requires(T a){
     a == a;
 };
 
+/* Population count function. */
+constexpr int32_t pop(int32_t x);
+
 /* the floor(log2(x)) operation, implemented way effitient. */
-inline constexpr unsigned flog2(unsigned x);
+constexpr int32_t flog2(int32_t x);
 
 /*
     get an Multipliable object and an integer, and make the "object" to the

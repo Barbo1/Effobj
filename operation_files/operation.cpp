@@ -2,12 +2,18 @@
 #define __Oper_mod_impl
 
 #include "./operation.h"
-#include <climits>
-#include <iostream>
 #include <vector>
-#include <string>
+#include <concepts>
 
-inline constexpr unsigned flog2(unsigned x){
+constexpr int32_t pop(int32_t x) {
+    x = x - ((x >> 1) & 0x55555555);
+    x = (x & 0x33333333) + ((x >> 2) & 0x33333333);
+    x = (x + (x >> 4)) & 0x0F0F0F0F;
+    x = x + (x >> 8);
+    return (x + (x >> 16)) & 0x0000003f;
+}
+
+constexpr int32_t flog2(int32_t x) {
    unsigned n = 0;
    if(x > 0x0000FFFF) { n += 16; x = x>>16; }
    if(x > 0x000000FF) { n += 8; x = x>>8; }

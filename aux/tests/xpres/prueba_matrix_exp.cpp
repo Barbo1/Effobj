@@ -18,9 +18,6 @@ void print_matrix(Matrix<T> M) {
 }
 
 int main () {
-    std::cout << (std::is_floating_point_v<Xpres>) << std::endl;
-    std::cout << (std::is_integral_v<Xpres>) << std::endl;
-
     Matrix<Xpres> M1 = Matrix<Xpres>(2, 2, new Xpres[4]{
         "a"_exp , "b"_exp,
         "c"_exp , "d"_exp
