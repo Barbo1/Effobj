@@ -6,62 +6,49 @@
   Matrix_8sq are not yet.
 */
 
-#ifndef __MOD_MATRIX
-#define __MOD_MATRIX
+#ifndef __Matrix_mod
+#define __Matrix_mod
 
 #include <type_traits>
 #include <utility>
 #include <cmath>
 #include <cstring>
 #include <cstdint>
-
-template<typename _type> concept arithmetric = requires (_type Arth, int i) {
-    Arth + Arth;                                    // addition 
-    Arth += Arth;
-    Arth - Arth;                                    // substraction 
-    Arth -= Arth;
-    Arth * Arth;                                    // multiplication 
-    Arth *= Arth;
-    Arth / Arth;                                    // division 
-    Arth /= Arth;
-    Arth == Arth;                                   // equal comparation
-    Arth = Arth;                                    // asignation
-    requires std::constructible_from<_type, int>;   // 1, -1, 0 needs to be convertible to _type
-};
+#include "./needed.hpp"
 
 /**********************
  *    Generic type    *
  **********************/
 
 template<arithmetric T>
-class Matrix{
-private:
-    T * _data_;
-    unsigned _rows_;
-    unsigned _columns_;
-public:
-    
-    #include "./matrix_files/basic_operations.cpp"
-    
-    #include "./matrix_files/get_info.cpp"
-    
-    #include "./matrix_files/col_row_manipulation.cpp"
-    
-    #include "./matrix_files/cast.cpp"
-    
-    #include "./matrix_files/is_methods.cpp"
-    
-    #include "./matrix_files/traspose.cpp"
-  
-    #include "./matrix_files/attached.cpp"
-    
-    #include "./matrix_files/mult_methods.cpp"
+class Matrix {
+    private:
+        T * _data_;
+        unsigned _rows_;
+        unsigned _columns_;
+    public:
+        
+        #include "./matrix_files/basic_operations.cpp"
+        
+        #include "./matrix_files/get_info.cpp"
+        
+        #include "./matrix_files/col_row_manipulation.cpp"
+        
+        #include "./matrix_files/cast.cpp"
+        
+        #include "./matrix_files/is_methods.cpp"
+        
+        #include "./matrix_files/traspose.cpp"
+      
+        #include "./matrix_files/attached.cpp"
+        
+        #include "./matrix_files/mult_methods.cpp"
 
-    #include "./matrix_files/add_method.cpp"
+        #include "./matrix_files/add_method.cpp"
 
-    #include "./matrix_files/invert.cpp"
-    
-    #include "./matrix_files/determinant.cpp"
+        #include "./matrix_files/invert.cpp"
+        
+        #include "./matrix_files/determinant.cpp"
 };  
 
 #include "./matrix_files/Xmatrixif.cpp"

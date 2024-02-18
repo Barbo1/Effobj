@@ -1,17 +1,30 @@
 TODOs to made:
 
+Worst:
+    -prove all get_word_l
+    -prove all the code again
+
 Matrix:
     -make specialization for:
-        1 - integral, floating_point (joined)
-        2 - bool (make it better)
-        3 - integral
-        4 - floating_point
-        5 - generic for all arithmetric types.
+        1 - integral
+        2 - floating_point
+    -add this methods:
+        test (std::function<bool> fun)
+            -> apply fun to all the elements in the matrix and return a Matrix<bool> with the 
+               result of the evaluation.
+        template <typedef T>
+        apply (std::function<T> fun)
+            -> apply fun to all elements in the matrix, changing them his return value.
+        probably more...
 
 Graphs:
     -make them (._.)
 
 Xpres:
+    -basic_operation -> Xpres constructor:
+        (1) -> change to std::reduce or std::accumulate
+        (2) -> change to ranges for
+        (3) -> change to ranges for
     -repare replace_current function.
     -add the parameters 'bool replce_in_repetition' and 'bool take_comming' to get more maneuveravility.
     -error when trying to use an iterator that where used before to compose().

@@ -1,5 +1,5 @@
-#ifndef __FIX_MATRIX_X4
-#define __FIX_MATRIX_X4
+#ifndef __FixMat_mod
+#define __FixMat_mod
 
 union fv_x44;
 

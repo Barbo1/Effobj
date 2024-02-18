@@ -9,8 +9,8 @@
  *      - an option to create an simplified expression.
  */
 
-#ifndef __MOD_EXPRESSION_
-#define __MOD_EXPRESSION_
+#ifndef __Xpres_mod
+#define __Xpres_mod
 
 #include <tuple>
 #include <string>
@@ -18,16 +18,14 @@
 #include <utility>
 #include <stack>
 #include <string_view>
-#include <inttypes.h>
+#include <cstdint>
 
-#include "./matrix.hpp"
-
-typedef struct exp_struct * nodeEX;
-typedef int8_t node_t;
-typedef int64_t data_t;
-
-class Xpres{
+class Xpres {
     private:
+        typedef struct exp_struct * nodeEX;
+        typedef int8_t node_t;
+        typedef int64_t data_t;
+
         nodeEX root;
 
         // keeps information of the tokens where the string is the name of the token, the

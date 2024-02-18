@@ -3,9 +3,6 @@
  * vectorization for the types doubles or floats (or both), and an integer type.
  * */
 
-template<typename T> 
-concept IntFloat = std::floating_point <T> || std::integral <T>;
-
 template<IntFloat T> requires arithmetric<T>
 class Matrix<T> {
 private:

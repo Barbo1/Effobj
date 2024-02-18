@@ -26,40 +26,35 @@ Xpres::Xpres(double d) {
  * validate_string_expresion(sexp) == true. 
  * */
 Xpres::Xpres(std::string_view sexp) {
-    double convdi; 
-    int j;
-    int curr;
     char let;
-    unsigned i;
-    unsigned n;
-    unsigned last;
-    unsigned top;
-    bool is_number;
-    bool is_hash;
-    bool has_dot;
+    int j, curr, i, n, last;
+    bool is_number, is_hash, has_dot;
     nodeEX res_1;
     nodeEX res_2;
     std::string operand;
     std::vector<std::string> token_names;
 
-    top = 1;
+    /* (1) */
+    int top = 1;
     for (i = 0; i < sexp.size(); i++) {
-        if(sexp[i] == '(') {
+        if (sexp[i] == '(') {
             top++;
         }
     }
 
     std::string ret[top]{""};
     unsigned prev[top]{0};
-
+    
     is_number = true;
     curr = 0;
     last = 0;
     j = 0;
+
+    /* (2) */
     for (i = 0; i < sexp.size(); i++) {
         let = sexp[i];
-        if (let != ' '){
-            if(let == '(') {
+        if (let != ' ') {
+            if (let == '(') {
                 ret[curr] += (is_number ? '#' : '$') + std::to_string(last+1);
                 prev[++j] = curr;
                 curr = ++last;
@@ -73,7 +68,6 @@ Xpres::Xpres(std::string_view sexp) {
             }
         }
     }
-
 
     nodeEX fin[top]{nullptr};
 
@@ -95,7 +89,7 @@ Xpres::Xpres(std::string_view sexp) {
                 is_hash = true;
                 std::string res_str = "";
                 let = current_str[++i];
-                while(std::isdigit(let)) {
+                while (std::isdigit(let)) {
                     res_str += let;
                     let = current_str[++i];
                 }
@@ -111,10 +105,7 @@ Xpres::Xpres(std::string_view sexp) {
                 }
                 if (is_number) {
                     if (has_dot) {
-                        st_tok.push(create_node(
-                            'd',
-                            * (data_t *) &(convdi = atof(operand.c_str()))
-                        ));
+                        st_tok.push(create_node('d', std::bit_cast<data_t>(atof(operand.c_str()))));
                     } else { 
                         st_tok.push(create_node('i', atoi(operand.c_str())));
                     }
@@ -126,13 +117,13 @@ Xpres::Xpres(std::string_view sexp) {
                         let = current_str[++i];
                     }
                     
-                   // for now, it is assumed that the function is one of the recognized.
+                    // for now, it is assumed that the function is one of the recognized.
                     st_tok.push(create_node(
-                                'f', 
-                                exists<std::string_view>(operand, recognized_functions),
-                                fin[atoi(res_str.c_str())],
-                                nullptr)
-                            );
+                        'f', 
+                        exists<std::string_view>(operand, recognized_functions),
+                        fin[atoi(res_str.c_str())],
+                        nullptr
+                    ));
                     continue;
                 } else {
                     j = exists(operand, token_names);
@@ -186,6 +177,7 @@ Xpres::Xpres(std::string_view sexp) {
 
     this->root = fin[0];
 
+    /* (3) */
     for (auto it = token_names.begin(); it != token_names.end(); it++) {
         this->token_info.push_back({*it, '\0', nullptr});
     }

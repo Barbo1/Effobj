@@ -1,33 +1,53 @@
+#ifndef __Graph_mod
+#define __Graph_mod
+
+#include "./needed.hpp"
 #include <vector>
 
-class NodeSet;
+typedef struct _node_avl * nodeAVL;
 
+template <typename T>
 class Graph {
+protected:
+    std::vector<T> _data_;
+    std::vector<nodeAVL> _adjacency_;
 public:
-    Graph(unsigned);
-    Graph(const Graph &);
-    Graph(Graph &&);
-    Graph operator=(const Graph &);
-    Graph operator=(Graph &&);
-    virtual ~Graph(){};
+    Graph ();
+    Graph (index);
+    Graph (const Graph &);
+    Graph (Graph &&);
+    Graph & operator= (const Graph &) = 0;
+    Graph & operator= (Graph &&) = 0;
+    bool operator== (const Graph &) = 0;
+    virtual ~Graph (){};
 
-    virtual int create_edge(unsigned, unsigned) = 0;
-    virtual int remove_edge(unsigned, unsigned) = 0;
-    virtual bool adjacent(unsigned, unsigned) = 0;
-    virtual NodeSet neighbors(unsigned) = 0;
-    virtual void set_vertex_val(unsigned, double) = 0;
-    virtual void set_edge_val(unsigned, unsigned, double) = 0;
-    virtual double get_vertex_val(unsigned) = 0;
-    virtual double get_edge_val(unsigned, unsigned) = 0;
+    virtual void create_edge () = 0;
+    virtual void remove_edge (index, index) = 0;
+    virtual index edge_quan () = 0;
+    virtual bool adjacents (index, index) = 0;
+    virtual std::vector<index> neighbors (index) = 0;
+    virtual void set_vertex_val (index, T) = 0;
+    virtual void set_edge_val (index, index, T) = 0;
+    virtual T get_vertex_val (index) = 0;
+    virtual T get_edge_val (index, index) = 0;
 
-    virtual NodeSet shortest_path(unsigned, unsigned) = 0;
+    virtual std::vector<index> shortest_path (index, index) = 0;
+    virtual Graph complement () = 0; 
 };
 
-class __Graph_Directed__ : public Graph {
-    __Graph_Directed__ find_topology(); 
+template <typename T>
+class GraphDirected : public Graph<T> {
+public:
+    GraphDirected find_topology (); 
+    GraphDirected trasnpose (); 
 };
 
-class __Graph_Undirected__ : public Graph {
-    bool is_flow_net();
-    Graph find_min_flow();
+template <typename T>
+class GraphUndirected : public Graph<T> {
+public:
+    bool is_flow_net ();
+    GraphUndirected find_min_flow ();
+    GraphUndirected power (int);
 };
+
+ #endif

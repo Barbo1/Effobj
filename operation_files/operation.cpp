@@ -1,36 +1,16 @@
-#ifndef __Oper_mod_impl
-#define __Oper_mod_impl
-
-#include "./operation.h"
-#include <vector>
-#include <concepts>
-
-constexpr int32_t pop(int32_t x) {
-    x = x - ((x >> 1) & 0x55555555);
-    x = (x & 0x33333333) + ((x >> 2) & 0x33333333);
-    x = (x + (x >> 4)) & 0x0F0F0F0F;
-    x = x + (x >> 8);
-    return (x + (x >> 16)) & 0x0000003f;
-}
-
-constexpr int32_t flog2(int32_t x) {
-   unsigned n = 0;
-   if(x > 0x0000FFFF) { n += 16; x = x>>16; }
-   if(x > 0x000000FF) { n += 8; x = x>>8; }
-   if(x > 0x0000000F) { n += 4; x = x>>4; }
-   if(x > 0x00000003) { n += 2; x = x>>2; }
-   if(x > 0x00000001) n += 1;
-   return n;
-}
 
 template<typename T>
 requires Multipliable<T>
-constexpr T int_pot(const T & obj, unsigned pot){
-    if(pot == 1) {
-        return obj;
-    }
-    unsigned char l2 = flog2(pot);
-    char i;
+constexpr T int_pot(const T & obj, int32_t pot){
+    if (pot == 1) return obj;
+
+    int32_t l2 = 0;
+    if (pot > 0x0000FFFF) { l2 += 16; pot >>= 16; }
+    if (pot > 0x000000FF) { l2 += 8; pot >>= 8; }
+    if (pot > 0x0000000F) { l2 += 4; pot >>= 4; }
+    if (pot > 0x00000003) { l2 += 2; pot >>= 2; }
+    if (pot > 0x00000001) l2 += 1;
+    int32_t i;
     T last;
     T * arr = new T[l2];
     arr[0] = obj;
@@ -111,7 +91,7 @@ std::vector<unsigned> segmentedMoreComplexSieve (unsigned n) {
 }
 
 unsigned* discompressPrimes(unsigned E){
-    unsigned* S = new unsigned[UINT_WIDTH+1];
+    unsigned* S = new unsigned[33];
     unsigned char P = 1, i; 
     unsigned r = 2, n = 2;
     bool b = true;
@@ -141,8 +121,7 @@ unsigned* discompressPrimes(unsigned E){
 
 unsigned phi(unsigned n){
     unsigned i, *A;
-    if(n < 2) 
-        return 1;
+    if (n < 2) return 1;
     A = discompressPrimes(n);
     for (i = 1; i < A[0]; i++) {
         n /= A[i];
@@ -202,5 +181,3 @@ double pi_aprox (unsigned precition) {
     }
     return 4*var_1 - var_2;
 }
-
-#endif

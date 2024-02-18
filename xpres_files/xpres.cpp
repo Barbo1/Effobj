@@ -1,4 +1,5 @@
 #include "../xpres.hpp"
+#include <bit>
 
 /* "log2", "log10" cannot exists bacause is not acepted a token with numbers and letters. */
 std::vector<std::string_view> recognized_functions{"cos", "acos", "cosh", 
