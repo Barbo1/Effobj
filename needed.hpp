@@ -1,8 +1,8 @@
-#ifndef __NeeCon_mod
-#define __NeeCon_mod
+#pragma once
 
-#include <concepts>
 #include <cstdint>
+#include <concepts>
+#include <immintrin.h>
 
 /* * * * * * * *
  *  Concepts  *
@@ -33,10 +33,9 @@ concept Multipliable = requires(_type a){
     a * a;
 };
 
-/* 
-    Two expresions 'a' and 'b' are Orderable if they define the ordered operations.
-    (>, <, >=, <=, ==)
-*/
+/* Two expresions 'a' and 'b' are Orderable if they define the ordered operations.
+ * (>, <, >=, <=, ==)
+ * */
 template<typename _type>
 concept Orderable = requires(_type a){
     a > a;
@@ -47,10 +46,16 @@ concept Orderable = requires(_type a){
 };
 
 
-/* * * * * *
- *  Types  *
- * * * * * */
+/***************
+ *    Types    *
+ ***************/
 
-typedef uint32_t index;
+union fv_x4 {
+  __m128 _v;
+  float _f[4];
+};
 
-#endif
+union iv_x4 {
+    __m128 _v;
+    int _i[4];
+};

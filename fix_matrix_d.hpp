@@ -1,14 +1,17 @@
-#ifndef __FixMat_mod
-#define __FixMat_mod
+#pragma once
 
-union fv_x44;
+#include "./needed.hpp"
+
+/********************************
+ *    Fixed Size, Float type    *
+ ********************************/
 
 class Matrix4{
 private:
-    fv_x44 * _data_;
+    fv_x4 * _data_;
 public:
     Matrix4();
-    Matrix4(fv_x44 * data_);
+    Matrix4(fv_x4 * data_);
     Matrix4(float * data_);
     Matrix4(const Matrix4 & A);
     Matrix4(Matrix4 && A);
@@ -34,5 +37,3 @@ public:
     float determinant();
     Matrix4 invert();
 };
-
-#endif

@@ -1,0 +1,29 @@
+#include "../xpres.hpp"
+
+#include "./useful_operations.cpp"
+
+#include "./node_manipulation.cpp"
+
+#include "./deduce_operation_binary.cpp"
+
+#include "./print_operations.cpp"
+
+#include "./validate_string_expresion.cpp"
+
+#include "./basic_operations.cpp"
+
+#include "./evaluate_operation_unitary.cpp"
+
+#include "./evaluate_operation_binary.cpp"
+
+#include "./evaluate_function.cpp"
+
+#include "./evaluate_aux.cpp"
+
+#include "./evaluate.cpp"
+
+#include "./operators.cpp"
+
+#include "./creator__.cpp"
+
+#include "./modification_operations_iterator.cpp"

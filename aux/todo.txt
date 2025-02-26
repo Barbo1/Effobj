@@ -20,6 +20,9 @@ Matrix:
 Graphs:
     -make them (._.)
 
+Trees:
+    -make them (._.)
+
 Xpres:
     -basic_operation -> Xpres constructor:
         (1) -> change to std::reduce or std::accumulate
