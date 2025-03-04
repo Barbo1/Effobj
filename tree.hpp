@@ -1,13 +1,6 @@
 #pragma once
 #include "./needed.hpp"
 
-/* Tree2
- * TreeN
- * TreeAVL
- * BTree
- * BpTree
- * Heap
- * */
 template <typename T> class Tree {
   private: 
     

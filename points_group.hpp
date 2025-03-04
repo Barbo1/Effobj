@@ -38,7 +38,7 @@ class PointsGroup {
     ~PointsGroup ();
 
     Point<T>& operator[] (unsigned i);
-    index size ();
+    uint64_t size ();
 
     /* Interpolations. */
     Polynomial<T> inter_linear ();

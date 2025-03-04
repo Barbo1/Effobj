@@ -18,10 +18,21 @@ Matrix:
         probably more...
 
 Graphs:
-    -make them (._.)
+    -make them (._.) ->
+      + Unidirectional
+      + Bidirectional
 
 Trees:
-    -make them (._.)
+    - make them (._.) ->
+      + binary tree
+      + binary avl tree
+      + B trees
+      + B+ trees
+      + n-ary tree
+      + heap
+      + WordSet
+      + LinkSet
+    - For them, a tree can store one object by key or objects.
 
 Xpres:
     -basic_operation -> Xpres constructor:

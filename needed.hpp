@@ -55,7 +55,22 @@ union fv_x4 {
   float _f[4];
 };
 
+union fv_x8 {
+  __m256 _v;
+  float _f[8];
+};
+
+union dv_x8 {
+  __m256d _v;
+  float _f[8];
+};
+
 union iv_x4 {
-    __m128 _v;
-    int _i[4];
+  __m128i _v;
+  uint32_t _i[4];
+};
+
+union iv_x8 {
+  __m256i _v;
+  uint32_t _i[8];
 };
