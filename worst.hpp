@@ -1,7 +1,7 @@
 /* 
- * This module was store data in a tree. It defines the wordSet class that can store words in a 
- * tree that represents a set. The wordSets don't work for words larger than MAX_LEN_WORD, and 
- * the amount of letters allowed are LETTER_QUAN.
+ * This module was made to store data in a tree. It defines the wordSet class that can store 
+ * words in a tree that represents a set. The wordSets don't work for words larger than MAX_LEN_WORD, 
+ * and the amount of letters allowed are LETTER_QUAN.
  * Methods:
  *  - aggregate_word, delete_word; that can change the set.
  *  - is_word, get_words_number, get_words_l, get_words_r; that doesn't alloc new 

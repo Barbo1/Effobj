@@ -72,6 +72,10 @@ template<typename T>
 requires std::is_integral_v<T>
 constexpr T reverse (T x);
 
+/* Calculate the gcd of two numbers using binary algorithm.
+ * */
+uint32_t gcd (uint32_t n, uint32_t m);
+
 
 /************************
  *    Math Functions    *
