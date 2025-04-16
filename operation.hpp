@@ -27,7 +27,7 @@ std::vector<unsigned> primes_by_many (unsigned many);
  * position 0 contains the quantity of positions ocupied, and the reminded 
  * space is garbage.
  * */
-std::array<unsigned, 33> discompress_primes(unsigned E);
+std::array<unsigned, 33> discompress_primes (unsigned E);
 
 /* Generate and return the lucas sequence with the numbers the numbers P and Q,
  * defined by the formula X_n = P * X_n-1 - Q * X_n-2
@@ -56,14 +56,6 @@ template<typename T>
 requires std::is_integral_v<T> 
 constexpr bool bitsp (T x);
 
-/* calculate the floor of the logarithm base 2 of the number passed by parameter. 
- * Precondition: 
- *  - T is in {uint8_t, uint16_t, uint32_t, uint64_t}
- * */
-template<typename R, typename T> 
-requires std::is_integral_v<T> && std::is_fundamental_v<R>
-constexpr R flog2 (T x);
-
 /* Return de reverse of the N bits sequence passed by parameter. 
  * Precondition: 
  *  - T is in {uint8_t, uint16_t, uint32_t, uint64_t}
@@ -71,10 +63,6 @@ constexpr R flog2 (T x);
 template<typename T> 
 requires std::is_integral_v<T>
 constexpr T reverse (T x);
-
-/* Calculate the gcd of two numbers using binary algorithm.
- * */
-uint32_t gcd (uint32_t n, uint32_t m);
 
 
 /************************
@@ -96,6 +84,18 @@ unsigned phi(unsigned n);
  * number(like 5) the aproximation will match well.
  * */
 double pi (unsigned precition);
+
+/* Calculate the gcd of two numbers using binary algorithm.
+ * */
+uint32_t gcd (uint32_t n, uint32_t m);
+
+/* calculate the floor of the logarithm base 2 of the number passed by parameter. 
+ * Precondition: 
+ *  - T is in {uint8_t, uint16_t, uint32_t, uint64_t}
+ * */
+template<typename R, typename T> 
+requires std::is_integral_v<T> && std::is_fundamental_v<R>
+constexpr R flog2 (T x);
 
 
 /*****************
