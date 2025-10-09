@@ -4,6 +4,7 @@
 #include "./graph.hpp"
 #include "./matrix.hpp"
 
+#include <concepts>
 #include <type_traits>
 #include <array>
 
@@ -20,7 +21,7 @@ GraphUndirected<int> MtoG(Matrix<bool> & M);
  * below it.
  * */
 std::vector<unsigned> primes_by_bound (unsigned top); 
-std::vector<unsigned> primes_by_many (unsigned many); 
+std::vector<int32_t> primes_by_many (unsigned many); 
 
 /* Generate and return an array of unsigened's that contain the primes that 
  * divide the number (passed by parameter). the array have 33 slots, where the 
@@ -96,6 +97,21 @@ uint32_t gcd (uint32_t n, uint32_t m);
 template<typename R, typename T> 
 requires std::is_integral_v<T> && std::is_fundamental_v<R>
 constexpr R flog2 (T x);
+
+/* functions to calculate tipical mathematical functions. All the functions have the 
+ * version for r-values and l-values.
+ * */
+template<typename T>
+struct SignConst;
+
+template<std::floating_point T> T maxv (const T& f1, const T& f2);
+template<std::floating_point T> T minv (const T& f1, const T& f2);
+
+template<std::floating_point T> T absv (T& f);
+template<std::floating_point T> T&& absv (T&& f);
+
+template<std::floating_point T> T sgnv (T& f);
+template<std::floating_point T> T&& sgnv (T&& f);
 
 
 /*****************

@@ -9,15 +9,14 @@ constexpr T ipot (const T & obj, int32_t pot) {
   T last;
   T * arr = new T[l2];
   arr[0] = obj;
-  for (i = 0; i < l2-1; i++) {
+  for (i = 0; i < l2-1; i++)
     arr[i+1] = arr[i] * arr[i];
-  }
+
   last = arr[i] * arr[i];
-  for (i = l2-1; i >= 0; i--) {
-    if ((1 << i) & pot) {
+  for (i = l2-1; i >= 0; i--)
+    if ((1 << i) & pot)
       last *= arr[i];
-    }
-  }
+
   delete [] arr;
   return last;
 }

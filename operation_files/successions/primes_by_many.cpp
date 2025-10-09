@@ -1,9 +1,9 @@
 #include "../../operation.hpp"
+#include <cstdint>
 
-std::vector<unsigned> primes_by_many (unsigned many) {
-	unsigned r=3, rc=9, n=7, o=2, a, *S, *B, *T, *I;
-  std::vector<unsigned> ret = std::vector<unsigned>();
-  ret.resize (many);
+std::vector<int32_t> primes_by_many (unsigned many) {
+	int32_t r=3, rc=9, n=7, o=2, a, *S, *B, *T, *I;
+  std::vector<int32_t> ret = std::vector<int32_t>(0, many);
   S = ret.data();
   B = S + 3;
   T = S + many;
@@ -14,14 +14,14 @@ std::vector<unsigned> primes_by_many (unsigned many) {
 	while (S < T) {
 		o ^= 6;
 		n += o;
-	 	if (n >= rc) {
-			r++;
-			rc = r * r;
-		}
+    r += ((n - rc) ^ 0x80000000) >> 31;
+    rc = r * r;
     I = B;
     a = 5;
-		while (a <= r && n % a) a = *(I++);
-		if (a > r) *(S++) = n;
+		while (a <= r && n % a)
+      a = *(I++);
+    *S = n;
+    S -= (r - a) >> 31;
 	}
 	return ret;
 }

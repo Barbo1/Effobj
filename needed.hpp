@@ -9,7 +9,7 @@
  * * * * * * * */
 
 /* Encompass the types that supports arthmetric operations. */
-template<typename _type> concept arithmetric = requires (_type Arth, int i) {
+template<typename _type> concept arithmetric = requires (_type Arth) {
     Arth + Arth;                                    // addition 
     Arth += Arth;
     Arth - Arth;                                    // substraction 
