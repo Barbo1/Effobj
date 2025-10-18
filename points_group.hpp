@@ -4,11 +4,9 @@
 #include <vector>
 #include <utility>
 
-template <arithmetric T>
 class Point {
   public:
-    T x;
-    T y;
+    float x, y;
 
     Point ();
     Point (const Point &);
@@ -20,13 +18,12 @@ class Point {
 
     Point operator+ (const Point &);
     Point operator- (const Point &);
-    T operator/ (const Point &);
+    float operator/ (const Point &);
 };
 
-template <arithmetric T>
 class PointsGroup {
   private: 
-    std::vector <Point<T>> _points_;
+    std::vector <Point> _points_;
 
   public:
     PointsGroup ();
@@ -37,22 +34,19 @@ class PointsGroup {
     bool operator== (const PointsGroup &);
     ~PointsGroup ();
 
-    Point<T>& operator[] (unsigned i);
+    Point& operator[] (unsigned i);
     uint64_t size ();
 
     /* Interpolations. */
-    Polynomial<T> inter_linear ();
-    Polynomial<T> inter_lagrange ();
+    Polynomial inter_linear ();
+    Polynomial inter_lagrange ();
 
     /* Aproximations. */
-    Polynomial<T> integral_aprox ();
+    Polynomial integral_aprox ();
 
-    Polynomial<T> linear_regretion ();
-    std::pair<const Point<T> &, const Point<T> &> nearest_points ();
+    Polynomial linear_regretion ();
+    std::pair<const Point &, const Point &> nearest_points ();
 };
 
-template <arithmetric T>
-Polynomial<T> inter_hermite ();
-
-template <arithmetric T>
-Polynomial<T> inter_splines ();
+Polynomial inter_hermite ();
+Polynomial inter_splines ();

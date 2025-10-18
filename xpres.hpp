@@ -1,17 +1,15 @@
 /* This library is meant to define mathematic exrepssions. The Subexpressions can be simplified,
- * factorized by a given factor, descopressed, quited or you can operate with two expressions using 
+ * factorized by a given factor, descopressed, quited or you can operate with two expressions using
  * several operands. The operands can be aplied in any level of the expression.
  *
  * Some thighs that i want to make in a future:
- *      - operation that do the following: if two expressions exp1*exp2*exp3 and p realted by ^, then 
- *          change (exp1*exp2*exp3)^p by exp1^p * (exp2*exp3)^p.
- *      - I can make a copy of an iterator that copy the pointed subexression to be another expresion.
- *      - an option to create an simplified expression.
+ *  - operation that do the following: if two expressions exp1*exp2*exp3 and p realted by ^, then 
+ *      change (exp1*exp2*exp3)^p by exp1^p * (exp2*exp3)^p.
+ *  - I can make a copy of an iterator that copy the pointed subexression to be another expresion.
+ *  - an option to create an simplified expression.
  */
 
 #pragma once
-
-#include "matrix.hpp" 
 
 #include <array>
 #include <tuple>

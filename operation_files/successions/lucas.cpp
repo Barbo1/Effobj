@@ -1,4 +1,5 @@
 #include "../../operation.hpp"
+#include <utility>
 
 std::vector<int> lucas (int P, int Q, int x0, int x1, unsigned many) {
   std::vector<int> ret = std::vector<int>();

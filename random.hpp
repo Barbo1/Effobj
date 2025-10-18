@@ -9,7 +9,6 @@
  * */
 
 #include <cstdint>
-#include "./operation.hpp"
 
 enum _rand_type {
   FIX_MOD, VAR_MOD

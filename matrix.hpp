@@ -9,7 +9,6 @@
 
 #include <type_traits>
 #include <array>
-#include <utility>
 #include <cmath>
 #include <cstring>
 #include <cstdint>

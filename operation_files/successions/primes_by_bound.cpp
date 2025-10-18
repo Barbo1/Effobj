@@ -1,4 +1,6 @@
 #include "../../operation.hpp"
+#include <cstring>
+#include <cmath>
 
 void moreComplexSieve(std::vector<unsigned>& initial_primes, unsigned limit) {
   bool * mark = new bool[limit];

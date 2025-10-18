@@ -3,10 +3,7 @@
 #include "./needed.hpp"
 #include <vector>
 #include <string>
-#include <span>
-#include <ranges>
 #include <cmath>
-#include <utility>
 
 class Polynomial {
   private:

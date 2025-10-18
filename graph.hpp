@@ -1,50 +1,56 @@
 #pragma once
 
-#include "./needed.hpp"
+#include "./tree.hpp"
+#include <cstdint>
 #include <vector>
 
-typedef struct _node_avl * nodeAVL;
+/* This class implements undirected graphs. It uses AVL trees to store the edges with its values,
+ * is operations like searching are guaranteed to be made in log(v). Given e as the number of
+ * edges ans v the number of vertex, the order of memory used is O(v + e). The order time of the
+ * operations are:
+ *  - graph creation -> O(v * log(v) + e * log(e)) [i suppose]
+ *  - create_edge -> O(log(e)).
+ *  - remove_edge -> O(log(e)).
+ *  - edge_number -> O(1).
+ *  - set_vertex_val -> O(1).
+ *  - get_vertex_val -> O(1).
+ *  - get_edge_val -> O(log(e)).
+ *  - set_edge_val -> O(log(e)).
+ *  - neighbors -> O(v * log(e)).
+ *  - adjacents -> O(log(e)).
+ * */
 
-template <typename T>
 class Graph {
-protected:
-    std::vector<T> _data_;
-    std::vector<nodeAVL> _adjacency_;
-public:
-    Graph ();
+  protected:
+    std::vector<int32_t> primes;
+    std::vector<float> vertex_values;
+    AVLTree edges;
+
+  public:
     Graph (uint32_t);
     Graph (const Graph &);
     Graph (Graph &&);
-    Graph & operator= (const Graph &) = 0;
-    Graph & operator= (Graph &&) = 0;
-    bool operator== (const Graph &) = 0;
-    virtual ~Graph (){};
+    Graph& operator= (const Graph &);
+    Graph& operator= (Graph &&);
 
-    virtual void create_edge () = 0;
-    virtual void remove_edge (uint32_t, uint32_t) = 0;
-    virtual uint32_t edge_quan () = 0;
-    virtual bool adjacents (uint32_t, uint32_t) = 0;
-    virtual std::vector<uint32_t> neighbors (uint32_t) = 0;
-    virtual void set_vertex_val (uint32_t, T) = 0;
-    virtual void set_edge_val (uint32_t, uint32_t, T) = 0;
-    virtual T get_vertex_val (uint32_t) = 0;
-    virtual T get_edge_val (uint32_t, uint32_t) = 0;
+    bool create_edge (uint32_t, uint32_t);
+    bool remove_edge (uint32_t, uint32_t);
+    bool is_edge (uint32_t, uint32_t);
+    uint32_t edge_number ();
+    uint32_t vertex_number ();
 
-    virtual std::vector<uint32_t> shortest_path (uint32_t, uint32_t) = 0;
-    virtual Graph complement () = 0; 
-};
+    void set_vertex_val (uint32_t, float);
+    float get_vertex_val (uint32_t);
+    float get_edge_val (uint32_t, uint32_t);
+    void set_edge_val (uint32_t, uint32_t, float);
 
-template <typename T>
-class GraphDirected : public Graph<T> {
-public:
-    GraphDirected find_topology (); 
-    GraphDirected trasnpose (); 
-};
+    std::vector<uint32_t> neighbors (uint32_t);
+    bool adjacents (uint32_t, uint32_t);
 
-template <typename T>
-class GraphUndirected : public Graph<T> {
-public:
+    /* Not yet implemented. */
+
+    std::vector<uint32_t> shortest_path (uint32_t, uint32_t);
     bool is_flow_net ();
-    GraphUndirected find_min_flow ();
-    GraphUndirected power (int);
+    Graph find_min_flow ();
+    Graph power (int);
 };

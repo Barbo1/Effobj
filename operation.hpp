@@ -1,32 +1,27 @@
 #pragma once
 
 #include "./needed.hpp"
-#include "./graph.hpp"
-#include "./matrix.hpp"
 
 #include <concepts>
 #include <type_traits>
 #include <array>
-
-GraphUndirected<int> MtoG(Matrix<bool> & M);
+#include <vector>
 
 
 /*********************
  *    Successions    *
  *********************/
 
-/* Generate and return an array of unsigened's that contains primes. Depending 
- * on the neccessity, you can deside if you want a fixed quantity of elemens, 
- * this is, only N primes, or a bound for the elements, so you get all element 
- * below it.
+/* Generate and return a vector which contains prime numbers. Depending on the neccessity, you
+ * can deside if you want a fixed number of elemens, this is, only N primes, or a bound for the 
+ * elements, so you get all element below it.
  * */
 std::vector<unsigned> primes_by_bound (unsigned top); 
 std::vector<int32_t> primes_by_many (unsigned many); 
 
-/* Generate and return an array of unsigened's that contain the primes that 
- * divide the number (passed by parameter). the array have 33 slots, where the 
- * position 0 contains the quantity of positions ocupied, and the reminded 
- * space is garbage.
+/* Generate and return an array of numbers that contain the primes that divide the number passed
+ * by parameter. the array have 33 slots, where the position 0 contains the number of positions 
+ * ocupied, and the remaining space is garbage.
  * */
 std::array<unsigned, 33> discompress_primes (unsigned E);
 
@@ -98,20 +93,21 @@ template<typename R, typename T>
 requires std::is_integral_v<T> && std::is_fundamental_v<R>
 constexpr R flog2 (T x);
 
-/* functions to calculate tipical mathematical functions. All the functions have the 
- * version for r-values and l-values.
- * */
-template<typename T>
-struct SignConst;
-
+/* Functions to calculate maximum value and minimum values of both parameters. */
 template<std::floating_point T> T maxv (const T& f1, const T& f2);
 template<std::floating_point T> T minv (const T& f1, const T& f2);
 
+/* Functions to calculate absolute values of both parameters. */
 template<std::floating_point T> T absv (T& f);
 template<std::floating_point T> T&& absv (T&& f);
 
+/* Functions to calculate sign of both parameters. */
 template<std::floating_point T> T sgnv (T& f);
 template<std::floating_point T> T&& sgnv (T&& f);
+
+/* Object which contains information of the needed to make calculations. */
+template<typename T>
+struct SignConst;
 
 
 /*****************
