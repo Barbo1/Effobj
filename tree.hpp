@@ -35,27 +35,44 @@ template <typename T> class Tree {
     ~Tree ();
 };
 
+template<typename T>
 struct _node_avl {
-  uint32_t index, height;
-  float value;
-  _node_avl* izq;
-  _node_avl* der;
+  uint32_t index;
+  uint32_t height;
+  _node_avl<T>* izq;
+  _node_avl<T>* der;
+  T value;
 };
 
-using nodeAVL = struct _node_avl*;
 
+template<typename T>
+using nodeAVL = struct _node_avl<T>*;
+
+template<typename T>
+nodeAVL<T> create_node_AVL (uint32_t index, T value);
+
+template<typename T>
+nodeAVL<T> copy_tree_AVL (nodeAVL<T> node);
+
+template<typename T>
+int height_tree_AVL (nodeAVL<T> node);
+
+template<typename T>
+void delete_tree_AVL (nodeAVL<T> node);
+
+template<typename T>
+nodeAVL<T> insert_node_AVL (uint32_t index, T value, nodeAVL<T> node);
+
+template<typename T>
+nodeAVL<T> remove_node_AVL (uint32_t index, nodeAVL<T> node);
+
+template<typename T>
+nodeAVL<T> find_node_AVL (nodeAVL<T> node, uint32_t index);
+
+template<typename T>
 class AVLTree {
   private: 
-    static nodeAVL create_node_AVL (uint32_t index, float value);
-    static nodeAVL copy_tree_AVL (nodeAVL node);
-
-    static int height_tree_AVL (nodeAVL node);
-    static void delete_tree_AVL (nodeAVL node);
-
-    static nodeAVL insert_node_AVL (uint32_t index, float value, nodeAVL node);
-    static nodeAVL remove_node_AVL (uint32_t index, nodeAVL node);
-    
-    nodeAVL root;
+    nodeAVL<T> root;
     uint32_t many;
 
   public:
@@ -71,9 +88,9 @@ class AVLTree {
 
     bool find (uint32_t);
 
-    float get_value (uint32_t);
-    void set_value (uint32_t, float);
+    T get_value (uint32_t);
+    void set_value (uint32_t, T);
 
-    void add_node (uint32_t, float);
+    void add_node (uint32_t, T);
     void delete_node (uint32_t);
 };

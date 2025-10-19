@@ -6,6 +6,7 @@
 #include <type_traits>
 #include <array>
 #include <vector>
+#include <memory>
 
 
 /*********************
@@ -18,6 +19,7 @@
  * */
 std::vector<unsigned> primes_by_bound (unsigned top); 
 std::vector<int32_t> primes_by_many (unsigned many); 
+std::shared_ptr<int32_t[]> primes_by_many_static (unsigned many); 
 
 /* Generate and return an array of numbers that contain the primes that divide the number passed
  * by parameter. the array have 33 slots, where the position 0 contains the number of positions 
