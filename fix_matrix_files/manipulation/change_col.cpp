@@ -1,4 +1,4 @@
-#include "../../fix_matrix_d.hpp"
+#include "../../fix_matrix.hpp"
 
 void Matrix4::changec (unsigned col1, unsigned col2) {
   col1--;

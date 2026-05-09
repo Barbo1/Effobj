@@ -1,7 +1,7 @@
 #include "../../worst.hpp"
 
 nodeWS WordSet::aux_int (nodeWS ws_1, nodeWS ws_2){
-  nodeWS res, res1, res_prev = nullptr, res_f = nullptr;
+  nodeWS res1, res_prev = nullptr, res_f = nullptr;
   ws_1 = ws_1->son;
   ws_2 = ws_2->son;
   while (ws_1 != nullptr && ws_2 != nullptr) {

@@ -15,12 +15,9 @@ bool Xpres::compare_tree_similar_aux (nodeEX root1, nodeEX root2, uint64_t * arr
     if (len1 == 0 || len1 != arr2.size()) return false; 
 
     /* Match pairs of nodes that represent equal subexpresions (they can be in a no straight order). */
-    uint64_t j;
     for (uint64_t i = 0; i < len1; i++) {
-      j = i;
-      while (j < len1 && !compare_tree_similar_aux (arr1[i], arr2[j], arr)) {
-        j++;
-      }
+      uint64_t j = i;
+      while (j < len1 && !compare_tree_similar_aux (arr1[i], arr2[j], arr)) j++;
       if (j == len1) return false;
       std::swap(arr2[i], arr2[j]);
     }

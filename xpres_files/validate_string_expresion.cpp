@@ -1,5 +1,4 @@
 #include "../xpres.hpp"
-#include "./useful_operations.cpp"
 
 bool Xpres::validate_string_expresion(std::string_view sexp) {
   const unsigned n = sexp.size();

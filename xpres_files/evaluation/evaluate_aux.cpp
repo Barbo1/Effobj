@@ -1,9 +1,9 @@
 #include "../../xpres.hpp"
 
 std::pair<char, void*> Xpres::evaluate_aux (
-    nodeEX node,
-    const std::vector<std::tuple<std::string, char, void*>> & token_info
-    ) {
+  nodeEX node,
+  const std::vector<std::tuple<std::string, char, void*>> & token_info
+) {
   nodeEX first_son = node->son;
   if (node->type == '\0') {
     return {'\0', nullptr};

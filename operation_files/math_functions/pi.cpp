@@ -1,7 +1,7 @@
 #include "../../operation.hpp"
+#include <cstdint>
 
 double pi (unsigned precition) {
-  int n;
   double or_2;
   int or_1 = 1; 
   int cinco_pot = 5; 
@@ -9,7 +9,7 @@ double pi (unsigned precition) {
   int menos_1 = 4;
   double var_1 = (double)4/5; 
   double var_2 = (double)4/239;
-  for (n = 1; n < precition; n++) {
+  for (uint32_t n = 1; n < precition; n++) {
     or_1 += 2;
     menos_1 *= -1;
     cinco_pot *= 25;

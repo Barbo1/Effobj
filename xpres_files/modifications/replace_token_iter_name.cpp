@@ -7,7 +7,6 @@ Xpres::iterator& Xpres::iterator::replace_token(std::string_view nold, std::stri
   while (idold < n && std::get<0>(this->token_info[idold]) != nold) { idold++; }
 
   if (idold < n) {
-    uint64_t i = 0;
     nodeEX root = get_root(this->points);
     nodeEX top = this->points.top();
 

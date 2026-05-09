@@ -17,7 +17,7 @@ void Matrix<bool>::multiply_by_index (
     for (int r = 0, rs = 0; r < rows; r++, rs = r << 3) {
       res = 0;
       for (int c = 0; c < 8; c++) {
-        if (_data_ [ki] & one << rs + c) {
+        if (_data_ [ki] & one << (rs + c)) {
           res |= Matrix::rvm [c];
         }
       }

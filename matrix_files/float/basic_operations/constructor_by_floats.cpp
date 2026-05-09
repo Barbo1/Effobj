@@ -6,9 +6,11 @@ Matrix<float>::Matrix (unsigned rows, unsigned columns, float * data, bool consu
   if (_rows_ != 0 && _columns_ != 0) {
     unsigned i, j;
     _length_ = (_columns_ + 3) / 4;
-    _data_ = new fv_x4[_length_ * _rows_];
+    _data_ = static_cast<fv_x4*>(
+      std::aligned_alloc(16, sizeof(fv_x4) * _length_ * _rows_)
+    );
 
-    // initialize with 0's the last fv_x4
+    // initiailize with 0's the last fv_x4
     for (i = 1; i <= _rows_; i++) {
       _data_[i*_length_ - 1]._v = _mm_setzero_ps();
     }
@@ -19,7 +21,7 @@ Matrix<float>::Matrix (unsigned rows, unsigned columns, float * data, bool consu
       }
     }
     if (consume) {
-      delete [] data;
+      std::free(data);
     }
   }
   data = nullptr;

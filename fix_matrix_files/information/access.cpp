@@ -1,4 +1,4 @@
-#include "../../fix_matrix_d.hpp"
+#include "../../fix_matrix.hpp"
 
 float Matrix4::operator() (unsigned row, unsigned column) const {
   if (--row < 4 && --column < 4) {

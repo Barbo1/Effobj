@@ -1,4 +1,5 @@
 #include "../../../xpres.hpp"
+#include "../../../matrix.hpp"
 
 /* Deallocate the memory of the void*, depending on the char.
  * */

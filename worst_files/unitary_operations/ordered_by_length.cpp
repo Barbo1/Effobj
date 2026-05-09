@@ -27,7 +27,7 @@ void WordSet::aux_ordered_by_length (
 }
 
 std::vector<std::string> WordSet::ordered_by_length () const {
-  int i = 0, n = aux_get_largest(this->root->son, 0);
+  int n = aux_get_largest(this->root->son, 0);
   std::vector<std::string> * vt = new std::vector<std::string>[n];
   std::vector<std::string> vt_new;
 

@@ -1,7 +1,9 @@
 #include "../../../matrix.hpp"
 
+#include <utility>
+
 Matrix<float> Matrix<float>::operator=(Matrix && M) noexcept {
-  delete [] _data_;
+  std::free (_data_);
   _data_ = std::exchange(M._data_, nullptr);
   _rows_ = M._rows_;
   _columns_ = M._columns_;

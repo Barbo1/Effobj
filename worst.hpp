@@ -15,8 +15,8 @@
 #include <vector>
 #include <string>
 
-#define MAX_LEN_WORD 35
-#define LETTER_QUAN 27
+const std::size_t MAX_LEN_WORD = 35;
+const std::size_t LETTER_QUAN = 27;
 
 typedef struct node_word_set_struct * nodeWS;
 
@@ -91,7 +91,7 @@ class WordSet {
     /* Return a copy of the nodes that leads to, or follow, a node that have a secuences of nodes
      * with the subword in str.
      * */
-    static nodeWS aux_find_subword (nodeWS node, unsigned pos, const char * str, const int & n); 
+    static nodeWS aux_find_subword (nodeWS node, unsigned pos, const char * str, const unsigned & n); 
 
 
     nodeWS root;
@@ -169,7 +169,7 @@ class WordSet {
      * */
     class iterator {
       private:
-        nodeWS * _nodes_;
+        nodeWS _nodes_[MAX_LEN_WORD];
         signed char _large_ = 0;
 
       public:

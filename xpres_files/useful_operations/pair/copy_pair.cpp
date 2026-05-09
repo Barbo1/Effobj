@@ -1,4 +1,5 @@
 #include "../../../xpres.hpp"
+#include "../../../matrix.hpp"
 
 std::pair<char, void*> Xpres::copy_pair(std::pair<char, void*> op) {
   if (op.first == 'i') {

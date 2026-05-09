@@ -1,28 +1,28 @@
 #include "../../../matrix.hpp"
+#include <cstdint>
 
 bool Matrix<float>::is_stochastic () const { 
-  unsigned i, j, pos;
-  __m128 res;
-  __m128 zeros = _mm_setzero_ps(), ones = _mm_set1_ps(1);
-  fv_x4 accumulate;
+  __m128 res, accumulation;
   bool resul = true;
 
-  i = 0;
-  while(resul && i < _rows_) {
-    j = 0;
-    accumulate._v = _data_[_length_*i]._v;
-    for(j = 1; j < _length_; j++) {
-      res = _data_[_length_*i + j]._v;
-      resul = !_mm_testc_ps (
-        _mm_or_ps(
-          _mm_cmp_ps(res, ones, 1), 
-          _mm_cmp_ps(res, zeros, 14)
-        ),
-        _mm_set1_ps(0xffffffff)
-      );
-      accumulate._v = _mm_add_ps(res, accumulate._v);
+  uint64_t i = 0, mask, pos = 0;
+  while (resul && i < this->_rows_) {
+    accumulation = res = this->_data_[pos++]._v;
+    mask = _mm_movemask_epi8(_mm_castps_si128(res));
+    resul &= !(mask & 0x8888);
+
+    for (unsigned j = 1; j < this->_length_; j++) {
+      res = this->_data_[pos++]._v;
+      accumulation = _mm_add_ps(res, accumulation);
+      mask = _mm_movemask_epi8(_mm_castps_si128(res));
+      resul &= !(mask & 0x8888);
     }
-    resul = (accumulate._f[0] + accumulate._f[1] + accumulate._f[2] + accumulate._f[3]) == 1;
+
+    accumulation = _mm_hadd_ps(accumulation, accumulation);
+    accumulation = _mm_hadd_ps(accumulation, accumulation);
+    float acc = _mm_cvtss_f32(accumulation);
+
+    resul &= 0.9998f < acc && acc < 1.0001f;
     i++;
   }
   return resul;

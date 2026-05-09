@@ -253,7 +253,7 @@ class Xpres {
 
     static nodeEX get_root (std::stack<nodeEX> st_this);
 
-    static bool quit_token_aux(nodeEX root, const uint64_t idname, bool recalculate_ids);
+    static bool quit_token_aux(nodeEX root, const int64_t idname, bool recalculate_ids);
 
 
     /**************

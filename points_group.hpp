@@ -14,7 +14,6 @@ class Point {
     Point& operator= (const Point &);
     Point& operator= (Point &&);
     bool operator== (const Point &);
-    ~Point ();
 
     Point operator+ (const Point &);
     Point operator- (const Point &);

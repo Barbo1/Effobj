@@ -58,7 +58,6 @@ Xpres::iterator& Xpres::iterator::descompose(uint64_t id_1 = 0, uint64_t id_2 = 
       default:
         return *this;
     }
-fin_switch:
 
     /* change tree. */
     nodeEX sum1 = sum->son;

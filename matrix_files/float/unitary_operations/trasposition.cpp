@@ -5,7 +5,9 @@ Matrix<float> Matrix<float>::traspose () {
     unsigned i, j;
     __m128 zero = _mm_setzero_ps();
     unsigned length = (_rows_ + 3)/4;
-    fv_x4 * _data_new_ = new fv_x4[_columns_ * length];
+    fv_x4 * _data_new_ = static_cast<fv_x4*>(
+      std::aligned_alloc(16, sizeof(fv_x4) * _columns_ * length)
+    );
     for(i = 0; i < _columns_; i++) {
       _data_new_[length*(i+1) - 1]._v = zero;
       for(j = 0; j < _rows_; j++) {

@@ -1,4 +1,5 @@
-/* This library implements matrix objects with some methods to manipulate them, and some 
+/* 
+ * This library implements matrix objects with some methods to manipulate them, and some 
  * operations and functions. I would define the "null matrix" such as one that have a 
  * dimension(or both) equaly to 0. This one would be returned in case of error.
  * The class matrix is implemented in matrix.cpp, but Matrix_2sq, Matrix_4sq and
@@ -14,7 +15,6 @@
 #include <cstdint>
 #include <immintrin.h>
 
-#include "./needed.hpp"
 #include "./needed.hpp"
 
 
@@ -293,6 +293,7 @@ class Matrix<float> {
     Matrix (Matrix && M) noexcept;
     Matrix operator= (const Matrix & M) noexcept;
     Matrix operator=(Matrix && M) noexcept;
+    ~Matrix ();
 
     /* Return a matrix resulting of cast the elements from the actual type 
      * to the specified.

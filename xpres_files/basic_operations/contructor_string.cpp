@@ -1,9 +1,10 @@
 #include "../../xpres.hpp"
+#include <cstdint>
 
 Xpres::Xpres(std::string_view sexp) {
   char let;
-  int j, curr, i, n, last;
-  bool is_number, is_hash, has_dot;
+  int j, curr, n, last;
+  bool is_number, has_dot;
   nodeEX res_1;
   nodeEX res_2;
   std::string operand;
@@ -11,7 +12,7 @@ Xpres::Xpres(std::string_view sexp) {
 
   /* (1) */
   int top = 1;
-  for (i = 0; i < sexp.size(); i++) {
+  for (uint32_t i = 0; i < sexp.size(); i++) {
     if (sexp[i] == '(') {
       top++;
     }
@@ -26,7 +27,7 @@ Xpres::Xpres(std::string_view sexp) {
   j = 0;
 
   /* (2) */
-  for (i = 0; i < sexp.size(); i++) {
+  for (uint32_t i = 0; i < sexp.size(); i++) {
     let = sexp[i];
     if (let != ' ') {
       if (let == '(') {
@@ -52,16 +53,16 @@ Xpres::Xpres(std::string_view sexp) {
     std::stack<nodeEX> st_tok;
     std::stack<char> st_ope;
 
-    i = 0;
+    int i = 0;
     is_number = false;
     n = current_str.size();
 
     while (i < n) {
       operand = "";
-      is_hash = false;
+      //is_hash = false;
       let = current_str[i];
       if (let == '#') {
-        is_hash = true;
+        //is_hash = true;
         std::string res_str = "";
         let = current_str[++i];
         while (std::isdigit(let)) {
@@ -112,10 +113,10 @@ Xpres::Xpres(std::string_view sexp) {
       if (let != '\0') {
         while (!st_ope.empty() && (((res = st_ope.top()) == '-' && let == '-') || 
               (precedence(res, let) > 0 && 
-               !(res == '@' && let == '~' || 
-                 res == '!' && let == '~' || 
-                 res == '!' && let == '-' && operand == "" || 
-                 res == '@' && let == '-' && operand == "") 
+               !((res == '@' && let == '~') || 
+                 (res == '!' && let == '~') || 
+                 (res == '!' && let == '-' && operand == "") || 
+                 (res == '@' && let == '-' && operand == "")) 
               ))) {
           st_ope.pop();
           res_1 = st_tok.top();

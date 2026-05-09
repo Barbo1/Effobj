@@ -1,4 +1,6 @@
 #include "../../xpres.hpp"
+#include "../../matrix.hpp"
+#include <bit>
 
 inline std::pair<char, void*> Xpres::evaluate_operator_binary(
     std::pair<char, void*> op1, 
@@ -9,31 +11,31 @@ inline std::pair<char, void*> Xpres::evaluate_operator_binary(
     data_t * a = (data_t*)op1.second; 
     switch (ope) {
       case '^':
-        *a = std::pow(*a, * (data_t*) op2.second);
+        *a = std::pow(*a, std::bit_cast<data_t>(op2.second));
         break;
       case '%':
-        *a = (*a) % (* (data_t*) op2.second);
+        *a = (*a) % std::bit_cast<data_t>(op2.second);
         break;
       case '/':
-        *a = (*a) / (* (data_t*) op2.second);
+        *a = (*a) / std::bit_cast<data_t>(op2.second);
         break;
       case '*':
-        *a = (*a) * (* (data_t*) op2.second);
+        *a = (*a) * std::bit_cast<data_t>(op2.second);
         break;
       case '+':
-        *a = (*a) + (* (data_t*) op2.second);
+        *a = (*a) + std::bit_cast<data_t>(op2.second);
         break;
       case '<':
-        *a = (*a) << (* (data_t*) op2.second);
+        *a = (*a) << std::bit_cast<data_t>(op2.second);
         break;
       case '>':
-        *a = ((*a) >> (* (data_t*) op2.second));
+        *a = (*a) >> std::bit_cast<data_t>(op2.second);
         break;
       case '&':
-        *a = (*a) & (* (data_t*) op2.second);
+        *a = (*a) & std::bit_cast<data_t>(op2.second);
         break;
       case '|':
-        *a = (*a) | (* (data_t*) op2.second);
+        *a = (*a) | std::bit_cast<data_t>(op2.second);
         break;
       default:
         free_pair(op2);
@@ -46,32 +48,28 @@ inline std::pair<char, void*> Xpres::evaluate_operator_binary(
     double * a = (double *)op2.second;
     switch (ope) {
       case '^':
-        *a = std::pow(* (data_t*) op1.second, *a);
+        *a = std::pow(std::bit_cast<data_t>(op1.second), *a);
         break;
       case '/':
-        *a = (double)(* (data_t*) op1.second) / (*a);
+        *a = std::bit_cast<data_t>(op1.second) / (*a);
         break;
       case '*':
-        *a = (* (data_t*) op1.second) * (*a);
+        *a = std::bit_cast<data_t>(op1.second) * (*a);
         break;
       case '+':
-        *a = (double)(* (data_t*) op1.second) + (*a);
+        *a = std::bit_cast<data_t>(op1.second) + (*a);
         break;
-      case '&': {
-                  data_t r = (* (data_t*) op1.second) | (* (data_t *) a);
-                  *a = * (double *) &r;
-                  break;
-                }
-      case '|': {
-                  data_t r = (* (data_t*) op1.second) & (* (data_t *) a);
-                  *a = * (double *) &r;
-                  break;
-                }
+      case '&': 
+        *a = std::bit_cast<double>(std::bit_cast<data_t>(op1.second) | std::bit_cast<data_t>(*a));
+        break;
+      case '|':
+        *a = std::bit_cast<double>(std::bit_cast<data_t>(op1.second) & std::bit_cast<data_t>(*a));
+        break;
       default:
-                free_pair(op2);
-                free_pair(op1);
-                return {'\0', (void*)nullptr};    
-                break;
+        free_pair(op2);
+        free_pair(op1);
+        return {'\0', (void*)nullptr};    
+        break;
     }
     exchange_pair(op1, op2);
     free_pair(op2);
@@ -79,71 +77,57 @@ inline std::pair<char, void*> Xpres::evaluate_operator_binary(
     double * a = (double *)op1.second;
     switch (ope) {
       case '^':
-        *a = std::pow(*a, * (data_t*) op2.second);
+        *a = std::pow(*a, std::bit_cast<data_t>(op2.second));
         break;
       case '/':
-        *a = (*a) / (double)(* (data_t*) op2.second);
+        *a = (*a) / (double)std::bit_cast<data_t>(op2.second);
         break;
       case '*':
-        *a *= (double)(* (data_t*) op2.second);
+        *a *= (double)std::bit_cast<data_t>(op2.second);
         break;
       case '+':
-        *a += (double)(* (data_t*) op2.second);
+        *a += (double)std::bit_cast<data_t>(op2.second);
         break;
-      case '<': {
-                  data_t r = (* (data_t *) a) << (* (data_t*) op2.second);
-                  *a = * (double*) &r;
-                  break;
-                }
-      case '>': {
-                  data_t r = (* (data_t *) a) >> (* (data_t*) op2.second);
-                  *a = * (double*) &r;
-                  break;
-                }
-      case '&': {
-                  data_t r = (* (data_t *) a) & (* (data_t*) op2.second);
-                  *a = * (double*) &r;
-                  break;
-                }
-      case '|': {
-                  data_t r = (* (data_t *) a) | (* (data_t*) op2.second);
-                  *a = * (double*) &r;
-                  break;
-                }
+      case '<': 
+        *a = std::bit_cast<double>(std::bit_cast<data_t>(*a) << std::bit_cast<data_t>(op2.second));
+        break;
+      case '>': 
+        *a = std::bit_cast<double>(std::bit_cast<data_t>(*a) >> std::bit_cast<data_t>(op2.second));
+        break;
+      case '&': 
+        *a = std::bit_cast<double>(std::bit_cast<data_t>(*a)  & std::bit_cast<data_t>(op2.second));
+        break;
+      case '|': 
+        *a = std::bit_cast<double>(std::bit_cast<data_t>(*a)  | std::bit_cast<data_t>(op2.second));
+        break;
       default:
-                free_pair(op2);
-                free_pair(op1);
-                return {'\0', (void*)nullptr};    
-                break;
+        free_pair(op2);
+        free_pair(op1);
+        return {'\0', (void*)nullptr};    
+        break;
     }
     free_pair(op2);
   } else if (op1.first == 'd' && op2.first == 'd') {
     double * a = (double *)op1.second;
     switch (ope) {
       case '^':
-        *a = std::pow(*a, * (double*) op2.second);
+        *a = std::pow(*a, std::bit_cast<double>(op2.second));
         break;
       case '/':
-        *a = (*a) / (* (double*) op2.second);
+        *a = (*a) / std::bit_cast<double>(op2.second);
         break;
       case '*':
-        *a = (*a) * (* (double*) op2.second);
+        *a = (*a) * std::bit_cast<double>(op2.second);
         break;
       case '+':
-        *a = (*a) + (* (double*) op2.second);
+        *a = (*a) + std::bit_cast<double>(op2.second);
         break;
       case '&':
-        {
-          data_t r = (* (data_t *) a) & (* (data_t*) op2.second);
-          *a = * (double*) &r;
-          break;
-        }
+        *a = std::bit_cast<double>(std::bit_cast<data_t>(*a) & std::bit_cast<data_t>(op2.second));
+        break;
       case '|':
-        {
-          data_t r = (* (data_t *) a) | (* (data_t*) op2.second);
-          *a = * (double*) &r;
-          break;
-        }
+        *a = std::bit_cast<double>(std::bit_cast<data_t>(*a) | std::bit_cast<data_t>(op2.second));
+        break;
       default:
         free_pair(op2);
         free_pair(op1);

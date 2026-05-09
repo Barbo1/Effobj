@@ -17,8 +17,6 @@ WordSet::iterator WordSet::find_word(const std::string & word) const {
   }
   if (tr_father->finished && i == n) {
     it._large_ = i - 1;
-  } else {
-    delete [] it._nodes_;
   }
   return it;
 }

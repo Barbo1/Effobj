@@ -15,9 +15,8 @@ bool Xpres::compare_tree_equal (nodeEX root1, nodeEX root2, bool not_same_level)
     }
 
     /* Match pairs of nodes that represent equal subexpresions (they can be in a no straight order). */
-    uint64_t j;
     for (uint64_t i = 0; i < len1; i++) {
-      j = i;
+      uint64_t j = i;
       while (j < len1 && !compare_tree_equal(arr1[i], arr2[j])) j++;
       if (j == len1) return false;
       std::swap(arr2[i], arr2[j]);
@@ -25,8 +24,7 @@ bool Xpres::compare_tree_equal (nodeEX root1, nodeEX root2, bool not_same_level)
 
     return not_same_level || compare_tree_equal(root1->sibling, root2->sibling);
 
-  } else {
-    return compare_tree_equal (root1->son, root2->son) && 
-      (not_same_level || compare_tree_equal (root1->sibling, root2->sibling));
   }
+  return compare_tree_equal (root1->son, root2->son) && 
+    (not_same_level || compare_tree_equal (root1->sibling, root2->sibling));
 }

@@ -2,7 +2,6 @@
 
 Matrix<bool> Matrix<bool>::operator*(const Matrix & A) const {
   if (_columns_ == A._rows_) {
-    uint64_t data_val, res, one = 1;
     uint64_t * _data_new_ = new uint64_t[_lenr_ * A._lenc_];
     for (int i = 0; i < _lenr_ - 1; i++) {
       for (int j = 0, index = i * _lenc_; j < A._lenc_; j++, index++) {

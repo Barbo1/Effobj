@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/graph_component.dir/basic_operations/constructor.cpp.o"
+  "CMakeFiles/graph_component.dir/basic_operations/constructor.cpp.o.d"
+  "CMakeFiles/graph_component.dir/basic_operations/copy_assignment.cpp.o"
+  "CMakeFiles/graph_component.dir/basic_operations/copy_assignment.cpp.o.d"
+  "CMakeFiles/graph_component.dir/basic_operations/copy_constructor.cpp.o"
+  "CMakeFiles/graph_component.dir/basic_operations/copy_constructor.cpp.o.d"
+  "CMakeFiles/graph_component.dir/basic_operations/move_assignment.cpp.o"
+  "CMakeFiles/graph_component.dir/basic_operations/move_assignment.cpp.o.d"
+  "CMakeFiles/graph_component.dir/basic_operations/move_constructor.cpp.o"
+  "CMakeFiles/graph_component.dir/basic_operations/move_constructor.cpp.o.d"
+  "CMakeFiles/graph_component.dir/edge_operations/create_edge.cpp.o"
+  "CMakeFiles/graph_component.dir/edge_operations/create_edge.cpp.o.d"
+  "CMakeFiles/graph_component.dir/edge_operations/edge_number.cpp.o"
+  "CMakeFiles/graph_component.dir/edge_operations/edge_number.cpp.o.d"
+  "CMakeFiles/graph_component.dir/edge_operations/get_edge_value.cpp.o"
+  "CMakeFiles/graph_component.dir/edge_operations/get_edge_value.cpp.o.d"
+  "CMakeFiles/graph_component.dir/edge_operations/is_edge.cpp.o"
+  "CMakeFiles/graph_component.dir/edge_operations/is_edge.cpp.o.d"
+  "CMakeFiles/graph_component.dir/edge_operations/remove_edge.cpp.o"
+  "CMakeFiles/graph_component.dir/edge_operations/remove_edge.cpp.o.d"
+  "CMakeFiles/graph_component.dir/edge_operations/set_edge_value.cpp.o"
+  "CMakeFiles/graph_component.dir/edge_operations/set_edge_value.cpp.o.d"
+  "CMakeFiles/graph_component.dir/finds/shortest_path.cpp.o"
+  "CMakeFiles/graph_component.dir/finds/shortest_path.cpp.o.d"
+  "CMakeFiles/graph_component.dir/operations/adjacents.cpp.o"
+  "CMakeFiles/graph_component.dir/operations/adjacents.cpp.o.d"
+  "CMakeFiles/graph_component.dir/operations/neighbors.cpp.o"
+  "CMakeFiles/graph_component.dir/operations/neighbors.cpp.o.d"
+  "CMakeFiles/graph_component.dir/vertex_operations/create_vertex.cpp.o"
+  "CMakeFiles/graph_component.dir/vertex_operations/create_vertex.cpp.o.d"
+  "CMakeFiles/graph_component.dir/vertex_operations/get_vertex_value.cpp.o"
+  "CMakeFiles/graph_component.dir/vertex_operations/get_vertex_value.cpp.o.d"
+  "CMakeFiles/graph_component.dir/vertex_operations/set_vertex_value.cpp.o"
+  "CMakeFiles/graph_component.dir/vertex_operations/set_vertex_value.cpp.o.d"
+  "CMakeFiles/graph_component.dir/vertex_operations/vertex_number.cpp.o"
+  "CMakeFiles/graph_component.dir/vertex_operations/vertex_number.cpp.o.d"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/graph_component.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

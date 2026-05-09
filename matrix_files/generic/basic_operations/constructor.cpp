@@ -3,7 +3,7 @@
 template<arithmetric T>
 template<typename U>
 requires std::convertible_to<U, T*>
-Matrix<T>::Matrix (unsigned rows, unsigned columns, const U data, bool consume_data) {
+Matrix<T>::Matrix (unsigned rows, unsigned columns, const U data, bool consume_data) noexcept {
   this->_rows_ = rows;
   this->_columns_ = columns;
   if (consume_data) {

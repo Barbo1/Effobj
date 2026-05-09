@@ -3,7 +3,7 @@
 void Matrix<bool>::changec (unsigned col1, unsigned col2) {
   col1--;
   col2--;
-  if (col1 < _columns_ && col2 < _columns_ && col1 != col2) {
+  if (static_cast<int64_t>(col1) < _columns_ && static_cast<int64_t>(col2) < _columns_ && col1 != col2) {
     uint64_t mask1 = col1 & 7;
     uint64_t mask2 = col2 & 7;
     if (mask2 > mask1) {
@@ -28,8 +28,8 @@ void Matrix<bool>::changec (unsigned col1, unsigned col2) {
       for (int i = 0; i < _lenr_ * _lenc_; i += _lenc_) {
         t1 = _data_[i + col1];
         t2 = _data_[i + col2];
-        _data_[i + col1] = t1 & ~mask1 | (t2 & mask2) << k;
-        _data_[i + col2] = t2 & ~mask2 | (t1 & mask1) >> k;
+        _data_[i + col1] = (t1 & ~mask1) | ((t2 & mask2) << k);
+        _data_[i + col2] = (t2 & ~mask2) | ((t1 & mask1) >> k);
       }
     }
   }

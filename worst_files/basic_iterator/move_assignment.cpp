@@ -2,8 +2,9 @@
 #include <utility>
 
 WordSet::iterator WordSet::iterator::operator=(iterator && it){
-  delete [] _nodes_;
   _large_ = std::exchange(it._large_, -1);
-  _nodes_ = std::exchange(it._nodes_, nullptr);
+  for (int i = 0; i < _large_; i++) {
+    _nodes_[i] = it._nodes_[i];
+  }
   return *this;
 }

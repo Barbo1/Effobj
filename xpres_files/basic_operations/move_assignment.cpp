@@ -8,9 +8,9 @@ Xpres& Xpres::operator=(Xpres && exp) noexcept {
       free_pair({type, data});
     }
     this->token_info = std::exchange(
-        exp.token_info, 
-        std::vector<std::tuple<std::string, char, void*>>()
-        );
+      exp.token_info, 
+      std::vector<std::tuple<std::string, char, void*>>()
+    );
   }
   return *this;
 }

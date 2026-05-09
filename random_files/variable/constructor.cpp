@@ -1,4 +1,5 @@
 #include "../../random.hpp"
+#include "../../operation.hpp"
 
 template <_rand_type T>
 Random<T>::Random (uint32_t m) {

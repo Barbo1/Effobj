@@ -1,7 +1,7 @@
 #include "../../../matrix.hpp"
 
 template<arithmetric T>
-Matrix<T>::Matrix (const Matrix & M) {
+Matrix<T>::Matrix (const Matrix & M) noexcept {
   _rows_ = M._rows_;
   _columns_ = M._columns_;
   if(_rows_ != 0 && _columns_ != 0) {

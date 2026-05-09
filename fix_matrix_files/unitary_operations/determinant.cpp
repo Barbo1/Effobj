@@ -1,5 +1,4 @@
-#include "../../fix_matrix_d.hpp"
-#include <iostream>
+#include "../../fix_matrix.hpp"
 
 float Matrix4::determinant () { 
   return (

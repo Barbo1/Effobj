@@ -1,4 +1,4 @@
-#include "../../fix_matrix_d.hpp"
+#include "../../fix_matrix.hpp"
 
 Matrix4::Matrix4 (const Matrix4 & A) {
   _data_[0]._v = A._data_[0]._v;

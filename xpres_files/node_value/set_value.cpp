@@ -1,4 +1,5 @@
 #include "../../xpres.hpp"
+#include "../../matrix.hpp"
 
 template<typename T>
 bool Xpres::set_value(std::string_view name, const T& value) {

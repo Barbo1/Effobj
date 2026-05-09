@@ -2,7 +2,9 @@
 
 void Xpres::repetition_counter_outer_arr_aux(nodeEX root, const nodeEX last_son, bool * arr) noexcept {
   if (root != last_son) {
-    if (root->type == 't') arr[root->id] = true;
+    if (root->type == 't') 
+      arr[root->id] = true;
+
     root = root->son;
     while (root != nullptr) {
       repetition_counter_outer_arr_aux(root, last_son, arr);

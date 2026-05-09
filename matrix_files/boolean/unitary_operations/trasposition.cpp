@@ -8,7 +8,7 @@ Matrix<bool> Matrix<bool>::traspose() {
         res = _data_[_lenc_*i + j];
         for (int r = 49, k = 0; k < 7; k++, r -= 7) {
           mask1 = Matrix::tvm[k];
-          res = res & ~(mask1 | Matrix::tvm[13 - k]) | (res & mask1) >> r | res << r & mask1;
+          res = (res & ~(mask1 | Matrix::tvm[13 - k])) | ((res & mask1) >> r) | (res << r & mask1);
         }
         _data_new_[_lenr_*j + i] = res;
       }

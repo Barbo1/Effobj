@@ -10,9 +10,10 @@ nodeWS WordSet::aux_less(nodeWS node, unsigned n, unsigned & top){
       sons_iter = sons_iter->sibling;
     }
     if (res_f != nullptr || node->finished) {
-      res = create_node (node->letter, node->finished, res_f);
+      return create_node (node->letter, node->finished, res_f);
+    } else {
+      return nullptr;
     }
-    return res;
   }
   return nullptr;
 }

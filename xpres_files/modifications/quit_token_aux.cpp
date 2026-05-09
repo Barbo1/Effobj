@@ -1,6 +1,6 @@
 #include "../../xpres.hpp"
 
-bool quit_token_aux(nodeEX root, const uint64_t idname, bool recalculate_ids) {
+bool quit_token_aux(nodeEX root, const int64_t idname, bool recalculate_ids) {
   if (root->type == 't') {
     if (recalculate_ids && root->id > idname) {
       root->id--;
@@ -29,9 +29,9 @@ bool quit_token_aux(nodeEX root, const uint64_t idname, bool recalculate_ids) {
       }
     }
     return root->son->sibling == nullptr && !(
-        root->type == 'p' && (root->id == '-' || root->id == '!' || root->id == '|') ||
-        root->type == 'f'
-        );
+      (root->type == 'p' && (root->id == '-' || root->id == '!' || root->id == '|')) ||
+      root->type == 'f'
+    );
   }
   return false;
 }

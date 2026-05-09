@@ -1,3 +1,7 @@
+#include "../needed.hpp"
+#include "../matrix.hpp"
+
+#include <utility>
 
 /* Here is an implementation of the matrices for fundamental types. In the future I will implement some
  * vectorization for the types doubles or floats (or both), and an integer type.

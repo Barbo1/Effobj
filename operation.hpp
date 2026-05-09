@@ -18,8 +18,11 @@
  * elements, so you get all element below it.
  * */
 std::vector<unsigned> primes_by_bound (unsigned top); 
-std::vector<int32_t> primes_by_many (unsigned many); 
+std::vector<int32_t> primes_by_many (unsigned many);
+
+/* The following two function are meant to create and update an array of primes. */
 std::shared_ptr<int32_t[]> primes_by_many_static (unsigned many); 
+void update_primes (std::shared_ptr<int32_t[]> p, unsigned many); 
 
 /* Generate and return an array of numbers that contain the primes that divide the number passed
  * by parameter. the array have 33 slots, where the position 0 contains the number of positions 

@@ -13,7 +13,7 @@ Matrix<bool>::Matrix (unsigned rows, unsigned columns, bool* data, bool consume_
   for (int i = 0; i < _rows_; i++) {
     for (int j = 0; j < _columns_; j++) {
       if (data [i*_columns_ + j]) {
-        _data_ [(i >> 3)*_lenc_ + (j >> 3)] |= one << ((i & 7) << 3) + (j & 7);
+        _data_ [(i >> 3)*_lenc_ + (j >> 3)] |= one << (((i & 7) << 3) + (j & 7));
       }
     }
   }

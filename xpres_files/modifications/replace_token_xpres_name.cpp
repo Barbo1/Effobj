@@ -1,4 +1,5 @@
 #include "../../xpres.hpp"
+#include <cstdint>
 
 Xpres& Xpres::replace_token(std::string_view nold, std::string_view nnew) {
   uint64_t idn = 0, idold = 0;
@@ -16,9 +17,13 @@ Xpres& Xpres::replace_token(std::string_view nold, std::string_view nnew) {
       this->token_info.erase (this->token_info.begin () + idold);
 
       /* recalculate ids. */
-      uint64_t arr[n];
-      for (idn = 0; idn < n; idn++) { arr[idn] = idn - (idn >= idold); }
+      uint64_t* arr = new uint64_t[n];
+
+      for (idn = 0; idn < n; idn++) 
+        arr[idn] = idn - (idn >= idold); 
       recalculate_ids (this->root, arr);
+
+      delete [] arr;
     } else {
       std::get<0>(this->token_info[idold]) = nnew;
     }

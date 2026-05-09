@@ -1,4 +1,5 @@
 #include "../../../matrix.hpp"
+#include <utility>
 
 Matrix<bool> Matrix<bool>::operator=(Matrix && M) noexcept {
   if (_data_ != nullptr) {

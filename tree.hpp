@@ -89,8 +89,8 @@ class AVLTree {
     bool find (uint32_t);
 
     T get_value (uint32_t);
-    void set_value (uint32_t, T);
+    bool set_value (uint32_t, T);
 
-    void add_node (uint32_t, T);
-    void delete_node (uint32_t);
+    bool add_node (uint32_t, T);
+    bool delete_node (uint32_t);
 };

@@ -1,5 +1,7 @@
 #include "../../../matrix.hpp"
 
+#include <utility>
+
 Matrix<float>::Matrix (Matrix && M) noexcept {
   _data_ = std::exchange(M._data_, nullptr);
   _rows_ = std::exchange(M._rows_, 0);

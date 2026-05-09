@@ -1,7 +1,3 @@
-#include "../../fix_matrix_d.hpp"
+#include "../../fix_matrix.hpp"
 
-Matrix4::~Matrix4 () {
-  if (_data_ != nullptr) {
-    delete [] _data_;
-  }
-}
+Matrix4::~Matrix4 () {}

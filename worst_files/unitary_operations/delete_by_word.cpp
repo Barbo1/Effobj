@@ -4,7 +4,8 @@
 unsigned WordSet::delete_word(const std::string & word) {
   char * com = new char[MAX_LEN_WORD];
   char * str = com, * fin;
-  int n = word.length(), i = -1, ret = 1;
+  std::size_t n = word.length();
+  int i = -1, ret = 1;
   nodeWS * data = new nodeWS[MAX_LEN_WORD];
   nodeWS tr_father = this->root;
   nodeWS tr = tr_father->son;

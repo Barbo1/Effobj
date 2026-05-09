@@ -7,7 +7,9 @@ Matrix<float> Matrix<float>::attached(unsigned row_to_elim, unsigned col_to_elim
     unsigned res_1, res_2, res_3;
     unsigned _rows_new_ = _rows_-1, _columns_new_ = _columns_-1;
     unsigned length_new = (_columns_new_ + 3) / 4;
-    fv_x4 * _data_new_ = new fv_x4[_rows_new_ * length_new];
+    fv_x4 * _data_new_ = static_cast<fv_x4*>(
+      std::aligned_alloc(16, sizeof(fv_x4) * _rows_new_ * length_new)
+    );
     for (unsigned i = 0; i < _rows_; i++) {
       res_1 = length_new * (i - (i > row_to_elim));
       res_2 = _length_*i;

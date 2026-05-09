@@ -7,9 +7,9 @@
 #define PERMITED_CHAR(pt) ((65 <= *pt && *pt <= 90) || (97 <= *pt && *pt <= 122))
 
 unsigned WordSet::aggregate_word(std::string_view word){
-  char * com = new char[MAX_LEN_WORD], * str = com, * fin, * i;
+  char com[MAX_LEN_WORD], * str = com, * fin, * i;
   nodeWS tr, tr_prev, tr_father;
-  int n = word.length();
+  std::size_t n = word.length();
 
   if (n <= MAX_LEN_WORD) {
     word.copy(str, n);
@@ -48,21 +48,21 @@ unsigned WordSet::aggregate_word(std::string_view word){
                 tr_father = 
                   tr_father->son = 
                     tr = create_node (
-                        *(str++), 
-                        false, 
-                        nullptr, 
-                        std::exchange (tr_prev, tr)
-                      );
+                      *(str++), 
+                      false, 
+                      nullptr, 
+                      std::exchange (tr_prev, tr)
+                    );
               }
             } else {
               if (tr == nullptr || tr->letter > *str) {
                 tr_father = 
                   tr = create_node (
-                      *(str++), 
-                      false, 
-                      nullptr, 
-                      std::exchange(tr_prev->sibling, tr)
-                    );
+                    *(str++), 
+                    false, 
+                    nullptr, 
+                    std::exchange(tr_prev->sibling, tr)
+                  );
               }
             }
           }
@@ -71,12 +71,10 @@ unsigned WordSet::aggregate_word(std::string_view word){
               tr = create_node (*str, false, nullptr, std::exchange(tr_father->son, tr));
           }
           tr_father->finished = true;
-          delete [] com;
           return 0;
         }
       }
     }   
   }
-  delete [] com;
   return 1;
 }

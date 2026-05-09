@@ -1,4 +1,5 @@
 #include "../../../matrix.hpp"
+#include <utility>
 
 Matrix<bool>::Matrix(Matrix && M) noexcept {
   _data_ = std::exchange(M._data_, nullptr);

@@ -1,4 +1,5 @@
 #include "../../polynomial.hpp"
+#include <ranges>
 
 std::string Polynomial::to_string () {
   std::string str = "";
@@ -7,11 +8,10 @@ std::string Polynomial::to_string () {
     return "0";
   }
   for (const auto & [coef, grade]: std::ranges::views::zip (
-        std::span<float> ((float *)this->coefficients.data (), this->size),
-        std::span<uint32_t> ((uint32_t *)this->grades.data (), this->size) | 
-          std::ranges::views::transform([] (uint32_t i) {return std::to_string(i);})
-      )
-    ) {
+    std::span<float> ((float *)this->coefficients.data (), this->size),
+    std::span<uint32_t> ((uint32_t *)this->grades.data (), this->size) | 
+    std::ranges::views::transform([] (uint32_t i) {return std::to_string(i);})
+  )) {
     if (coef == 1) {
       str = "+ x^" + grade + " " + str;
     } else if (coef == -1) {

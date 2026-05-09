@@ -8,7 +8,8 @@ Xpres::iterator& Xpres::iterator::quit_token(std::string_view name) {
 
   bool res = repetition_counter_outer(get_root(this->points), this->points.top(), idname);
 
-  if (res) { this->token_info.erase(this->token_info.begin() + idname); }
+  if (res)
+    this->token_info.erase(this->token_info.begin() + idname);
   quit_token_aux(this->points.top(), idname, res);
 
   return *this;

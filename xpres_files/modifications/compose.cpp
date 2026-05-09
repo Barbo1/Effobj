@@ -5,7 +5,7 @@ Xpres::iterator& Xpres::iterator::compose(uint64_t id_1, uint64_t id_2, std::str
   if (top->type == 'p' && top->id == '+' && id_1 != id_2) {
 
     /* finding the id of name. */
-    uint64_t id_name = 0;
+    int64_t id_name = 0;
     for (const auto & [n1, n2, n3]: this->token_info) {
       if (n1 == name) { goto finded; }
       id_name++;
@@ -69,6 +69,17 @@ Xpres::iterator& Xpres::iterator::compose(uint64_t id_1, uint64_t id_2, std::str
         son = son->sibling;
       }
       return son;
+    };
+    auto cond_calc = [&] (nodeEX& son) {
+      bool c0 = cond0(son);
+
+      bool c1 = false;
+      if (cond1(son)) {
+        son = find_token(son);
+        c1 = (son != nullptr);
+      }
+
+      return c0 | (c1 << 1);
     };
     auto quit_node = [](const nodeEX father, const nodeEX son) {
       put_first(father, son);
@@ -143,7 +154,7 @@ Xpres::iterator& Xpres::iterator::compose(uint64_t id_1, uint64_t id_2, std::str
       case 0b010100:
         son21 = find_token (son2c);
         son11 = son1c->son;
-        conds1 = cond0 (son11) | ((cond1 (son11) && (son11 = find_token (son11)) != nullptr) << 1);
+        conds1 =  cond_calc(son11);
         if (!conds1 || son21 == nullptr) { return *this; }
         switch (conds1) {
           case 1:
@@ -165,8 +176,8 @@ Xpres::iterator& Xpres::iterator::compose(uint64_t id_1, uint64_t id_2, std::str
       case 0b100100:
         son11 = son1c->son;
         son21 = son2c->son;
-        conds1 = cond0 (son11) | ((cond1 (son11) && (son11 = find_token (son11)) != nullptr) << 1);
-        conds2 = cond0 (son21) | ((cond1 (son21) && (son21 = find_token (son21)) != nullptr) << 1);
+        conds1 =  cond_calc(son11);
+        conds2 =  cond_calc(son21);
         if (!conds1 || !conds2) { return *this; }
         switch (conds1) {
           case 1:

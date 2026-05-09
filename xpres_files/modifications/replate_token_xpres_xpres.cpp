@@ -1,4 +1,5 @@
 #include "../../xpres.hpp"
+#include <cstdint>
 
 Xpres& Xpres::replace_token(std::string_view nold, const Xpres & exp) {
   uint64_t idold = 0, i;
@@ -13,7 +14,7 @@ Xpres& Xpres::replace_token(std::string_view nold, const Xpres & exp) {
     /* Generating an array that contain true in a position if the token is in both exp and                        
      * this. If the repited id is the one to be replaced, will be false. 
      * */
-    bool _ids[exp.token_info.size()];
+    bool *_ids = new bool[exp.token_info.size()];
     for (const auto& [n1, _, __]: exp.token_info) {
       for (i = 0; i < size_this; i++) {
         if (n1 == std::get<0>(this->token_info[i])) {
@@ -32,7 +33,7 @@ Xpres& Xpres::replace_token(std::string_view nold, const Xpres & exp) {
     int64_t n = size_this-1;
 
     /* Generating an array _new_ids empty to put ids to change. */
-    uint64_t _new_ids[size_this];
+    uint64_t* _new_ids = new uint64_t[size_this];
     for (i = 0; i < size_this; i++) {
       _new_ids [i] = (i == idold ? n : i) - (i > idold);
     }
@@ -56,6 +57,9 @@ Xpres& Xpres::replace_token(std::string_view nold, const Xpres & exp) {
         );
       i++;
     }
+    
+    delete [] _ids;
+    delete [] _new_ids;
   }
   return *this;
 }

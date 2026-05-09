@@ -1,4 +1,4 @@
-#include "../../fix_matrix_d.hpp"
+#include "../../fix_matrix.hpp"
 
 void Matrix4::multc (unsigned col, float multiplier) {
   if (--col < 4) {

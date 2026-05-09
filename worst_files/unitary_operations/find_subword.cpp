@@ -1,6 +1,6 @@
 #include "../../worst.hpp"
 
-nodeWS WordSet::aux_find_subword (nodeWS node, unsigned pos, const char * str, const int & n) { 
+nodeWS WordSet::aux_find_subword (nodeWS node, unsigned pos, const char * str, const unsigned & n) { 
   if (node != nullptr) {
     if (pos < n || node->letter != str[pos]) {
       nodeWS son_i = node->son, sons = nullptr, res, son_f = nullptr;
