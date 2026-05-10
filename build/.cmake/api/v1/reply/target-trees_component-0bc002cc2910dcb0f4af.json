@@ -1,0 +1,313 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/basic_operations/constructor.cpp.o"
+		},
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/basic_operations/copy_assignment.cpp.o"
+		},
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/basic_operations/copy_constructor.cpp.o"
+		},
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/basic_operations/destructor.cpp.o"
+		},
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/basic_operations/move_assignment.cpp.o"
+		},
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/basic_operations/move_constructor.cpp.o"
+		},
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/operations/add_node.cpp.o"
+		},
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/operations/delete_node.cpp.o"
+		},
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/operations/find.cpp.o"
+		},
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/operations/get_height.cpp.o"
+		},
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/operations/get_value.cpp.o"
+		},
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/operations/nodes_number.cpp.o"
+		},
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/operations/set_value.cpp.o"
+		},
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/private_operations/copy_tree.cpp.o"
+		},
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/private_operations/create_node.cpp.o"
+		},
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/private_operations/delete_tree.cpp.o"
+		},
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/private_operations/find_node_tree.cpp.o"
+		},
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/private_operations/height_tree.cpp.o"
+		},
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/private_operations/insert_node.cpp.o"
+		},
+		{
+			"path" : "tree_files/CMakeFiles/trees_component.dir/avl_tree/private_operations/remove_node.cpp.o"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_include_directories",
+			"target_sources"
+		],
+		"files" : 
+		[
+			"tree_files/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 3,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 4,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 5,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-O3 -Wall -Werror -msse -msse2 -msse3 -msse4.1 -msse4.2 -mavx -mavx2 -mfma -std=gnu++23"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/home/barbo/Desktop/proyectos/Effobj/tree_files/.."
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "23"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19
+			]
+		}
+	],
+	"id" : "trees_component::@c5bfd8b7826c2ecb5663",
+	"name" : "trees_component",
+	"paths" : 
+	{
+		"build" : "tree_files",
+		"source" : "tree_files"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/basic_operations/constructor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/basic_operations/copy_assignment.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/basic_operations/copy_constructor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/basic_operations/destructor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/basic_operations/move_assignment.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/basic_operations/move_constructor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/operations/add_node.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/operations/delete_node.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/operations/find.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/operations/get_height.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/operations/get_value.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/operations/nodes_number.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/operations/set_value.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/private_operations/copy_tree.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/private_operations/create_node.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/private_operations/delete_tree.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/private_operations/find_node_tree.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/private_operations/height_tree.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/private_operations/insert_node.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "tree_files/avl_tree/private_operations/remove_node.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

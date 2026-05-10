@@ -4,7 +4,7 @@
 # compile CXX with g++-14
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/barbo/Desktop/proyectos/Effobj/aux/.. -I/home/barbo/Desktop/proyectos/Effobj/fix_matrix_files/.. -I/home/barbo/Desktop/proyectos/Effobj/operation_files/..
+CXX_INCLUDES = -I/home/barbo/Desktop/proyectos/Effobj/aux/.. -I/home/barbo/Desktop/proyectos/Effobj/polynomial_files/.. -I/home/barbo/Desktop/proyectos/Effobj/operation_files/..
 
 CXX_FLAGS = -O3 -Wall -Werror -msse -msse2 -msse3 -msse4.1 -msse4.2 -mavx -mavx2 -mfma -std=gnu++23
 

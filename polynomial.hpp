@@ -19,9 +19,10 @@ class Polynomial {
     Polynomial (std::vector<fv_x8>&, std::vector<iv_x8>&, std::size_t);
 
   public:
-    Polynomial ();
-    Polynomial (int);
-    Polynomial (float, uint64_t);
+    Polynomial ();                  // create 0.
+    Polynomial (int);               // create constant.
+    Polynomial (float, uint32_t);   // create monomial.
+    Polynomial (float*, uint32_t);  // create polynomial.
     Polynomial (const Polynomial &);
     Polynomial (Polynomial &&);
     Polynomial& operator= (const Polynomial &);
@@ -31,17 +32,16 @@ class Polynomial {
 
     std::string to_string ();
 
+    Polynomial operator- ();
     Polynomial operator+ (const Polynomial &);
-    Polynomial operator- (const Polynomial &);
     Polynomial operator* (const Polynomial &);
     Polynomial operator/ (const Polynomial &);
     Polynomial operator+= (const Polynomial &);
-    Polynomial operator-= (const Polynomial &);
     Polynomial operator*= (const Polynomial &);
     Polynomial operator/= (const Polynomial &);
 
     float operator[] (unsigned grade);
-    unsigned monomial_quan ();
+    std::size_t many_monomials ();
 
     template <arithmetric X, arithmetric R>
     R operator() (X);

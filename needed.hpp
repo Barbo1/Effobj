@@ -60,9 +60,9 @@ union fv_x8 {
   float _f[8];
 };
 
-union dv_x8 {
+union dv_x4 {
   __m256d _v;
-  float _f[8];
+  double _f[4];
 };
 
 union iv_x4 {

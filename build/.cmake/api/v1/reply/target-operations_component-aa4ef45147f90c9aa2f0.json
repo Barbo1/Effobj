@@ -1,0 +1,324 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/bit_functions/bitsp.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/bit_functions/combines.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/bit_functions/reverse.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/math_functions/abs.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/math_functions/flog2.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/math_functions/gcd.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/math_functions/ipot.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/math_functions/max.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/math_functions/min.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/math_functions/phi.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/math_functions/pi.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/math_functions/sgn.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/math_functions/sign_const.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/sorting/heapsort.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/sorting/mergesort.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/successions/discompress_primes.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/successions/lucas.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/successions/primes_by_bound.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/successions/primes_by_many.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/successions/primes_by_many_static.cpp.o"
+		},
+		{
+			"path" : "operation_files/CMakeFiles/operations_component.dir/successions/update_primes.cpp.o"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_include_directories",
+			"target_sources"
+		],
+		"files" : 
+		[
+			"operation_files/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 6,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 7,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 8,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-O3 -Wall -Werror -msse -msse2 -msse3 -msse4.1 -msse4.2 -mavx -mavx2 -mfma -std=gnu++23"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/home/barbo/Desktop/proyectos/Effobj/operation_files/.."
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "23"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20
+			]
+		}
+	],
+	"id" : "operations_component::@c7c3e52622bb3ead3de2",
+	"name" : "operations_component",
+	"paths" : 
+	{
+		"build" : "operation_files",
+		"source" : "operation_files"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/bit_functions/bitsp.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/bit_functions/combines.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/bit_functions/reverse.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/math_functions/abs.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/math_functions/flog2.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/math_functions/gcd.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/math_functions/ipot.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/math_functions/max.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/math_functions/min.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/math_functions/phi.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/math_functions/pi.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/math_functions/sgn.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/math_functions/sign_const.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/sorting/heapsort.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/sorting/mergesort.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/successions/discompress_primes.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/successions/lucas.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/successions/primes_by_bound.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/successions/primes_by_many.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/successions/primes_by_many_static.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "operation_files/successions/update_primes.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

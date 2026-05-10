@@ -130,29 +130,29 @@ fin/fast:
 	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f aux/CMakeFiles/fin.dir/build.make aux/CMakeFiles/fin.dir/build
 .PHONY : fin/fast
 
-proofs.o: proofs.cpp.o
-.PHONY : proofs.o
+tests/polynomial/prueba_2.o: tests/polynomial/prueba_2.cpp.o
+.PHONY : tests/polynomial/prueba_2.o
 
 # target to build an object file
-proofs.cpp.o:
-	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f aux/CMakeFiles/fin.dir/build.make aux/CMakeFiles/fin.dir/proofs.cpp.o
-.PHONY : proofs.cpp.o
+tests/polynomial/prueba_2.cpp.o:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f aux/CMakeFiles/fin.dir/build.make aux/CMakeFiles/fin.dir/tests/polynomial/prueba_2.cpp.o
+.PHONY : tests/polynomial/prueba_2.cpp.o
 
-proofs.i: proofs.cpp.i
-.PHONY : proofs.i
+tests/polynomial/prueba_2.i: tests/polynomial/prueba_2.cpp.i
+.PHONY : tests/polynomial/prueba_2.i
 
 # target to preprocess a source file
-proofs.cpp.i:
-	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f aux/CMakeFiles/fin.dir/build.make aux/CMakeFiles/fin.dir/proofs.cpp.i
-.PHONY : proofs.cpp.i
+tests/polynomial/prueba_2.cpp.i:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f aux/CMakeFiles/fin.dir/build.make aux/CMakeFiles/fin.dir/tests/polynomial/prueba_2.cpp.i
+.PHONY : tests/polynomial/prueba_2.cpp.i
 
-proofs.s: proofs.cpp.s
-.PHONY : proofs.s
+tests/polynomial/prueba_2.s: tests/polynomial/prueba_2.cpp.s
+.PHONY : tests/polynomial/prueba_2.s
 
 # target to generate assembly for a file
-proofs.cpp.s:
-	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f aux/CMakeFiles/fin.dir/build.make aux/CMakeFiles/fin.dir/proofs.cpp.s
-.PHONY : proofs.cpp.s
+tests/polynomial/prueba_2.cpp.s:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f aux/CMakeFiles/fin.dir/build.make aux/CMakeFiles/fin.dir/tests/polynomial/prueba_2.cpp.s
+.PHONY : tests/polynomial/prueba_2.cpp.s
 
 # Help Target
 help:
@@ -163,9 +163,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... fin"
-	@echo "... proofs.o"
-	@echo "... proofs.i"
-	@echo "... proofs.s"
+	@echo "... tests/polynomial/prueba_2.o"
+	@echo "... tests/polynomial/prueba_2.i"
+	@echo "... tests/polynomial/prueba_2.s"
 .PHONY : help
 
 

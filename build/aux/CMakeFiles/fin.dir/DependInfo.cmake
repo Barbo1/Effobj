@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/barbo/Desktop/proyectos/Effobj/aux/proofs.cpp" "aux/CMakeFiles/fin.dir/proofs.cpp.o" "gcc" "aux/CMakeFiles/fin.dir/proofs.cpp.o.d"
+  "/home/barbo/Desktop/proyectos/Effobj/aux/tests/polynomial/prueba_2.cpp" "aux/CMakeFiles/fin.dir/tests/polynomial/prueba_2.cpp.o" "gcc" "aux/CMakeFiles/fin.dir/tests/polynomial/prueba_2.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

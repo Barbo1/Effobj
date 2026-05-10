@@ -1,0 +1,439 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "/home/barbo/Desktop/proyectos/Effobj/fin"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"aux/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 3,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 2,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-O3 -Wall -Werror -msse -msse2 -msse3 -msse4.1 -msse4.2 -mavx -mavx2 -mfma -std=gnu++23"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "/home/barbo/Desktop/proyectos/Effobj/aux/.."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/barbo/Desktop/proyectos/Effobj/polynomial_files/.."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/barbo/Desktop/proyectos/Effobj/operation_files/.."
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "23"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "operations_component::@c7c3e52622bb3ead3de2"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "poly_components::@89d3d31a92411e328c26"
+		}
+	],
+	"id" : "fin::@45a66f3a5fd641c1d76e",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-O3 -Wall -Werror -msse -msse2 -msse3 -msse4.1 -msse4.2 -mavx -mavx2 -mfma",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "fin",
+	"nameOnDisk" : "fin",
+	"paths" : 
+	{
+		"build" : "aux",
+		"source" : "aux"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "Object Libraries",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "aux/tests/polynomial/prueba_2.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/basic_operations/comparation.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/basic_operations/constructor.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/basic_operations/convertion_int.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_assignment.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_constructor.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/basic_operations/defalut_constructor.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/basic_operations/destructor.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/basic_operations/monomial_constructor.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_assignment.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_constructor.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/basic_operations/private_constructor.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/binary_operations/addition.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/binary_operations/division.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/binary_operations/multiplication.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/access_monomial.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/derivate.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/evaluation.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/integrate.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/many_monomials.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/negate.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/to_string.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/bit_functions/bitsp.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/bit_functions/combines.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/bit_functions/reverse.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/math_functions/abs.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/math_functions/flog2.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/math_functions/gcd.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/math_functions/ipot.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/math_functions/max.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/math_functions/min.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/math_functions/phi.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/math_functions/pi.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/math_functions/sgn.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/math_functions/sign_const.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/sorting/heapsort.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/sorting/mergesort.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/successions/discompress_primes.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/successions/lucas.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/successions/primes_by_bound.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/successions/primes_by_many.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/successions/primes_by_many_static.cpp.o",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "build/operation_files/CMakeFiles/operations_component.dir/successions/update_primes.cpp.o",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "EXECUTABLE"
+}

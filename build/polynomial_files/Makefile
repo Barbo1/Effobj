@@ -154,6 +154,30 @@ basic_operations/comparation.cpp.s:
 	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/basic_operations/comparation.cpp.s
 .PHONY : basic_operations/comparation.cpp.s
 
+basic_operations/constructor.o: basic_operations/constructor.cpp.o
+.PHONY : basic_operations/constructor.o
+
+# target to build an object file
+basic_operations/constructor.cpp.o:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/basic_operations/constructor.cpp.o
+.PHONY : basic_operations/constructor.cpp.o
+
+basic_operations/constructor.i: basic_operations/constructor.cpp.i
+.PHONY : basic_operations/constructor.i
+
+# target to preprocess a source file
+basic_operations/constructor.cpp.i:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/basic_operations/constructor.cpp.i
+.PHONY : basic_operations/constructor.cpp.i
+
+basic_operations/constructor.s: basic_operations/constructor.cpp.s
+.PHONY : basic_operations/constructor.s
+
+# target to generate assembly for a file
+basic_operations/constructor.cpp.s:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/basic_operations/constructor.cpp.s
+.PHONY : basic_operations/constructor.cpp.s
+
 basic_operations/convertion_int.o: basic_operations/convertion_int.cpp.o
 .PHONY : basic_operations/convertion_int.o
 
@@ -370,29 +394,221 @@ basic_operations/private_constructor.cpp.s:
 	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/basic_operations/private_constructor.cpp.s
 .PHONY : basic_operations/private_constructor.cpp.s
 
-operations/additions.o: operations/additions.cpp.o
-.PHONY : operations/additions.o
+binary_operations/addition.o: binary_operations/addition.cpp.o
+.PHONY : binary_operations/addition.o
 
 # target to build an object file
-operations/additions.cpp.o:
-	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/operations/additions.cpp.o
-.PHONY : operations/additions.cpp.o
+binary_operations/addition.cpp.o:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/binary_operations/addition.cpp.o
+.PHONY : binary_operations/addition.cpp.o
 
-operations/additions.i: operations/additions.cpp.i
-.PHONY : operations/additions.i
+binary_operations/addition.i: binary_operations/addition.cpp.i
+.PHONY : binary_operations/addition.i
 
 # target to preprocess a source file
-operations/additions.cpp.i:
-	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/operations/additions.cpp.i
-.PHONY : operations/additions.cpp.i
+binary_operations/addition.cpp.i:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/binary_operations/addition.cpp.i
+.PHONY : binary_operations/addition.cpp.i
 
-operations/additions.s: operations/additions.cpp.s
-.PHONY : operations/additions.s
+binary_operations/addition.s: binary_operations/addition.cpp.s
+.PHONY : binary_operations/addition.s
 
 # target to generate assembly for a file
-operations/additions.cpp.s:
-	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/operations/additions.cpp.s
-.PHONY : operations/additions.cpp.s
+binary_operations/addition.cpp.s:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/binary_operations/addition.cpp.s
+.PHONY : binary_operations/addition.cpp.s
+
+binary_operations/division.o: binary_operations/division.cpp.o
+.PHONY : binary_operations/division.o
+
+# target to build an object file
+binary_operations/division.cpp.o:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/binary_operations/division.cpp.o
+.PHONY : binary_operations/division.cpp.o
+
+binary_operations/division.i: binary_operations/division.cpp.i
+.PHONY : binary_operations/division.i
+
+# target to preprocess a source file
+binary_operations/division.cpp.i:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/binary_operations/division.cpp.i
+.PHONY : binary_operations/division.cpp.i
+
+binary_operations/division.s: binary_operations/division.cpp.s
+.PHONY : binary_operations/division.s
+
+# target to generate assembly for a file
+binary_operations/division.cpp.s:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/binary_operations/division.cpp.s
+.PHONY : binary_operations/division.cpp.s
+
+binary_operations/multiplication.o: binary_operations/multiplication.cpp.o
+.PHONY : binary_operations/multiplication.o
+
+# target to build an object file
+binary_operations/multiplication.cpp.o:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/binary_operations/multiplication.cpp.o
+.PHONY : binary_operations/multiplication.cpp.o
+
+binary_operations/multiplication.i: binary_operations/multiplication.cpp.i
+.PHONY : binary_operations/multiplication.i
+
+# target to preprocess a source file
+binary_operations/multiplication.cpp.i:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/binary_operations/multiplication.cpp.i
+.PHONY : binary_operations/multiplication.cpp.i
+
+binary_operations/multiplication.s: binary_operations/multiplication.cpp.s
+.PHONY : binary_operations/multiplication.s
+
+# target to generate assembly for a file
+binary_operations/multiplication.cpp.s:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/binary_operations/multiplication.cpp.s
+.PHONY : binary_operations/multiplication.cpp.s
+
+unitary_operations/access_monomial.o: unitary_operations/access_monomial.cpp.o
+.PHONY : unitary_operations/access_monomial.o
+
+# target to build an object file
+unitary_operations/access_monomial.cpp.o:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/access_monomial.cpp.o
+.PHONY : unitary_operations/access_monomial.cpp.o
+
+unitary_operations/access_monomial.i: unitary_operations/access_monomial.cpp.i
+.PHONY : unitary_operations/access_monomial.i
+
+# target to preprocess a source file
+unitary_operations/access_monomial.cpp.i:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/access_monomial.cpp.i
+.PHONY : unitary_operations/access_monomial.cpp.i
+
+unitary_operations/access_monomial.s: unitary_operations/access_monomial.cpp.s
+.PHONY : unitary_operations/access_monomial.s
+
+# target to generate assembly for a file
+unitary_operations/access_monomial.cpp.s:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/access_monomial.cpp.s
+.PHONY : unitary_operations/access_monomial.cpp.s
+
+unitary_operations/derivate.o: unitary_operations/derivate.cpp.o
+.PHONY : unitary_operations/derivate.o
+
+# target to build an object file
+unitary_operations/derivate.cpp.o:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/derivate.cpp.o
+.PHONY : unitary_operations/derivate.cpp.o
+
+unitary_operations/derivate.i: unitary_operations/derivate.cpp.i
+.PHONY : unitary_operations/derivate.i
+
+# target to preprocess a source file
+unitary_operations/derivate.cpp.i:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/derivate.cpp.i
+.PHONY : unitary_operations/derivate.cpp.i
+
+unitary_operations/derivate.s: unitary_operations/derivate.cpp.s
+.PHONY : unitary_operations/derivate.s
+
+# target to generate assembly for a file
+unitary_operations/derivate.cpp.s:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/derivate.cpp.s
+.PHONY : unitary_operations/derivate.cpp.s
+
+unitary_operations/evaluation.o: unitary_operations/evaluation.cpp.o
+.PHONY : unitary_operations/evaluation.o
+
+# target to build an object file
+unitary_operations/evaluation.cpp.o:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/evaluation.cpp.o
+.PHONY : unitary_operations/evaluation.cpp.o
+
+unitary_operations/evaluation.i: unitary_operations/evaluation.cpp.i
+.PHONY : unitary_operations/evaluation.i
+
+# target to preprocess a source file
+unitary_operations/evaluation.cpp.i:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/evaluation.cpp.i
+.PHONY : unitary_operations/evaluation.cpp.i
+
+unitary_operations/evaluation.s: unitary_operations/evaluation.cpp.s
+.PHONY : unitary_operations/evaluation.s
+
+# target to generate assembly for a file
+unitary_operations/evaluation.cpp.s:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/evaluation.cpp.s
+.PHONY : unitary_operations/evaluation.cpp.s
+
+unitary_operations/integrate.o: unitary_operations/integrate.cpp.o
+.PHONY : unitary_operations/integrate.o
+
+# target to build an object file
+unitary_operations/integrate.cpp.o:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/integrate.cpp.o
+.PHONY : unitary_operations/integrate.cpp.o
+
+unitary_operations/integrate.i: unitary_operations/integrate.cpp.i
+.PHONY : unitary_operations/integrate.i
+
+# target to preprocess a source file
+unitary_operations/integrate.cpp.i:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/integrate.cpp.i
+.PHONY : unitary_operations/integrate.cpp.i
+
+unitary_operations/integrate.s: unitary_operations/integrate.cpp.s
+.PHONY : unitary_operations/integrate.s
+
+# target to generate assembly for a file
+unitary_operations/integrate.cpp.s:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/integrate.cpp.s
+.PHONY : unitary_operations/integrate.cpp.s
+
+unitary_operations/many_monomials.o: unitary_operations/many_monomials.cpp.o
+.PHONY : unitary_operations/many_monomials.o
+
+# target to build an object file
+unitary_operations/many_monomials.cpp.o:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/many_monomials.cpp.o
+.PHONY : unitary_operations/many_monomials.cpp.o
+
+unitary_operations/many_monomials.i: unitary_operations/many_monomials.cpp.i
+.PHONY : unitary_operations/many_monomials.i
+
+# target to preprocess a source file
+unitary_operations/many_monomials.cpp.i:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/many_monomials.cpp.i
+.PHONY : unitary_operations/many_monomials.cpp.i
+
+unitary_operations/many_monomials.s: unitary_operations/many_monomials.cpp.s
+.PHONY : unitary_operations/many_monomials.s
+
+# target to generate assembly for a file
+unitary_operations/many_monomials.cpp.s:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/many_monomials.cpp.s
+.PHONY : unitary_operations/many_monomials.cpp.s
+
+unitary_operations/negate.o: unitary_operations/negate.cpp.o
+.PHONY : unitary_operations/negate.o
+
+# target to build an object file
+unitary_operations/negate.cpp.o:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/negate.cpp.o
+.PHONY : unitary_operations/negate.cpp.o
+
+unitary_operations/negate.i: unitary_operations/negate.cpp.i
+.PHONY : unitary_operations/negate.i
+
+# target to preprocess a source file
+unitary_operations/negate.cpp.i:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/negate.cpp.i
+.PHONY : unitary_operations/negate.cpp.i
+
+unitary_operations/negate.s: unitary_operations/negate.cpp.s
+.PHONY : unitary_operations/negate.s
+
+# target to generate assembly for a file
+unitary_operations/negate.cpp.s:
+	cd /home/barbo/Desktop/proyectos/Effobj/build && $(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/negate.cpp.s
+.PHONY : unitary_operations/negate.cpp.s
 
 unitary_operations/to_string.o: unitary_operations/to_string.cpp.o
 .PHONY : unitary_operations/to_string.o
@@ -430,6 +646,9 @@ help:
 	@echo "... basic_operations/comparation.o"
 	@echo "... basic_operations/comparation.i"
 	@echo "... basic_operations/comparation.s"
+	@echo "... basic_operations/constructor.o"
+	@echo "... basic_operations/constructor.i"
+	@echo "... basic_operations/constructor.s"
 	@echo "... basic_operations/convertion_int.o"
 	@echo "... basic_operations/convertion_int.i"
 	@echo "... basic_operations/convertion_int.s"
@@ -457,9 +676,33 @@ help:
 	@echo "... basic_operations/private_constructor.o"
 	@echo "... basic_operations/private_constructor.i"
 	@echo "... basic_operations/private_constructor.s"
-	@echo "... operations/additions.o"
-	@echo "... operations/additions.i"
-	@echo "... operations/additions.s"
+	@echo "... binary_operations/addition.o"
+	@echo "... binary_operations/addition.i"
+	@echo "... binary_operations/addition.s"
+	@echo "... binary_operations/division.o"
+	@echo "... binary_operations/division.i"
+	@echo "... binary_operations/division.s"
+	@echo "... binary_operations/multiplication.o"
+	@echo "... binary_operations/multiplication.i"
+	@echo "... binary_operations/multiplication.s"
+	@echo "... unitary_operations/access_monomial.o"
+	@echo "... unitary_operations/access_monomial.i"
+	@echo "... unitary_operations/access_monomial.s"
+	@echo "... unitary_operations/derivate.o"
+	@echo "... unitary_operations/derivate.i"
+	@echo "... unitary_operations/derivate.s"
+	@echo "... unitary_operations/evaluation.o"
+	@echo "... unitary_operations/evaluation.i"
+	@echo "... unitary_operations/evaluation.s"
+	@echo "... unitary_operations/integrate.o"
+	@echo "... unitary_operations/integrate.i"
+	@echo "... unitary_operations/integrate.s"
+	@echo "... unitary_operations/many_monomials.o"
+	@echo "... unitary_operations/many_monomials.i"
+	@echo "... unitary_operations/many_monomials.s"
+	@echo "... unitary_operations/negate.o"
+	@echo "... unitary_operations/negate.i"
+	@echo "... unitary_operations/negate.s"
 	@echo "... unitary_operations/to_string.o"
 	@echo "... unitary_operations/to_string.i"
 	@echo "... unitary_operations/to_string.s"

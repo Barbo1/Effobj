@@ -261,36 +261,4 @@ polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/to_string.cpp
  /usr/include/c++/14/tr1/modified_bessel_func.tcc \
  /usr/include/c++/14/tr1/poly_hermite.tcc \
  /usr/include/c++/14/tr1/poly_laguerre.tcc \
- /usr/include/c++/14/tr1/riemann_zeta.tcc /usr/include/c++/14/ranges \
- /usr/include/c++/14/iterator /usr/include/c++/14/bits/stream_iterator.h \
- /usr/include/c++/14/bits/streambuf_iterator.h \
- /usr/include/c++/14/streambuf /usr/include/c++/14/bits/ios_base.h \
- /usr/include/c++/14/ext/atomicity.h \
- /usr/include/x86_64-linux-gnu/c++/14/bits/gthr.h \
- /usr/include/x86_64-linux-gnu/c++/14/bits/gthr-default.h \
- /usr/include/pthread.h /usr/include/sched.h \
- /usr/include/x86_64-linux-gnu/bits/sched.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
- /usr/include/x86_64-linux-gnu/bits/cpu-set.h /usr/include/time.h \
- /usr/include/x86_64-linux-gnu/bits/time.h \
- /usr/include/x86_64-linux-gnu/bits/timex.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
- /usr/include/x86_64-linux-gnu/bits/setjmp.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
- /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
- /usr/include/x86_64-linux-gnu/c++/14/bits/atomic_word.h \
- /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
- /usr/include/c++/14/bits/locale_classes.h \
- /usr/include/c++/14/bits/locale_classes.tcc \
- /usr/include/c++/14/system_error \
- /usr/include/x86_64-linux-gnu/c++/14/bits/error_constants.h \
- /usr/include/c++/14/stdexcept /usr/include/c++/14/exception \
- /usr/include/c++/14/bits/exception_ptr.h \
- /usr/include/c++/14/bits/cxxabi_init_exception.h \
- /usr/include/c++/14/typeinfo /usr/include/c++/14/bits/nested_exception.h \
- /usr/include/c++/14/bits/streambuf.tcc /usr/include/c++/14/optional \
- /usr/include/c++/14/bits/enable_special_members.h \
- /usr/include/c++/14/span /usr/include/c++/14/array \
- /usr/include/c++/14/variant /usr/include/c++/14/bits/parse_numbers.h \
- /usr/include/c++/14/bits/elements_of.h
+ /usr/include/c++/14/tr1/riemann_zeta.tcc

@@ -1,0 +1,280 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "fix_matrix_files/CMakeFiles/fixmat_component.dir/information/access.cpp.o"
+		},
+		{
+			"path" : "fix_matrix_files/CMakeFiles/fixmat_component.dir/manipulation/change_col.cpp.o"
+		},
+		{
+			"path" : "fix_matrix_files/CMakeFiles/fixmat_component.dir/manipulation/change_row.cpp.o"
+		},
+		{
+			"path" : "fix_matrix_files/CMakeFiles/fixmat_component.dir/manipulation/mult_col.cpp.o"
+		},
+		{
+			"path" : "fix_matrix_files/CMakeFiles/fixmat_component.dir/manipulation/mult_row.cpp.o"
+		},
+		{
+			"path" : "fix_matrix_files/CMakeFiles/fixmat_component.dir/unitary_operations/determinant.cpp.o"
+		},
+		{
+			"path" : "fix_matrix_files/CMakeFiles/fixmat_component.dir/unitary_operations/invertion.cpp.o"
+		},
+		{
+			"path" : "fix_matrix_files/CMakeFiles/fixmat_component.dir/unitary_operations/multiplication.cpp.o"
+		},
+		{
+			"path" : "fix_matrix_files/CMakeFiles/fixmat_component.dir/unitary_operations/transposition.cpp.o"
+		},
+		{
+			"path" : "fix_matrix_files/CMakeFiles/fixmat_component.dir/basic_operations/constructor_by_float.cpp.o"
+		},
+		{
+			"path" : "fix_matrix_files/CMakeFiles/fixmat_component.dir/basic_operations/constructor_by_fv_x4.cpp.o"
+		},
+		{
+			"path" : "fix_matrix_files/CMakeFiles/fixmat_component.dir/basic_operations/copy_assignment.cpp.o"
+		},
+		{
+			"path" : "fix_matrix_files/CMakeFiles/fixmat_component.dir/basic_operations/copy_constructor.cpp.o"
+		},
+		{
+			"path" : "fix_matrix_files/CMakeFiles/fixmat_component.dir/basic_operations/default_constructor.cpp.o"
+		},
+		{
+			"path" : "fix_matrix_files/CMakeFiles/fixmat_component.dir/basic_operations/destructor.cpp.o"
+		},
+		{
+			"path" : "fix_matrix_files/CMakeFiles/fixmat_component.dir/binary_operations/addition.cpp.o"
+		},
+		{
+			"path" : "fix_matrix_files/CMakeFiles/fixmat_component.dir/binary_operations/multiplication.cpp.o"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_include_directories",
+			"target_sources"
+		],
+		"files" : 
+		[
+			"fix_matrix_files/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 7,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 9,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-O3 -Wall -Werror -msse -msse2 -msse3 -msse4.1 -msse4.2 -mavx -mavx2 -mfma -std=gnu++23"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/home/barbo/Desktop/proyectos/Effobj/fix_matrix_files/.."
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "23"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16
+			]
+		}
+	],
+	"id" : "fixmat_component::@f8fc8856b0cda2592afa",
+	"name" : "fixmat_component",
+	"paths" : 
+	{
+		"build" : "fix_matrix_files",
+		"source" : "fix_matrix_files"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "fix_matrix_files/information/access.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "fix_matrix_files/manipulation/change_col.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "fix_matrix_files/manipulation/change_row.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "fix_matrix_files/manipulation/mult_col.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "fix_matrix_files/manipulation/mult_row.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "fix_matrix_files/unitary_operations/determinant.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "fix_matrix_files/unitary_operations/invertion.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "fix_matrix_files/unitary_operations/multiplication.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "fix_matrix_files/unitary_operations/transposition.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "fix_matrix_files/basic_operations/constructor_by_float.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "fix_matrix_files/basic_operations/constructor_by_fv_x4.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "fix_matrix_files/basic_operations/copy_assignment.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "fix_matrix_files/basic_operations/copy_constructor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "fix_matrix_files/basic_operations/default_constructor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "fix_matrix_files/basic_operations/destructor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "fix_matrix_files/binary_operations/addition.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "fix_matrix_files/binary_operations/multiplication.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

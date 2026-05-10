@@ -1,0 +1,301 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					],
+					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "matrix_files",
+					"jsonFile" : "directory-matrix_files-0bbdd574a834255b2165.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "matrix_files",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "operation_files",
+					"jsonFile" : "directory-operation_files-5cb6366aab5c6ebff7eb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "operation_files",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "worst_files",
+					"jsonFile" : "directory-worst_files-1733a11e001ffbf9a735.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "worst_files",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "xpres_files",
+					"jsonFile" : "directory-xpres_files-03e8c0207b7dc27526c8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "xpres_files",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "random_files",
+					"jsonFile" : "directory-random_files-95ba0fec8e48a9c4b2e1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "random_files",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "tree_files",
+					"jsonFile" : "directory-tree_files-9cf8ba2ee777913a4dd1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tree_files",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "polynomial_files",
+					"jsonFile" : "directory-polynomial_files-c3e1b6589c869789f1f9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "polynomial_files",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "fix_matrix_files",
+					"jsonFile" : "directory-fix_matrix_files-4cec7ff896ec4e40fd3d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "fix_matrix_files",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "graph_files",
+					"jsonFile" : "directory-graph_files-f2899fedbf40d168411e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "graph_files",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "aux",
+					"jsonFile" : "directory-aux-4bcc3c4c12f2991d0755.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "aux",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					],
+					"name" : "Effobj",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 10,
+					"id" : "fin::@45a66f3a5fd641c1d76e",
+					"jsonFile" : "target-fin-ba6f0b2510e89e702875.json",
+					"name" : "fin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "fixmat_component::@f8fc8856b0cda2592afa",
+					"jsonFile" : "target-fixmat_component-7185580622239adbfb58.json",
+					"name" : "fixmat_component",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "graph_component::@e050f63ad18152177da4",
+					"jsonFile" : "target-graph_component-10239e0395a6ef692433.json",
+					"name" : "graph_component",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "matrix_component::@6f9df7566e4f99378097",
+					"jsonFile" : "target-matrix_component-43edcc77d07beebd7711.json",
+					"name" : "matrix_component",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "operations_component::@c7c3e52622bb3ead3de2",
+					"jsonFile" : "target-operations_component-aa4ef45147f90c9aa2f0.json",
+					"name" : "operations_component",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "poly_components::@89d3d31a92411e328c26",
+					"jsonFile" : "target-poly_components-1b33a53781599a5a15cb.json",
+					"name" : "poly_components",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "random_component::@acf551a94e99b26ca865",
+					"jsonFile" : "target-random_component-428b4cbac637531a7302.json",
+					"name" : "random_component",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "trees_component::@c5bfd8b7826c2ecb5663",
+					"jsonFile" : "target-trees_component-0bc002cc2910dcb0f4af.json",
+					"name" : "trees_component",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "worst_component::@6547368e8c7789bc7873",
+					"jsonFile" : "target-worst_component-283e6fc6e6a3950ffc15.json",
+					"name" : "worst_component",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "xpres_component::@7787706e08b993f09e76",
+					"jsonFile" : "target-xpres_component-6ad01b473113740c2ece.json",
+					"name" : "xpres_component",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/barbo/Desktop/proyectos/Effobj/build",
+		"source" : "/home/barbo/Desktop/proyectos/Effobj"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

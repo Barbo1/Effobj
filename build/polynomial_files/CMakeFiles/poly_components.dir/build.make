@@ -83,10 +83,24 @@ polynomial_files/CMakeFiles/poly_components.dir/basic_operations/comparation.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/poly_components.dir/basic_operations/comparation.cpp.s"
 	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/comparation.cpp -o CMakeFiles/poly_components.dir/basic_operations/comparation.cpp.s
 
+polynomial_files/CMakeFiles/poly_components.dir/basic_operations/constructor.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
+polynomial_files/CMakeFiles/poly_components.dir/basic_operations/constructor.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/constructor.cpp
+polynomial_files/CMakeFiles/poly_components.dir/basic_operations/constructor.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/basic_operations/constructor.cpp.o"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/basic_operations/constructor.cpp.o -MF CMakeFiles/poly_components.dir/basic_operations/constructor.cpp.o.d -o CMakeFiles/poly_components.dir/basic_operations/constructor.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/constructor.cpp
+
+polynomial_files/CMakeFiles/poly_components.dir/basic_operations/constructor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/poly_components.dir/basic_operations/constructor.cpp.i"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/constructor.cpp > CMakeFiles/poly_components.dir/basic_operations/constructor.cpp.i
+
+polynomial_files/CMakeFiles/poly_components.dir/basic_operations/constructor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/poly_components.dir/basic_operations/constructor.cpp.s"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/constructor.cpp -o CMakeFiles/poly_components.dir/basic_operations/constructor.cpp.s
+
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/convertion_int.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/convertion_int.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/convertion_int.cpp
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/convertion_int.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/basic_operations/convertion_int.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/basic_operations/convertion_int.cpp.o"
 	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/basic_operations/convertion_int.cpp.o -MF CMakeFiles/poly_components.dir/basic_operations/convertion_int.cpp.o.d -o CMakeFiles/poly_components.dir/basic_operations/convertion_int.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/convertion_int.cpp
 
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/convertion_int.cpp.i: cmake_force
@@ -100,7 +114,7 @@ polynomial_files/CMakeFiles/poly_components.dir/basic_operations/convertion_int.
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_assignment.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_assignment.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/copy_assignment.cpp
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_assignment.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_assignment.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_assignment.cpp.o"
 	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_assignment.cpp.o -MF CMakeFiles/poly_components.dir/basic_operations/copy_assignment.cpp.o.d -o CMakeFiles/poly_components.dir/basic_operations/copy_assignment.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/copy_assignment.cpp
 
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_assignment.cpp.i: cmake_force
@@ -114,7 +128,7 @@ polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_assignment
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_constructor.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_constructor.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/copy_constructor.cpp
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_constructor.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_constructor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_constructor.cpp.o"
 	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_constructor.cpp.o -MF CMakeFiles/poly_components.dir/basic_operations/copy_constructor.cpp.o.d -o CMakeFiles/poly_components.dir/basic_operations/copy_constructor.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/copy_constructor.cpp
 
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_constructor.cpp.i: cmake_force
@@ -128,7 +142,7 @@ polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_constructo
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/defalut_constructor.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/defalut_constructor.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/defalut_constructor.cpp
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/defalut_constructor.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/basic_operations/defalut_constructor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/basic_operations/defalut_constructor.cpp.o"
 	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/basic_operations/defalut_constructor.cpp.o -MF CMakeFiles/poly_components.dir/basic_operations/defalut_constructor.cpp.o.d -o CMakeFiles/poly_components.dir/basic_operations/defalut_constructor.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/defalut_constructor.cpp
 
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/defalut_constructor.cpp.i: cmake_force
@@ -142,7 +156,7 @@ polynomial_files/CMakeFiles/poly_components.dir/basic_operations/defalut_constru
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/destructor.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/destructor.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/destructor.cpp
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/destructor.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/basic_operations/destructor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/basic_operations/destructor.cpp.o"
 	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/basic_operations/destructor.cpp.o -MF CMakeFiles/poly_components.dir/basic_operations/destructor.cpp.o.d -o CMakeFiles/poly_components.dir/basic_operations/destructor.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/destructor.cpp
 
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/destructor.cpp.i: cmake_force
@@ -156,7 +170,7 @@ polynomial_files/CMakeFiles/poly_components.dir/basic_operations/destructor.cpp.
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/monomial_constructor.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/monomial_constructor.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/monomial_constructor.cpp
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/monomial_constructor.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/basic_operations/monomial_constructor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/basic_operations/monomial_constructor.cpp.o"
 	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/basic_operations/monomial_constructor.cpp.o -MF CMakeFiles/poly_components.dir/basic_operations/monomial_constructor.cpp.o.d -o CMakeFiles/poly_components.dir/basic_operations/monomial_constructor.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/monomial_constructor.cpp
 
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/monomial_constructor.cpp.i: cmake_force
@@ -170,7 +184,7 @@ polynomial_files/CMakeFiles/poly_components.dir/basic_operations/monomial_constr
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_assignment.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_assignment.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/move_assignment.cpp
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_assignment.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_assignment.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_assignment.cpp.o"
 	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_assignment.cpp.o -MF CMakeFiles/poly_components.dir/basic_operations/move_assignment.cpp.o.d -o CMakeFiles/poly_components.dir/basic_operations/move_assignment.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/move_assignment.cpp
 
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_assignment.cpp.i: cmake_force
@@ -184,7 +198,7 @@ polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_assignment
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_constructor.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_constructor.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/move_constructor.cpp
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_constructor.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_constructor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_constructor.cpp.o"
 	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_constructor.cpp.o -MF CMakeFiles/poly_components.dir/basic_operations/move_constructor.cpp.o.d -o CMakeFiles/poly_components.dir/basic_operations/move_constructor.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/move_constructor.cpp
 
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_constructor.cpp.i: cmake_force
@@ -198,7 +212,7 @@ polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_constructo
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/private_constructor.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/private_constructor.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/private_constructor.cpp
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/private_constructor.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/basic_operations/private_constructor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/basic_operations/private_constructor.cpp.o"
 	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/basic_operations/private_constructor.cpp.o -MF CMakeFiles/poly_components.dir/basic_operations/private_constructor.cpp.o.d -o CMakeFiles/poly_components.dir/basic_operations/private_constructor.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/private_constructor.cpp
 
 polynomial_files/CMakeFiles/poly_components.dir/basic_operations/private_constructor.cpp.i: cmake_force
@@ -209,24 +223,136 @@ polynomial_files/CMakeFiles/poly_components.dir/basic_operations/private_constru
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/poly_components.dir/basic_operations/private_constructor.cpp.s"
 	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/barbo/Desktop/proyectos/Effobj/polynomial_files/basic_operations/private_constructor.cpp -o CMakeFiles/poly_components.dir/basic_operations/private_constructor.cpp.s
 
-polynomial_files/CMakeFiles/poly_components.dir/operations/additions.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
-polynomial_files/CMakeFiles/poly_components.dir/operations/additions.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/operations/additions.cpp
-polynomial_files/CMakeFiles/poly_components.dir/operations/additions.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/operations/additions.cpp.o"
-	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/operations/additions.cpp.o -MF CMakeFiles/poly_components.dir/operations/additions.cpp.o.d -o CMakeFiles/poly_components.dir/operations/additions.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/operations/additions.cpp
+polynomial_files/CMakeFiles/poly_components.dir/binary_operations/addition.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
+polynomial_files/CMakeFiles/poly_components.dir/binary_operations/addition.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/binary_operations/addition.cpp
+polynomial_files/CMakeFiles/poly_components.dir/binary_operations/addition.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/binary_operations/addition.cpp.o"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/binary_operations/addition.cpp.o -MF CMakeFiles/poly_components.dir/binary_operations/addition.cpp.o.d -o CMakeFiles/poly_components.dir/binary_operations/addition.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/binary_operations/addition.cpp
 
-polynomial_files/CMakeFiles/poly_components.dir/operations/additions.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/poly_components.dir/operations/additions.cpp.i"
-	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/barbo/Desktop/proyectos/Effobj/polynomial_files/operations/additions.cpp > CMakeFiles/poly_components.dir/operations/additions.cpp.i
+polynomial_files/CMakeFiles/poly_components.dir/binary_operations/addition.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/poly_components.dir/binary_operations/addition.cpp.i"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/barbo/Desktop/proyectos/Effobj/polynomial_files/binary_operations/addition.cpp > CMakeFiles/poly_components.dir/binary_operations/addition.cpp.i
 
-polynomial_files/CMakeFiles/poly_components.dir/operations/additions.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/poly_components.dir/operations/additions.cpp.s"
-	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/barbo/Desktop/proyectos/Effobj/polynomial_files/operations/additions.cpp -o CMakeFiles/poly_components.dir/operations/additions.cpp.s
+polynomial_files/CMakeFiles/poly_components.dir/binary_operations/addition.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/poly_components.dir/binary_operations/addition.cpp.s"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/barbo/Desktop/proyectos/Effobj/polynomial_files/binary_operations/addition.cpp -o CMakeFiles/poly_components.dir/binary_operations/addition.cpp.s
+
+polynomial_files/CMakeFiles/poly_components.dir/binary_operations/division.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
+polynomial_files/CMakeFiles/poly_components.dir/binary_operations/division.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/binary_operations/division.cpp
+polynomial_files/CMakeFiles/poly_components.dir/binary_operations/division.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/binary_operations/division.cpp.o"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/binary_operations/division.cpp.o -MF CMakeFiles/poly_components.dir/binary_operations/division.cpp.o.d -o CMakeFiles/poly_components.dir/binary_operations/division.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/binary_operations/division.cpp
+
+polynomial_files/CMakeFiles/poly_components.dir/binary_operations/division.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/poly_components.dir/binary_operations/division.cpp.i"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/barbo/Desktop/proyectos/Effobj/polynomial_files/binary_operations/division.cpp > CMakeFiles/poly_components.dir/binary_operations/division.cpp.i
+
+polynomial_files/CMakeFiles/poly_components.dir/binary_operations/division.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/poly_components.dir/binary_operations/division.cpp.s"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/barbo/Desktop/proyectos/Effobj/polynomial_files/binary_operations/division.cpp -o CMakeFiles/poly_components.dir/binary_operations/division.cpp.s
+
+polynomial_files/CMakeFiles/poly_components.dir/binary_operations/multiplication.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
+polynomial_files/CMakeFiles/poly_components.dir/binary_operations/multiplication.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/binary_operations/multiplication.cpp
+polynomial_files/CMakeFiles/poly_components.dir/binary_operations/multiplication.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/binary_operations/multiplication.cpp.o"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/binary_operations/multiplication.cpp.o -MF CMakeFiles/poly_components.dir/binary_operations/multiplication.cpp.o.d -o CMakeFiles/poly_components.dir/binary_operations/multiplication.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/binary_operations/multiplication.cpp
+
+polynomial_files/CMakeFiles/poly_components.dir/binary_operations/multiplication.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/poly_components.dir/binary_operations/multiplication.cpp.i"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/barbo/Desktop/proyectos/Effobj/polynomial_files/binary_operations/multiplication.cpp > CMakeFiles/poly_components.dir/binary_operations/multiplication.cpp.i
+
+polynomial_files/CMakeFiles/poly_components.dir/binary_operations/multiplication.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/poly_components.dir/binary_operations/multiplication.cpp.s"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/barbo/Desktop/proyectos/Effobj/polynomial_files/binary_operations/multiplication.cpp -o CMakeFiles/poly_components.dir/binary_operations/multiplication.cpp.s
+
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/access_monomial.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/access_monomial.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/access_monomial.cpp
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/access_monomial.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/access_monomial.cpp.o"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/access_monomial.cpp.o -MF CMakeFiles/poly_components.dir/unitary_operations/access_monomial.cpp.o.d -o CMakeFiles/poly_components.dir/unitary_operations/access_monomial.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/access_monomial.cpp
+
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/access_monomial.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/poly_components.dir/unitary_operations/access_monomial.cpp.i"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/access_monomial.cpp > CMakeFiles/poly_components.dir/unitary_operations/access_monomial.cpp.i
+
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/access_monomial.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/poly_components.dir/unitary_operations/access_monomial.cpp.s"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/access_monomial.cpp -o CMakeFiles/poly_components.dir/unitary_operations/access_monomial.cpp.s
+
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/derivate.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/derivate.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/derivate.cpp
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/derivate.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/derivate.cpp.o"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/derivate.cpp.o -MF CMakeFiles/poly_components.dir/unitary_operations/derivate.cpp.o.d -o CMakeFiles/poly_components.dir/unitary_operations/derivate.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/derivate.cpp
+
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/derivate.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/poly_components.dir/unitary_operations/derivate.cpp.i"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/derivate.cpp > CMakeFiles/poly_components.dir/unitary_operations/derivate.cpp.i
+
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/derivate.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/poly_components.dir/unitary_operations/derivate.cpp.s"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/derivate.cpp -o CMakeFiles/poly_components.dir/unitary_operations/derivate.cpp.s
+
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/evaluation.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/evaluation.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/evaluation.cpp
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/evaluation.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/evaluation.cpp.o"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/evaluation.cpp.o -MF CMakeFiles/poly_components.dir/unitary_operations/evaluation.cpp.o.d -o CMakeFiles/poly_components.dir/unitary_operations/evaluation.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/evaluation.cpp
+
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/evaluation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/poly_components.dir/unitary_operations/evaluation.cpp.i"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/evaluation.cpp > CMakeFiles/poly_components.dir/unitary_operations/evaluation.cpp.i
+
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/evaluation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/poly_components.dir/unitary_operations/evaluation.cpp.s"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/evaluation.cpp -o CMakeFiles/poly_components.dir/unitary_operations/evaluation.cpp.s
+
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/integrate.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/integrate.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/integrate.cpp
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/integrate.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/integrate.cpp.o"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/integrate.cpp.o -MF CMakeFiles/poly_components.dir/unitary_operations/integrate.cpp.o.d -o CMakeFiles/poly_components.dir/unitary_operations/integrate.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/integrate.cpp
+
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/integrate.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/poly_components.dir/unitary_operations/integrate.cpp.i"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/integrate.cpp > CMakeFiles/poly_components.dir/unitary_operations/integrate.cpp.i
+
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/integrate.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/poly_components.dir/unitary_operations/integrate.cpp.s"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/integrate.cpp -o CMakeFiles/poly_components.dir/unitary_operations/integrate.cpp.s
+
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/many_monomials.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/many_monomials.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/many_monomials.cpp
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/many_monomials.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/many_monomials.cpp.o"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/many_monomials.cpp.o -MF CMakeFiles/poly_components.dir/unitary_operations/many_monomials.cpp.o.d -o CMakeFiles/poly_components.dir/unitary_operations/many_monomials.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/many_monomials.cpp
+
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/many_monomials.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/poly_components.dir/unitary_operations/many_monomials.cpp.i"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/many_monomials.cpp > CMakeFiles/poly_components.dir/unitary_operations/many_monomials.cpp.i
+
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/many_monomials.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/poly_components.dir/unitary_operations/many_monomials.cpp.s"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/many_monomials.cpp -o CMakeFiles/poly_components.dir/unitary_operations/many_monomials.cpp.s
+
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/negate.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/negate.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/negate.cpp
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/negate.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/negate.cpp.o"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/negate.cpp.o -MF CMakeFiles/poly_components.dir/unitary_operations/negate.cpp.o.d -o CMakeFiles/poly_components.dir/unitary_operations/negate.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/negate.cpp
+
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/negate.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/poly_components.dir/unitary_operations/negate.cpp.i"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/negate.cpp > CMakeFiles/poly_components.dir/unitary_operations/negate.cpp.i
+
+polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/negate.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/poly_components.dir/unitary_operations/negate.cpp.s"
+	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/negate.cpp -o CMakeFiles/poly_components.dir/unitary_operations/negate.cpp.s
 
 polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/to_string.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/flags.make
 polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/to_string.cpp.o: /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/to_string.cpp
 polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/to_string.cpp.o: polynomial_files/CMakeFiles/poly_components.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/to_string.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/to_string.cpp.o"
 	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/to_string.cpp.o -MF CMakeFiles/poly_components.dir/unitary_operations/to_string.cpp.o.d -o CMakeFiles/poly_components.dir/unitary_operations/to_string.cpp.o -c /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/to_string.cpp
 
 polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/to_string.cpp.i: cmake_force
@@ -238,6 +364,7 @@ polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/to_string.cpp
 	cd /home/barbo/Desktop/proyectos/Effobj/build/polynomial_files && g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/barbo/Desktop/proyectos/Effobj/polynomial_files/unitary_operations/to_string.cpp -o CMakeFiles/poly_components.dir/unitary_operations/to_string.cpp.s
 
 poly_components: polynomial_files/CMakeFiles/poly_components.dir/basic_operations/comparation.cpp.o
+poly_components: polynomial_files/CMakeFiles/poly_components.dir/basic_operations/constructor.cpp.o
 poly_components: polynomial_files/CMakeFiles/poly_components.dir/basic_operations/convertion_int.cpp.o
 poly_components: polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_assignment.cpp.o
 poly_components: polynomial_files/CMakeFiles/poly_components.dir/basic_operations/copy_constructor.cpp.o
@@ -247,7 +374,15 @@ poly_components: polynomial_files/CMakeFiles/poly_components.dir/basic_operation
 poly_components: polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_assignment.cpp.o
 poly_components: polynomial_files/CMakeFiles/poly_components.dir/basic_operations/move_constructor.cpp.o
 poly_components: polynomial_files/CMakeFiles/poly_components.dir/basic_operations/private_constructor.cpp.o
-poly_components: polynomial_files/CMakeFiles/poly_components.dir/operations/additions.cpp.o
+poly_components: polynomial_files/CMakeFiles/poly_components.dir/binary_operations/addition.cpp.o
+poly_components: polynomial_files/CMakeFiles/poly_components.dir/binary_operations/division.cpp.o
+poly_components: polynomial_files/CMakeFiles/poly_components.dir/binary_operations/multiplication.cpp.o
+poly_components: polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/access_monomial.cpp.o
+poly_components: polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/derivate.cpp.o
+poly_components: polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/evaluation.cpp.o
+poly_components: polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/integrate.cpp.o
+poly_components: polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/many_monomials.cpp.o
+poly_components: polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/negate.cpp.o
 poly_components: polynomial_files/CMakeFiles/poly_components.dir/unitary_operations/to_string.cpp.o
 poly_components: polynomial_files/CMakeFiles/poly_components.dir/build.make
 .PHONY : poly_components

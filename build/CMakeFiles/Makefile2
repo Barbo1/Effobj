@@ -258,12 +258,12 @@ xpres_files/clean: xpres_files/CMakeFiles/xpres_component.dir/clean
 matrix_files/CMakeFiles/matrix_component.dir/all:
 	$(MAKE) $(MAKESILENT) -f matrix_files/CMakeFiles/matrix_component.dir/build.make matrix_files/CMakeFiles/matrix_component.dir/depend
 	$(MAKE) $(MAKESILENT) -f matrix_files/CMakeFiles/matrix_component.dir/build.make matrix_files/CMakeFiles/matrix_component.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44 "Built target matrix_component"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42 "Built target matrix_component"
 .PHONY : matrix_files/CMakeFiles/matrix_component.dir/all
 
 # Build rule for subdir invocation for target.
 matrix_files/CMakeFiles/matrix_component.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 29
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matrix_files/CMakeFiles/matrix_component.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 0
 .PHONY : matrix_files/CMakeFiles/matrix_component.dir/rule
@@ -284,7 +284,7 @@ matrix_files/CMakeFiles/matrix_component.dir/clean:
 operation_files/CMakeFiles/operations_component.dir/all:
 	$(MAKE) $(MAKESILENT) -f operation_files/CMakeFiles/operations_component.dir/build.make operation_files/CMakeFiles/operations_component.dir/depend
 	$(MAKE) $(MAKESILENT) -f operation_files/CMakeFiles/operations_component.dir/build.make operation_files/CMakeFiles/operations_component.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=45,46,47,48,49,50,51,52 "Built target operations_component"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=43,44,45,46,47,48,49,50 "Built target operations_component"
 .PHONY : operation_files/CMakeFiles/operations_component.dir/all
 
 # Build rule for subdir invocation for target.
@@ -310,12 +310,12 @@ operation_files/CMakeFiles/operations_component.dir/clean:
 worst_files/CMakeFiles/worst_component.dir/all:
 	$(MAKE) $(MAKESILENT) -f worst_files/CMakeFiles/worst_component.dir/build.make worst_files/CMakeFiles/worst_component.dir/depend
 	$(MAKE) $(MAKESILENT) -f worst_files/CMakeFiles/worst_component.dir/build.make worst_files/CMakeFiles/worst_component.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=67,68,69,70,71,72,73,74,75,76,77,78,79 "Built target worst_component"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=68,69,70,71,72,73,74,75,76,77,78,79 "Built target worst_component"
 .PHONY : worst_files/CMakeFiles/worst_component.dir/all
 
 # Build rule for subdir invocation for target.
 worst_files/CMakeFiles/worst_component.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 worst_files/CMakeFiles/worst_component.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 0
 .PHONY : worst_files/CMakeFiles/worst_component.dir/rule
@@ -362,12 +362,12 @@ xpres_files/CMakeFiles/xpres_component.dir/clean:
 random_files/CMakeFiles/random_component.dir/all:
 	$(MAKE) $(MAKESILENT) -f random_files/CMakeFiles/random_component.dir/build.make random_files/CMakeFiles/random_component.dir/depend
 	$(MAKE) $(MAKESILENT) -f random_files/CMakeFiles/random_component.dir/build.make random_files/CMakeFiles/random_component.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=57,58 "Built target random_component"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=58,59,60 "Built target random_component"
 .PHONY : random_files/CMakeFiles/random_component.dir/all
 
 # Build rule for subdir invocation for target.
 random_files/CMakeFiles/random_component.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 random_files/CMakeFiles/random_component.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 0
 .PHONY : random_files/CMakeFiles/random_component.dir/rule
@@ -388,12 +388,12 @@ random_files/CMakeFiles/random_component.dir/clean:
 tree_files/CMakeFiles/trees_component.dir/all:
 	$(MAKE) $(MAKESILENT) -f tree_files/CMakeFiles/trees_component.dir/build.make tree_files/CMakeFiles/trees_component.dir/depend
 	$(MAKE) $(MAKESILENT) -f tree_files/CMakeFiles/trees_component.dir/build.make tree_files/CMakeFiles/trees_component.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=59,60,61,62,63,64,65,66 "Built target trees_component"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=61,62,63,64,65,66,67 "Built target trees_component"
 .PHONY : tree_files/CMakeFiles/trees_component.dir/all
 
 # Build rule for subdir invocation for target.
 tree_files/CMakeFiles/trees_component.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tree_files/CMakeFiles/trees_component.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 0
 .PHONY : tree_files/CMakeFiles/trees_component.dir/rule
@@ -414,12 +414,12 @@ tree_files/CMakeFiles/trees_component.dir/clean:
 polynomial_files/CMakeFiles/poly_components.dir/all:
 	$(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/depend
 	$(MAKE) $(MAKESILENT) -f polynomial_files/CMakeFiles/poly_components.dir/build.make polynomial_files/CMakeFiles/poly_components.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=53,54,55,56 "Built target poly_components"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=51,52,53,54,55,56,57 "Built target poly_components"
 .PHONY : polynomial_files/CMakeFiles/poly_components.dir/all
 
 # Build rule for subdir invocation for target.
 polynomial_files/CMakeFiles/poly_components.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 polynomial_files/CMakeFiles/poly_components.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 0
 .PHONY : polynomial_files/CMakeFiles/poly_components.dir/rule
@@ -440,12 +440,12 @@ polynomial_files/CMakeFiles/poly_components.dir/clean:
 fix_matrix_files/CMakeFiles/fixmat_component.dir/all:
 	$(MAKE) $(MAKESILENT) -f fix_matrix_files/CMakeFiles/fixmat_component.dir/build.make fix_matrix_files/CMakeFiles/fixmat_component.dir/depend
 	$(MAKE) $(MAKESILENT) -f fix_matrix_files/CMakeFiles/fixmat_component.dir/build.make fix_matrix_files/CMakeFiles/fixmat_component.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target fixmat_component"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target fixmat_component"
 .PHONY : fix_matrix_files/CMakeFiles/fixmat_component.dir/all
 
 # Build rule for subdir invocation for target.
 fix_matrix_files/CMakeFiles/fixmat_component.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fix_matrix_files/CMakeFiles/fixmat_component.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 0
 .PHONY : fix_matrix_files/CMakeFiles/fixmat_component.dir/rule
@@ -466,12 +466,12 @@ fix_matrix_files/CMakeFiles/fixmat_component.dir/clean:
 graph_files/CMakeFiles/graph_component.dir/all:
 	$(MAKE) $(MAKESILENT) -f graph_files/CMakeFiles/graph_component.dir/build.make graph_files/CMakeFiles/graph_component.dir/depend
 	$(MAKE) $(MAKESILENT) -f graph_files/CMakeFiles/graph_component.dir/build.make graph_files/CMakeFiles/graph_component.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=8,9,10,11,12,13 "Built target graph_component"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num=7,8,9,10,11,12,13 "Built target graph_component"
 .PHONY : graph_files/CMakeFiles/graph_component.dir/all
 
 # Build rule for subdir invocation for target.
 graph_files/CMakeFiles/graph_component.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 graph_files/CMakeFiles/graph_component.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles 0
 .PHONY : graph_files/CMakeFiles/graph_component.dir/rule
@@ -490,7 +490,7 @@ graph_files/CMakeFiles/graph_component.dir/clean:
 
 # All Build rule for target.
 aux/CMakeFiles/fin.dir/all: operation_files/CMakeFiles/operations_component.dir/all
-aux/CMakeFiles/fin.dir/all: fix_matrix_files/CMakeFiles/fixmat_component.dir/all
+aux/CMakeFiles/fin.dir/all: polynomial_files/CMakeFiles/poly_components.dir/all
 	$(MAKE) $(MAKESILENT) -f aux/CMakeFiles/fin.dir/build.make aux/CMakeFiles/fin.dir/depend
 	$(MAKE) $(MAKESILENT) -f aux/CMakeFiles/fin.dir/build.make aux/CMakeFiles/fin.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/barbo/Desktop/proyectos/Effobj/build/CMakeFiles --progress-num= "Built target fin"

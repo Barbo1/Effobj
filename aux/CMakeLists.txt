@@ -1,6 +1,6 @@
-add_executable (fin ./proofs.cpp)
+add_executable (fin ./tests/polynomial/prueba_2.cpp)
 target_include_directories (fin PRIVATE ..)
 target_link_libraries (fin PRIVATE
-  fixmat_component
+  poly_components
   operations_component
 )
