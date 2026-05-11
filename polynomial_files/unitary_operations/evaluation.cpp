@@ -24,7 +24,7 @@ X evaluate_polynomial(const Polynomial pol, const X& obj, const X& one, const X&
   int32_t l2 = 32 - std::countl_zero(static_cast<uint32_t>(max_diff));
   X * arr = new X[l2];
   arr[0] = obj;
-  for (uint32_t i = 0; i < static_cast<uint32_t>(l2); i++)
+  for (uint32_t i = 0; i < static_cast<uint32_t>(l2)-1; i++)
     arr[i+1] = arr[i] * arr[i];
 
   // calculating the returned value.
@@ -42,9 +42,12 @@ X evaluate_polynomial(const Polynomial pol, const X& obj, const X& one, const X&
   for (uint32_t i = init; i < pol.size; i++) {
     int64_t next_diff = *grade - *(grade - 1);
     X x_diff = one;
-    for (uint32_t j = 0; j < static_cast<uint32_t>(l2); j++)
-      if ((1 << j) & next_diff)
-        x_diff *= arr[j];
+    for (uint32_t j = 0; j < static_cast<uint32_t>(l2); j++) {
+      if ((1 << j) & next_diff) {
+        X thing = arr[j];
+        x_diff *= thing;
+      }
+    }
     current_x *= x_diff;
     current_ret += current_x * (*coef++);
     grade++;
@@ -59,10 +62,10 @@ float Polynomial::operator()(const float& x) {
 }
 
 Matrix<float> Polynomial::operator()(const Matrix<float>& x) {
-  Matrix<float> zero = mfo<float>(0, x.rows(), x.rows());
   if (x.cols() != x.rows()) {
-    return zero;
+    return Matrix<float>();
   }
   Matrix<float> one = identity<float>(x.rows());
+  Matrix<float> zero = mfo<float>(0, x.rows(), x.rows());
   return evaluate_polynomial<Matrix<float>>(*this, x, one, zero);
 }

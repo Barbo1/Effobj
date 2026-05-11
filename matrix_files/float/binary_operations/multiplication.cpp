@@ -80,10 +80,12 @@ Matrix<float> Matrix<float>::operator*= (const Matrix & A) const {
     }
 
     for (uint32_t i = 0; i < this->_rows_; i++) {
-      for (uint32_t j = 0; j < this->_columns_; j++) {
-        this->_data_[i*this->_columns_ + j]._v = _data_new_[i*this->_columns_ + j]._v;
+      for (uint32_t j = 0; j < this->_length_; j++) {
+        this->_data_[i*this->_length_ + j]._v = _data_new_[i*this->_length_ + j]._v;
       }
     }
+
+    std::free(_data_new_);
   }
   return *this;
 }

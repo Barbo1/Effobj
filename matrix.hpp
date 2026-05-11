@@ -17,7 +17,6 @@
 
 #include "./needed.hpp"
 
-
 /**********************
  *    Generic type    *
  **********************/
@@ -276,7 +275,6 @@ class Matrix<bool>{
 
 /* float vector of size 4 */
 
-
 template<>
 class Matrix<float> {
   private:
@@ -384,8 +382,6 @@ class Matrix<float> {
      * */
     float determinant();
 };  
-
-
 
 /******************************
  *    Functions definition    *

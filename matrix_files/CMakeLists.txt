@@ -6,6 +6,6 @@ file (GLOB_RECURSE FILES_MATRIX_GENERIC "generic/*.cpp")
 add_library (matrix_component OBJECT)
 target_include_directories (matrix_component PUBLIC ..)
 target_sources (matrix_component PRIVATE 
-  ${FILES_MATRIX_INT_FLOAT} ${FILES_MATRIX_FLOAT}
-  ${FILES_MATRIX_BOOLEAN} ${FILES_MATRIX_GENERIC}
+  ${FILES_MATRIX_GENERIC} ${FILES_MATRIX_FLOAT}
+  ${FILES_MATRIX_BOOLEAN} ${FILES_MATRIX_INT_FLOAT}
 )

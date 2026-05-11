@@ -1,4 +1,3 @@
-#include "../../../polynomial.hpp"
 #include "../../../matrix.hpp"
 #include <iostream>
 
@@ -15,18 +14,22 @@ void printM (const Matrix<float> M) {
 }
 
 int main () {
-  Matrix<float> A = Matrix<float>(4, 4, new float[16] {
-    1,1,1,1,
-    2,2,2,3,
-    4,2,1,1,
-    5,2,2,4
+  Matrix<float> A = Matrix<float> (3, 4, new float[12]{
+    0.25f, 0.5f, 0.f, 0.25f,
+    0.f, 1.f, 0.f, 0.f,
+    0.5f, 0.f, 0.5f, 0.f 
   }, true);
 
-  std::cout << "poly 1:" << std::endl;
-  float arr1[3] = {24.f, 6.f, 1.f};
-  Polynomial a(arr1, 3);
-  std::cout << a.to_string() << std::endl;
-  printM(a(A));
+  Matrix<float> B = Matrix<float> (4, 4, new float [16] {
+    3, 10, 12, 18,
+    12, 1, 4, 9,
+    9, 10, 12, 2,
+    3, 12, 4, 10
+  }, true);
+
+  printM(B);
+  B += B;
+  printM(B);
 
   return 0;
 }
