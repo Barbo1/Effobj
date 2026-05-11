@@ -14,3 +14,13 @@ Matrix<float> Matrix<float>::operator+(const Matrix & M) const {
     return Matrix();
   } 
 }
+
+Matrix<float> Matrix<float>::operator+=(const Matrix & M) const {
+  if(_columns_ == M._columns_ && _rows_ == M._rows_)
+    for(unsigned i = 0; i < _rows_ * _length_; i++)
+      _mm_stream_ps(
+        (float*)(this->_data_ + i), 
+        _mm_add_ps(M._data_[i]._v, this->_data_[i]._v)
+      );
+  return *this;
+}

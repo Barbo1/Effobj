@@ -4,9 +4,9 @@
 
 Polynomial Polynomial::derivate () {
   // quiting independent term
-  __m256i grade_perm = _mm256_set_epi32(0,7,6,5,4,3,2,1);
   if (this->grades[0]._i[0] == 0) {
     uint32_t i = 0;
+    __m256i grade_perm = _mm256_set_epi32(0,7,6,5,4,3,2,1);
     while (i < (this->size - 1) / 8) {
       this->coefficients[i]._v = _mm256_blend_ps (
         _mm256_permutevar8x32_ps(this->coefficients[i]._v, grade_perm),
@@ -20,16 +20,18 @@ Polynomial Polynomial::derivate () {
       );
       i++;
     }
+
     this->coefficients[i]._v = _mm256_permutevar8x32_ps(this->coefficients[i]._v, grade_perm);
     this->grades[i]._v = _mm256_permutevar8x32_epi32(this->grades[i]._v, grade_perm);
+
     if ((this->size & 0b111) == 0b1) {
       this->coefficients.pop_back();
       this->grades.pop_back();
     }
+    this->size--;
   }
 
   // modifying monomials.
-  this->size--;
   __m256i ones_i = _mm256_set1_epi32(1);
   for (uint32_t i = 0; i < (this->size + 7) / 8; i++) {
     this->coefficients[i]._v = _mm256_mul_ps(

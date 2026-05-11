@@ -8,6 +8,15 @@
  *  Concepts  *
  * * * * * * * */
 
+/* Encompass the types that supports some arthmetric operations. */
+template<typename _type> concept semi_arithmetric = requires (_type Arth) {
+    Arth + Arth;
+    Arth += Arth;
+    Arth * Arth;
+    Arth *= Arth;
+    Arth = Arth;
+};
+
 /* Encompass the types that supports arthmetric operations. */
 template<typename _type> concept arithmetric = requires (_type Arth) {
     Arth + Arth;                                    // addition 

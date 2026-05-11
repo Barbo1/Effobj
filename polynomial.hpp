@@ -1,6 +1,7 @@
 #pragma once
 
 #include "./needed.hpp"
+#include "./matrix.hpp"
 #include <vector>
 #include <string>
 #include <cmath>
@@ -43,8 +44,8 @@ class Polynomial {
     float operator[] (unsigned grade);
     std::size_t many_monomials ();
 
-    template <arithmetric X, arithmetric R>
-    R operator() (X);
+    float operator() (const float& obj);
+    Matrix<float> operator() (const Matrix<float>& obj);
 
     Polynomial derivate ();
     Polynomial integrate ();
@@ -55,6 +56,11 @@ class Polynomial {
 
     /* friend. */
     friend std::ostream& operator<<(const std::ostream & out, const Polynomial & pol); 
+    template <semi_arithmetric X>
+      friend X evaluate_polynomial(
+        const Polynomial pol, const X& obj, 
+        const X& one, const X& zero
+      );
 };
 
 std::ostream& operator<<(const std::ostream & out, const Polynomial & pol);

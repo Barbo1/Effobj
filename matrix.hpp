@@ -362,14 +362,17 @@ class Matrix<float> {
     /* Matrix by constant operator.
      * */
     Matrix operator*(float multiplier) const;
+    Matrix operator*=(float multiplier) const;
 
     /* Matrix by Matrix operator.
      * */
     Matrix operator*(const Matrix & A) const;
+    Matrix operator*=(const Matrix & A) const;
 
     /* Addition operator.
      * */
     Matrix operator+(const Matrix & M) const;
+    Matrix operator+=(const Matrix & M) const;
    
     /* Return the inverse of the matrix. If this is a null matrix, or the 
      * determinant is 0, a null matrix will be returned.
@@ -391,9 +394,33 @@ class Matrix<float> {
 /* Return an identity matrix with the dimention passed by parameter.
  * */
 template<arithmetric T>
-Matrix<T> identity(unsigned dimension);
+Matrix<T> identity(unsigned dimension) {
+  if(dimension != 0){
+    unsigned i, j;
+    T * _data_new_ = new T[dimension * dimension];
+    for(i = 0; i < dimension; i++) {
+      for(j = 0; j < dimension; j++) {
+        _data_new_[dimension*i + j] = i == j;
+      }
+    }
+    return Matrix<T>(dimension, dimension, _data_new_, true);
+  } else {
+    return Matrix<T>();
+  }
+}
 
 /* Return an identity matrix with all the positions equal to elem.
  * */
 template<arithmetric T>
-Matrix<T> mfo(unsigned row, unsigned col, T elem);
+Matrix<T> mfo(unsigned row, unsigned col, T elem) {
+  if(row != 0 && col != 0) {
+    T * _data_new_ = new T[row * col];
+    for(unsigned i = 0; i < row*col; i++) {
+      _data_new_[i] = elem;
+    }
+    return Matrix<T>(row, col, _data_new_, true);
+  } else {
+    return Matrix<T>();
+  } 
+}
+
